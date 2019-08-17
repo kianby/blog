@@ -11,6 +11,6 @@ Je viens de découvrir que le blog a perdu *magiquement* sa barre de navigation 
 
 J'ai voulu lever le pied sur la gestion de l'infra, me reposer sur GitHub mais c'est la cata ! Il est temps de se retrousser les manches 
 
-![Bruce et Alfred]({{site.baseurl}}/images/2019/bruce-alfred.jpg)
+![Bruce et Alfred](/images/2019/bruce-alfred.jpg)
 
 *Nous savons tous le réel plaisir que vous avez à dire : je vous l'avais bien dit...*

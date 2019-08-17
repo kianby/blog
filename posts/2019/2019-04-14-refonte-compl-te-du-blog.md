@@ -21,7 +21,7 @@ Il y a possibilité d'héberger Prose sur ses propres serveur mais j'avais déj�
 
 Et quid des commentaires ? Les URLs des articles ont bougé donc j'ai bousillé tout le référencement et je n'avais pas envie de me casser la tête à maintenir des redirections entre les anciennes URLs et les nouvelles. J'aurais pu adapter la partie *front-end* de Stacosys pour qu'elle devienne full JavaScript et soit intégrable dans le blog mais il aurait aussi fallu modifier l'ensembles des URLs. J'ai évalué Isso et j'ai décidé que Stacosys pouvait prendre sa retraite. Né au moment où il n'y avait pas beaucoup de solutions pour les blogs statiques, il n'a plus d'avantages fonctionnel. Isso a une administration Web en plus des notifications par e-mail, ce que j'avais prévu de développer... un jour. Inutile de réinventer la route, j'héberge Isso sur mon serveur dédié et il sert les commentaires du blog sur l'autre domaine. J'ai migré les commentaires existants car l'histoire d'un blog ce ne sont pas que des articles. 
 
-![Sea Bird]({{site.baseurl}}/images/2019/sea-bird-night-water-9012.jpeg)
+![Sea Bird](/images/2019/sea-bird-night-water-9012.jpeg)
 
 
 

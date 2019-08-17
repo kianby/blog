@@ -158,10 +158,12 @@ def make_posts(src, src_pattern, dst, layout, **params):
         content = read_content(src_path)
 
         page_params = dict(params, **content)
-        print(page_params)
+        page_params['date_path'] = page_params['date'].replace('-', '/')
 
+        # TODO DEBUG
+        #print(page_params)   
         #break
-
+    
         # Populate placeholders in content if content-rendering is enabled.
         if page_params.get('render') == 'yes':
             rendered_content = render(page_params['content'], **page_params)
@@ -235,11 +237,11 @@ def main():
 
     # Create blogs.
     blog_posts = make_posts('posts', '**/*.md',
-                            '_site/{{ slug }}.html',
+                            '_site/{{ date_path }}/{{ slug }}.html',
                             post_layout, blog='blog', **params)
 
     # Create blog list pages.
-    make_list(blog_posts, '_site/blog/index.html',
+    make_list(blog_posts, '_site/index.html',
               list_layout, item_layout, blog='blog', title='Blog', **params)
 
     # Create RSS feeds.

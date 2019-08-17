@@ -5,4 +5,4 @@ J'aime bien l'allure du nouveau blog mais l'ancien *Blog du Yax* me manque un pe
 
 Il me reste [Archive.org](https://web.archive.org/web/20180331143503/https://blogduyax.madyanne.fr/) pour les souvenirs :-) 
 
-![Ancien Blog du Yax]({{site.baseurl}}/images/2019/blogduyax.png)
+![Ancien Blog du Yax](/images/2019/blogduyax.png)

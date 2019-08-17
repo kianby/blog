@@ -39,6 +39,6 @@ N'ayant pas installé le module node en tant que root mais sous mon utilisateur,
 
 Et voici le rendu HTML:
 
-![Rendu Mermaid]({{site.baseurl}}/images/2019/mermaid.png)
+![Rendu Mermaid](/images/2019/mermaid.png)
 
 Bon markdown !
