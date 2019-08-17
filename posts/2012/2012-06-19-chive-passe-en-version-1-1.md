@@ -1,0 +1,23 @@
+<!-- title: Chive passe en version 1.1 -->
+<!-- category: Archlinux -->
+<!-- tag: planet -->
+
+Le gestionnaire de base MySQL alternative crédible et sexy à phpMyAdmin, le
+bien nommé [Chive](http://www.chive-project.com/) est sorti en version 1.1.<!-- more -->
+
+C'est une version considérée majeure par ses développeurs qui apporte deux
+fonctionnalités :
+
+*    la première passe inaperçue pour l'utilisateur lambda que je suis : la
+possibilité d'empaqueter Chive en tant qu' archive Phar. C'est utile à ceux
+qui déploient Chive le temps d'un développement sur un serveur Web tiers - qui
+a dit "squat moderne" ;-) - car on ne déploie qu'une archive et PHP l'exécute
+sans l'extraire.
+*    la seconde est le remplacement de l'éditeur de code SQL "maison" par l'éditeur
+ACE, projet soutenu par la fondation Mozilla. C'est un changement qui sera
+bénéfique pour le produit en terme de maintenabilité et de qualité du code.
+
+Rajoutez à ces deux changements quelques correctifs et on obtient le
+millésimé 1.1 de ce beau projet. J'ai mis à jour le paquet
+[AUR](http://en.wikipedia.org/wiki/Arch_Linux#Arch_User_Repository) pour la
+distribution [ArchLinux](http://www.archlinux.org/).

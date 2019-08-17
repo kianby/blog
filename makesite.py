@@ -34,7 +34,7 @@ import glob
 import sys
 import json
 import datetime
-
+from pathlib import Path
 
 def fread(filename):
     """Read file and close the file."""
@@ -149,6 +149,36 @@ def make_pages(src, dst, layout, **params):
     return sorted(items, key=lambda x: x['date'], reverse=True)
 
 
+def make_posts(src, src_pattern, dst, layout, **params):
+    """Generate posts from posts directory."""
+    items = []
+
+    for posix_path in Path(src).glob(src_pattern):
+        src_path = str(posix_path)
+        content = read_content(src_path)
+
+        page_params = dict(params, **content)
+        print(page_params)
+
+        #break
+
+        # Populate placeholders in content if content-rendering is enabled.
+        if page_params.get('render') == 'yes':
+            rendered_content = render(page_params['content'], **page_params)
+            page_params['content'] = rendered_content
+            content['content'] = rendered_content
+
+        items.append(content)
+
+        dst_path = render(dst, **page_params)
+        output = render(layout, **page_params)
+
+        log('Rendering {} => {} ...', src_path, dst_path)
+        fwrite(dst_path, output)
+
+    return sorted(items, key=lambda x: x['date'], reverse=True)
+
+
 def make_list(posts, dst, list_layout, item_layout, **params):
     """Generate list page for a blog."""
     items = []
@@ -198,30 +228,23 @@ def main():
     list_layout = render(page_layout, content=list_layout)
 
     # Create site pages.
-    make_pages('content/_index.html', '_site/index.html',
+    make_pages('content/index.html', '_site/index.html',
                page_layout, **params)
     make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
                page_layout, **params)
 
     # Create blogs.
-    blog_posts = make_pages('content/blog/*.md',
-                            '_site/blog/{{ slug }}/index.html',
+    blog_posts = make_posts('posts', '**/*.md',
+                            '_site/{{ slug }}.html',
                             post_layout, blog='blog', **params)
-    news_posts = make_pages('content/news/*.html',
-                            '_site/news/{{ slug }}/index.html',
-                            post_layout, blog='news', **params)
 
     # Create blog list pages.
     make_list(blog_posts, '_site/blog/index.html',
               list_layout, item_layout, blog='blog', title='Blog', **params)
-    make_list(news_posts, '_site/news/index.html',
-              list_layout, item_layout, blog='news', title='News', **params)
 
     # Create RSS feeds.
     make_list(blog_posts, '_site/blog/rss.xml',
               feed_xml, item_xml, blog='blog', title='Blog', **params)
-    make_list(news_posts, '_site/news/rss.xml',
-              feed_xml, item_xml, blog='news', title='News', **params)
 
 
 # Test parameter to be set temporarily by unit tests.
