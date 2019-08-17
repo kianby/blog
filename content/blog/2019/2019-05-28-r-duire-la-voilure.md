@@ -1,0 +1,14 @@
+---
+layout: post
+published: true
+title: Réduire la voilure
+categories: Hébergement
+tags: ''
+---
+
+Séparer l'hébergement du blog du reste de l'infrastructure a été une bonne idée, je n'ai plus de scrupule à effectuer mes maintenances sans préavis, parfois avec moins de préparation puisque ça ne dérange que moi. Ayant viré pas mal de containers *maison* autour du blog, il me reste [Isso](https://posativ.org/isso/) pour gérer les commentaires et mes applications indispensables<!-- more --> : [Wallabag](https://wallabag.org) pour sauver un article et le lire plus tard, [Shaarli](https://www.shaarli.fr/) pour gérer les favoris, [Selfoss](https://www.selfoss.aditu.de/) pour les flux RSS. J'ai aussi une instance de [Gitea](https://gitea.io) qui me fournit un wiki basique et un miroir de mes projets GitHub. J'avais aussi en tête de rapatrier ma photothèque de 70 Go, actuellement hébergée gracieusement par Cozy Cloud.
+
+Pour ces quelques services je n'ai pas besoin de beaucoup de puissance, la dedibox SC est devenue surdimensionnée et son augmentation de tarif a joué dans ma décision de réduire la voilure et de trouver un hébergement moins cher, avec au moins 200 Go de disque. Dédié ou VPS KVM, peu importe si je peux migrer mes containers Docker dessus. La dedibox coûte 11,99 euros par mois, je pensais trouver facilement une alternative en dessous de 8 euros. J'ai vite déchanté... Le prix des hébergements a grimpé depuis [ma dernière quête](https://blogduyax.fr/2016/06/18/histoire-herbergement.html) et cela concerne aussi les offres VPS avec des offres plus spécialisées : du VPS basique avec un disque de 5 ou 10 Go et du VPS *storage* avec plus de disque (et souvent moins de puissance). Pour avoir 200 Go de stockage on tombe dans la catégorie stockage et la plupart des offres sont aussi chères que la dedibox SC qui est pourtant un serveur physique dédié. J'ai eu du mal à trouver une offre compétitive pour mon cas d'usage ; c'est en traînant sur le canal **vps** de Reddit que j'ai trouvé mon offre à Munich chez [Contabo](https://contabo.com) avec leur VPS S SSD avec 200 Go de disque, 4 coeurs virtuels et 8 Go de RAM pour 4,99 euros. Le serveur physique est un XEON E5-2630. En pratique, j'ai moins de latence pour accéder à mes services. Il faut voir sur le long terme... en fonction de la charge de mes co-locataires sur le serveur physique ça pourrait se dégrader mais jusqu'ici je suis très satisfait du rapport qualité / prix.
+
+![Glances]({{site.baseurl}}/images/2019/glances.png)
+
