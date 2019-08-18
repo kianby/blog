@@ -3,40 +3,60 @@
 <head>
     <title>{{ title }} - {{ subtitle }}</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/pure/pure-min.css">
     <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/style.css">
+
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="{{ base_path }}/css/pure/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="{{ base_path }}/css/pure/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/logos/logo@16px.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="16x16" href="/logos/logo@16px.png">
+    <link rel="icon" type="image/png" href="/logos/logo@32px.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="32x32" href="/logos/logo@32px.png">
+    <link rel="icon" type="image/png" href="/logos/logo@96px.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="96x96" href="/logos/logo@96px.png">
+    <link rel="icon" type="image/png" href="/logos/logo@120px.png" sizes="120x120">
+    <link rel="apple-touch-icon" sizes="120x120" href="/logos/logo@120px.png">
+    <link rel="icon" type="image/png" href="/logos/logo@144px.png" sizes="144x144">
+    <link rel="apple-touch-icon" sizes="144x144" href="/logos/logo@144px.png">
+    <link rel="shortcut icon" href="/logos/logo@32px.png">    
 </head>
 
 <body id="{{ slug }}">
 
-<nav>
-<section>
-    <span class="home">
-        <a href="{{ base_path }}/">Home</a>
-    </span>
-    <span class="links">
-        <a href="{{ base_path }}/blog/">Blog</a>
-        <a href="{{ base_path }}/news/">News</a>
-        <a href="{{ base_path }}/contact/">Contact</a>
-        <a href="{{ base_path }}/about/">About</a>
-    </span>
-</section>
-</nav>
+    <div class="pure-menu pure-menu-horizontal">
+        <img src="/logos/logo@96px.png"></img>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="/" class="pure-menu-link">Blog</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Archives</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Recherche</a></li>
+        </ul>
+    </div>
 
-<main>
-{{ content }}
-</main>
+    <div class="pure-g">
+        <div class="pure-u-1-4"></div>
+        <div class="pure-u-1-2">{{ content }}</div>
+        <div class="pure-u-1-4"></div>        
+    </div>
 
-<footer>
-<section>
-<p>&copy; {{ current_year }} Lorem Ipsum</p>
-<p>
-    <a href="https://twitter.com/sunainapai">Twitter</a>
-    <a href="https://github.com/sunainapai">GitHub</a>
-    <a href="https://www.example.com/">Example</a>
-</p>
-</section>
-</footer>
+    <footer>
+    <section>
+        <p>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img src="/license.png"></a>
+        </p>
+        <p>
+        <a href="https://github.com/kianby/blog">Makesite.py</a>
+        <a href="https://github.com/kianby/stacosys">Stacosys</a>
+        </p>
+    </section>
+    </footer>
 
 </body>
 </html>

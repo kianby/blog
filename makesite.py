@@ -159,6 +159,17 @@ def make_posts(src, src_pattern, dst, layout, **params):
 
         page_params = dict(params, **content)
         page_params['date_path'] = page_params['date'].replace('-', '/')
+        page_params['year'] = page_params['date'].split('-')[0]
+
+        cat = []
+        if 'category' in page_params:
+            cat.append(str(page_params['category']).strip())
+        elif 'categories' in page_params:
+            for s in page_params['categories'].split(' '):
+                if s.strip():
+                    cat.append(s.strip())
+        page_params['category'] = cat
+        page_params['category_label'] = ' '.join(cat)
 
         # TODO DEBUG
         #print(page_params)   
@@ -186,6 +197,10 @@ def make_list(posts, dst, list_layout, item_layout, **params):
     items = []
     for post in posts:
         item_params = dict(params, **post)
+        #print(item_params)
+        #print(0/0)
+        item_params['year'] = item_params['date'].split('-')[0]
+        # TODO recuperer more
         item_params['summary'] = truncate(post['content'])
         item = render(item_layout, **item_params)
         items.append(item)
@@ -207,6 +222,7 @@ def main():
     # Default parameters.
     params = {
         'base_path': '',
+        'title': 'Blog',
         'subtitle': 'Lorem Ipsum',
         'author': 'Admin',
         'site_url': 'http://localhost:8000',
@@ -237,16 +253,16 @@ def main():
 
     # Create blogs.
     blog_posts = make_posts('posts', '**/*.md',
-                            '_site/{{ date_path }}/{{ slug }}.html',
-                            post_layout, blog='blog', **params)
+                            '_site/{{ year }}/{{ slug }}.html',
+                            post_layout, **params)
 
     # Create blog list pages.
     make_list(blog_posts, '_site/index.html',
-              list_layout, item_layout, blog='blog', title='Blog', **params)
+              list_layout, item_layout, **params)
 
     # Create RSS feeds.
     make_list(blog_posts, '_site/blog/rss.xml',
-              feed_xml, item_xml, blog='blog', title='Blog', **params)
+              feed_xml, item_xml, **params)
 
 
 # Test parameter to be set temporarily by unit tests.
