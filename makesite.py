@@ -123,6 +123,17 @@ def render(template, **params):
                   template)
 
 
+def get_categories(page_params):
+    cat = []
+    if 'category' in page_params:
+        cat.append(str(page_params['category']).strip())
+    elif 'categories' in page_params:
+        for s in page_params['categories'].split(' '):
+            if s.strip():
+                cat.append(s.strip())
+    return cat
+
+
 def make_pages(src, dst, layout, **params):
     """Generate pages from page content."""
     items = []
@@ -133,10 +144,10 @@ def make_pages(src, dst, layout, **params):
         page_params = dict(params, **content)
 
         # Populate placeholders in content if content-rendering is enabled.
-        if page_params.get('render') == 'yes':
-            rendered_content = render(page_params['content'], **page_params)
-            page_params['content'] = rendered_content
-            content['content'] = rendered_content
+        # if page_params.get('render') == 'yes':
+        #     rendered_content = render(page_params['content'], **page_params)
+        #     page_params['content'] = rendered_content
+        #     content['content'] = rendered_content
 
         items.append(content)
 
@@ -161,27 +172,32 @@ def make_posts(src, src_pattern, dst, layout, **params):
         page_params['date_path'] = page_params['date'].replace('-', '/')
         page_params['year'] = page_params['date'].split('-')[0]
 
-        cat = []
-        if 'category' in page_params:
-            cat.append(str(page_params['category']).strip())
-        elif 'categories' in page_params:
-            for s in page_params['categories'].split(' '):
-                if s.strip():
-                    cat.append(s.strip())
-        page_params['category'] = cat
-        page_params['category_label'] = ' '.join(cat)
+        # categories
+        categories = get_categories(page_params)
+        page_params['category'] = categories
+        page_params['category_label'] = ' '.join(categories)
 
-        # TODO DEBUG
-        #print(page_params)   
-        #break
     
         # Populate placeholders in content if content-rendering is enabled.
-        if page_params.get('render') == 'yes':
-            rendered_content = render(page_params['content'], **page_params)
-            page_params['content'] = rendered_content
-            content['content'] = rendered_content
+        # if page_params.get('render') == 'yes':
+        #      rendered_content = render(page_params['content'], **page_params)
+        #      page_params['content'] = rendered_content
+        #      content['content'] = rendered_content
+
+        summary_index = page_params['content'].find('<!-- more')
+        if summary_index > 0:
+            content['summary'] = render(page_params['content'][:summary_index], **page_params)
+
+        content['year'] = page_params['year']
+        content['category'] = page_params['category']
+        content['category_label'] = page_params['category_label']
 
         items.append(content)
+
+        # TODO DEBUG
+        #print(page_params) 
+        #print(content)  
+        #break
 
         dst_path = render(dst, **page_params)
         output = render(layout, **page_params)
@@ -199,9 +215,16 @@ def make_list(posts, dst, list_layout, item_layout, **params):
         item_params = dict(params, **post)
         #print(item_params)
         #print(0/0)
-        item_params['year'] = item_params['date'].split('-')[0]
+        #item_params['year'] = item_params['date'].split('-')[0]
+
+        # categories
+        # categories = get_categories(item_params)
+        # item_params['category'] = categories
+        # item_params['category_label'] = ' '.join(categories)
+
         # TODO recuperer more
-        item_params['summary'] = truncate(post['content'])
+        if 'summary' not in item_params:
+            item_params['summary'] = truncate(post['content'])
         item = render(item_layout, **item_params)
         items.append(item)
 
