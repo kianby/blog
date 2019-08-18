@@ -257,6 +257,7 @@ def main():
         params.update(json.loads(fread('params.json')))
 
     # Load layouts.
+    landing_layout = fread('layout/landing.html') 
     page_layout = fread('layout/page.html')
     post_layout = fread('layout/post.html')
     list_layout = fread('layout/list.html')
@@ -266,7 +267,7 @@ def main():
 
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
-    list_layout = render(page_layout, content=list_layout)
+    list_layout = render(landing_layout, content=list_layout)
 
     # Create site pages.
     make_pages('content/index.html', '_site/index.html',
