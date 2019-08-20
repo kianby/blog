@@ -169,6 +169,7 @@ def make_posts(src, src_pattern, dst, layout, **params):
         content = read_content(src_path)
 
         page_params = dict(params, **content)
+        page_params['banner'] =' '
         page_params['date_path'] = page_params['date'].replace('-', '/')
         page_params['year'] = page_params['date'].split('-')[0]
 
@@ -208,7 +209,7 @@ def make_posts(src, src_pattern, dst, layout, **params):
     return sorted(items, key=lambda x: x['date'], reverse=True)
 
 
-def make_list(posts, dst, list_layout, item_layout, **params):
+def make_list(posts, dst, list_layout, item_layout, banner_layout, **params):
     """Generate list page for a blog."""
     items = []
     for post in posts:
@@ -227,6 +228,9 @@ def make_list(posts, dst, list_layout, item_layout, **params):
             item_params['summary'] = truncate(post['content'])
         item = render(item_layout, **item_params)
         items.append(item)
+
+    banner = render(banner_layout)
+    params['banner'] = banner
 
     params['content'] = ''.join(items)
     dst_path = render(dst, **params)
@@ -257,17 +261,17 @@ def main():
         params.update(json.loads(fread('params.json')))
 
     # Load layouts.
-    landing_layout = fread('layout/landing.html') 
     page_layout = fread('layout/page.html')
     post_layout = fread('layout/post.html')
     list_layout = fread('layout/list.html')
     item_layout = fread('layout/item.html')
+    banner_layout = fread('layout/banner.html')
     feed_xml = fread('layout/feed.xml')
     item_xml = fread('layout/item.xml')
 
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
-    list_layout = render(landing_layout, content=list_layout)
+    list_layout = render(page_layout, content=list_layout)
 
     # Create site pages.
     make_pages('content/index.html', '_site/index.html',
@@ -282,11 +286,11 @@ def main():
 
     # Create blog list pages.
     make_list(blog_posts, '_site/index.html',
-              list_layout, item_layout, **params)
+              list_layout, item_layout, banner_layout, **params)
 
     # Create RSS feeds.
-    make_list(blog_posts, '_site/blog/rss.xml',
-              feed_xml, item_xml, **params)
+    #make_list(blog_posts, '_site/blog/rss.xml',
+    #          feed_xml, item_xml, banner_layout, **params)
 
 
 # Test parameter to be set temporarily by unit tests.
