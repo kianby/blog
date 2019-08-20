@@ -141,6 +141,11 @@ a:hover, a:active {
     padding-right: 20px;
 }
 
+.meta > span {
+    display: inline;
+    margin-right: 10px;
+}
+
 /* Footer */
 footer {
     background: #f0f0f0;

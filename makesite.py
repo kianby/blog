@@ -35,6 +35,7 @@ import sys
 import json
 import datetime
 from pathlib import Path
+import unicodedata
 
 def fread(filename):
     """Read file and close the file."""
@@ -75,6 +76,16 @@ def rfc_2822_format(date_str):
     d = datetime.datetime.strptime(date_str, '%Y-%m-%d')
     return d.strftime('%a, %d %b %Y %H:%M:%S +0000')
 
+
+def slugify(value):
+    """
+    Converts to lowercase, removes non-word characters (alphanumerics and
+    underscores) and converts spaces to hyphens. Also strips leading and
+    trailing whitespace.
+    """
+    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+    value = re.sub('[^\w\s-]', '', value).strip().lower()
+    return re.sub('[-\s]+', '-', value)
 
 def read_content(filename):
     """Read content and metadata from file into a dictionary."""
@@ -177,7 +188,7 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
         categories = get_categories(page_params)
         out_cats = []
         for category in categories:
-            out_cat = render(category_layout, category=category)
+            out_cat = render(category_layout, category=category, url=slugify(category))
             out_cats.append(out_cat.strip())
         page_params['category_label'] = ''.join(out_cats)
 
@@ -194,8 +205,6 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
 
         content['year'] = page_params['year']
         content['category_label'] = page_params['category_label']
-
-        print(content['category_label'])
 
         items.append(content)
 
@@ -218,22 +227,12 @@ def make_list(posts, dst, list_layout, item_layout, banner_layout, **params):
     items = []
     for post in posts:
         item_params = dict(params, **post)
-        #print(item_params)
-        #print(0/0)
-        #item_params['year'] = item_params['date'].split('-')[0]
-
-        # categories
-        # categories = get_categories(item_params)
-        # item_params['category'] = categories
-        # item_params['category_label'] = ' '.join(categories)
-
-        # TODO recuperer more
         if 'summary' not in item_params:
             item_params['summary'] = truncate(post['content'])
         item = render(item_layout, **item_params)
         items.append(item)
 
-    banner = render(banner_layout)
+    banner = render(banner_layout, **params)
     params['banner'] = banner
 
     params['content'] = ''.join(items)
@@ -281,8 +280,8 @@ def main():
     # Create site pages.
     make_pages('content/index.html', '_site/index.html',
                page_layout, **params)
-    make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
-               page_layout, **params)
+    #make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
+    #           page_layout, **params)
 
     # Create blogs.
     blog_posts = make_posts('posts', '**/*.md',
