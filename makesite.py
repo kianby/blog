@@ -160,7 +160,7 @@ def make_pages(src, dst, layout, **params):
     return sorted(items, key=lambda x: x['date'], reverse=True)
 
 
-def make_posts(src, src_pattern, dst, layout, **params):
+def make_posts(src, src_pattern, dst, layout, category_layout, **params):
     """Generate posts from posts directory."""
     items = []
 
@@ -175,8 +175,11 @@ def make_posts(src, src_pattern, dst, layout, **params):
 
         # categories
         categories = get_categories(page_params)
-        page_params['category'] = categories
-        page_params['category_label'] = ' '.join(categories)
+        out_cats = []
+        for category in categories:
+            out_cat = render(category_layout, category=category)
+            out_cats.append(out_cat.strip())
+        page_params['category_label'] = ''.join(out_cats)
 
     
         # Populate placeholders in content if content-rendering is enabled.
@@ -190,8 +193,9 @@ def make_posts(src, src_pattern, dst, layout, **params):
             content['summary'] = render(page_params['content'][:summary_index], **page_params)
 
         content['year'] = page_params['year']
-        content['category'] = page_params['category']
         content['category_label'] = page_params['category_label']
+
+        print(content['category_label'])
 
         items.append(content)
 
@@ -266,6 +270,7 @@ def main():
     list_layout = fread('layout/list.html')
     item_layout = fread('layout/item.html')
     banner_layout = fread('layout/banner.html')
+    category_layout = fread('layout/category.html')
     feed_xml = fread('layout/feed.xml')
     item_xml = fread('layout/item.xml')
 
@@ -282,7 +287,7 @@ def main():
     # Create blogs.
     blog_posts = make_posts('posts', '**/*.md',
                             '_site/{{ year }}/{{ slug }}.html',
-                            post_layout, **params)
+                            post_layout, category_layout, **params)
 
     # Create blog list pages.
     make_list(blog_posts, '_site/index.html',
