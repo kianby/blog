@@ -1,5 +1,5 @@
 <!-- title: Je vous l'avais bien dit -->
-<!-- categories: Hébergement -->
+<!-- category: Hébergement -->
 
 Mini-bilan après les décisions des 8 derniers mois : migration Docker, refonte du blog, nouveau domaine, hébergement chez GitHub Pages... <!-- more -->
 

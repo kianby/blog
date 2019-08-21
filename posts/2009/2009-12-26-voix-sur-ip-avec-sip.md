@@ -1,5 +1,5 @@
 <!-- title: Voix sur IP avec SIP -->
-<!-- categories: Mobilité -->
+<!-- category: Mobilité -->
 
 J'utilise Skype occasionnellement depuis 2 ans pour des appels de PC à PC mais
 aussi de PC à téléphone fixe ainsi qu'en mode conférence et bon jour...

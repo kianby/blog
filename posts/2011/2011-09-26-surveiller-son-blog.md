@@ -1,5 +1,5 @@
 <!-- title: Surveiller son blog -->
-<!-- categories: Hébergement Blog -->
+<!-- category: Hébergement Blog -->
 <!-- tag: planet -->
 
 Quand on héberge son blog à la maison se pose la question de savoir s'il est

@@ -1,5 +1,5 @@
 <!-- title: Un blog plus statique -->
-<!-- categories: Hébergement Blog -->
+<!-- category: Hébergement Blog -->
 <!-- tag: planet -->
 
 Un échange avec [Bruno Adelé](http://bruno.adele.im), qui fut l'initiateur du

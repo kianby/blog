@@ -1,5 +1,5 @@
 <!-- title: Markdown intergénérationnel -->
-<!-- categories: Développement -->
+<!-- category: Développement -->
 
 Je suis un fan du Markdown depuis que je connais son existence : un langage de balise lisible, aisément mémorisable pour écrire sans distraction en se concentrant sur le contenu, pas sur la forme.<!-- more --> C'est le Markdown qui m'a intéressé aux générateurs de sites statiques. Il est parfait pour l'écriture mais il montre ses limites pour produire du document (ce pour quoi il n'a pas vraiment été conçu). Mais un langage de balise est par nature extensible donc des extensions ont vu le jour pour générer une table des matières, gérer des tableaux et d'autres trucs plus exotiques...
 

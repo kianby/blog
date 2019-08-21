@@ -1,5 +1,5 @@
 <!-- title: Performances, Golang à la rescousse -->
-<!-- categories: Développement Blog -->
+<!-- category: Développement Blog -->
 <!-- tag: planet -->
 
 Dans l'[article précédent](/2017/performance-python-web) j'ai optimisé le

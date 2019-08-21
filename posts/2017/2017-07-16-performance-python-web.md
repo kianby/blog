@@ -1,5 +1,5 @@
 <!-- title: Performance Python Web -->
-<!-- categories: Développement Hébergement Blog -->
+<!-- category: Développement Hébergement Blog -->
 
 J'ai terminé l'article précédent en évoquant le [système de gestion des
 commentaires Stacosys](https://github.com/kianby/stacosys) et sa mise en place

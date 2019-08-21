@@ -1,5 +1,5 @@
 <!-- title: Deux installations de OpenBSD -->
-<!-- categories: Hébergement BSD -->
+<!-- category: Hébergement BSD -->
 
 Déjà un peu évoqué sur Diaspora, j'ai migré mon serveur vers OpenBSD depuis
 deux mois<!-- more --> à une période où les planètes étaient alignées : j'avais du temps et

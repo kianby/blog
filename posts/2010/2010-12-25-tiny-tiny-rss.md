@@ -1,5 +1,5 @@
 <!-- title: Tiny Tiny RSS -->
-<!-- categories: Android GNU/Linux Hébergement -->
+<!-- category: Android GNU/Linux Hébergement -->
 
 J'ai découvert récemment une alternative à Google Reader : [Tiny Tiny
 RSS](http://tt-rss.org/). <!-- more -->L'avantage par rapport à un simple client de flux

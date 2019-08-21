@@ -1,5 +1,5 @@
 <!-- title: L'obsolescence repoussée -->
-<!-- categories: Matériel Humeur -->
+<!-- category: Matériel Humeur -->
 <!-- tag: planet -->
 
 J'ai modifié ma façon de consommer depuis déjà quelques années : beaucoup moins

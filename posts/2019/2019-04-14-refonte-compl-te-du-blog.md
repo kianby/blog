@@ -1,5 +1,5 @@
 <!-- title: Refonte complète du blog -->
-<!-- categories: Blog -->
+<!-- category: Blog -->
 
 Le blog a pris son envol et il a désormais son propre nom de domaine **blogduyax.fr**. 
 

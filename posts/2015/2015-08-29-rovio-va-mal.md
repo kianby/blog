@@ -1,5 +1,5 @@
 <!-- title: Rovio va mal et c'est mérité -->
-<!-- categories: Humeur Android -->
+<!-- category: Humeur Android -->
 <!-- tag: planet -->
 
 En 2010 j'achetais [un Motorola Milestone sous Android 2.1

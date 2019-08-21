@@ -1,5 +1,5 @@
 <!-- title: Réduire la voilure -->
-<!-- categories: Hébergement -->
+<!-- category: Hébergement -->
 
 Séparer l'hébergement du blog du reste de l'infrastructure a été une bonne idée, je n'ai plus de scrupule à effectuer mes maintenances sans préavis, parfois avec moins de préparation puisque ça ne dérange que moi. Ayant viré pas mal de containers *maison* autour du blog, il me reste [Isso](https://posativ.org/isso/) pour gérer les commentaires et mes applications indispensables<!-- more --> : [Wallabag](https://wallabag.org) pour sauver un article et le lire plus tard, [Shaarli](https://www.shaarli.fr/) pour gérer les favoris, [Selfoss](https://www.selfoss.aditu.de/) pour les flux RSS. J'ai aussi une instance de [Gitea](https://gitea.io) qui me fournit un wiki basique et un miroir de mes projets GitHub. J'avais aussi en tête de rapatrier ma photothèque de 70 Go, actuellement hébergée gracieusement par Cozy Cloud.
 

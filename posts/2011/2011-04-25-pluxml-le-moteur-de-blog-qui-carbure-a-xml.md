@@ -1,5 +1,5 @@
 <!-- title: PluXml, le moteur de blog qui carbure à XML -->
-<!-- categories: Blog Hébergement -->
+<!-- category: Blog Hébergement -->
 
 Le titre de ce billet est un clin d’œil au site officiel de
 [PluXml](http://pluxml.org/). J'ai profité de mon retour en auto-hébergement

@@ -1,5 +1,5 @@
 <!-- title: Il court, il court, le furet -->
-<!-- categories: Humeur Containers -->
+<!-- category: Humeur Containers -->
 
 Il court, il court, le furet... ça résume à peu près mes semaines en ce moment.<!-- more --> Le thème de celle-ci (oui j'ai des semaines à thème) est la vente d'électro-ménager sur le site du Bon Coin (à ne pas confondre avec le bon sens près de chez vous) pour cause de rénovation. D'ailleurs si quelqu'un veut un frigo pas cher qu'il me contacte ;-) 
 

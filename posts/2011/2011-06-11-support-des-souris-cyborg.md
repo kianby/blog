@@ -1,5 +1,5 @@
 <!-- title: Support des souris Cyborg -->
-<!-- categories: GNU/Linux Matériel -->
+<!-- category: GNU/Linux Matériel -->
 <!-- tag: planet -->
 
 On trouve de l'information contradictoire et pas très à jour sur le support

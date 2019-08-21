@@ -1,5 +1,5 @@
 <!-- title: Souvenir de blog -->
-<!-- categories: Blog -->
+<!-- category: Blog -->
 
 J'aime bien l'allure du nouveau blog mais l'ancien *Blog du Yax* me manque un peu<!-- more -->, probablement parce que j'avais tout fait de A à Z, le HTML, le CSS et le JavaScript. Le résultat faisait un peu amateur mais c'était ma création.
 

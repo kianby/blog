@@ -1,5 +1,5 @@
 <!-- title: Flux RSS et esprit libre -->
-<!-- categories: Blog Humeur -->
+<!-- category: Blog Humeur -->
 
 J'ai réalisé que mon flux RSS est tronqué depuis [ma migration sous
 Hugo](/2017/migration-du-blog-sous-hugo) et je viens de corriger le tir.<!-- more --> Loin de moi

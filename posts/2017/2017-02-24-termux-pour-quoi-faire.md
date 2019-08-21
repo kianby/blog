@@ -1,5 +1,5 @@
 <!-- title: Termux pour quoi faire ? -->
-<!-- categories: GNU/Linux Mobilité -->
+<!-- category: GNU/Linux Mobilité -->
 <!-- tag: planet -->
 
 Cascador m'a communiqué son engouement pour [Termux](https://termux.com) à

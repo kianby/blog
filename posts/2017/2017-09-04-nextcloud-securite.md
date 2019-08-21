@@ -1,5 +1,5 @@
 <!-- title: Sécurité des données, focus sur Nextcloud -->
-<!-- categories: Hébergement BSD -->
+<!-- category: Hébergement BSD -->
 <!-- tag: planet -->
 
 En 2007, j'ai ouvert un compte Dropbox avec l'offre gratuite de 2 Go. J'avais

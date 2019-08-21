@@ -1,5 +1,5 @@
 <!-- title: Migration du blog sous Pelican -->
-<!-- categories: Blog Hébergement -->
+<!-- category: Blog Hébergement -->
 <!-- tag: planet -->
 
 Et oui, un de plus à migrer son blog sous [Pelican](http://docs.getpelican.com) !<!-- more -->

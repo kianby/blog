@@ -1,5 +1,5 @@
 <!-- title: Hello Moto Droid -->
-<!-- categories: Android Mobilité -->
+<!-- category: Android Mobilité -->
 
 Après deux ans de bons et loyaux services j'ai remisé mon Nokia E61i pour un
 téléphone plus récent. <!-- more -->J'ai hésité entre le Nokia N900 et un smartphone

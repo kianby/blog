@@ -1,5 +1,5 @@
 <!-- title: Proxmox, NAT et DHCP -->
-<!-- categories: Hébergement Containers -->
+<!-- category: Hébergement Containers -->
 
 J'ai eu beaucoup de retours à [mon dernier article](https://blogduyax.madyanne.fr/2018/hebergement-containers/) qui ont  alimenté ma réflexion et m'ont permis de clarifier mon objectif avec mon serveur [Proxmox](https://fr.wikipedia.org/wiki/Proxmox_VE).<!-- more --> J'ai décidé de pousser plus loin avec les containers LXC, de ne pas utiliser Docker sur le serveur mais d'améliorer certains aspects de mon installation : containeriser ce que j'ai installé directement sur l'hyperviseur (que ce soit par flemme, pour aller vite ou par manque de connaissances) et automatiser le déploiement de certains containers pour faciliter une éventuelle  migration et me permettre d'installer un environnement de test local.
 

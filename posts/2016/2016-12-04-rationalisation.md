@@ -1,5 +1,5 @@
 <!-- title: Rationalisation de mon informatique -->
-<!-- categories: Humeur Debian -->
+<!-- category: Humeur Debian -->
 <!-- tag: planet -->
 
 Je continue la rationalisation de mon informatique.<!-- more -->

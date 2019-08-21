@@ -1,5 +1,5 @@
 <!-- title: De GNU/Linux à gnuSystemlinuxdGnomeOs -->
-<!-- categories: GNU/Linux BSD Humeur -->
+<!-- category: GNU/Linux BSD Humeur -->
 
 Cet article n'est pas un réquisitoire contre **systemd** mais l'argumentaire de
 mon positionnement<!-- more --> qui me situe quelque part entre les deux positions

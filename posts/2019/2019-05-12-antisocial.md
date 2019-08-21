@@ -1,5 +1,5 @@
 <!-- title: Antisocial en veilleuse -->
-<!-- categories: Humeur -->
+<!-- category: Humeur -->
 
 Je traîne beaucoup moins sur Diaspora : je poste très peu et j'ai fait récemment une grosse lessive parmi les gens et les hashtags que je suivais.<!-- more -->
 

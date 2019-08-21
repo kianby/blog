@@ -1,5 +1,5 @@
 <!-- title: Installation de Horde Groupware -->
-<!-- categories: Hébergement Mobilité Debian -->
+<!-- category: Hébergement Mobilité Debian -->
 <!-- tag: planet -->
 
 Je remets en place progressivement les outils nécessaires sur mon serveur

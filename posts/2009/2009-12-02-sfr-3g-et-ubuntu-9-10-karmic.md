@@ -1,5 +1,5 @@
 <!-- title: SFR 3G et Ubuntu 9.10 Karmic -->
-<!-- categories: GNU/Linux Mobilité -->
+<!-- category: GNU/Linux Mobilité -->
 
 J'ai une clef 3G SFR obtenue pour 1 euro grâce au Pacte SFR (merci à eux) et
 j'ai voulu valider qu'elle pouvait fonctionner avec Ubuntu pour le jour où ce

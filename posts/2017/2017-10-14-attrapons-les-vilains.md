@@ -1,5 +1,5 @@
 <!-- title: Attrapons les vilains -->
-<!-- categories: Hébergement BSD -->
+<!-- category: Hébergement BSD -->
 
 A la fin de [mon article sur le blocage des attaques de brute
 force](/2017/nextcloud-securite/), j'étais resté sur l'envoi quotidien d'un

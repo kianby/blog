@@ -1,5 +1,5 @@
 <!-- title: Emuler la Raspbian avec Qemu -->
-<!-- categories: Debian Matériel Virtualisation -->
+<!-- category: Debian Matériel Virtualisation -->
 <!-- tag: planet -->
 
 <img src="/images/2014/rasplogo.png" alt="Raspberry logo" style="margin: 0px

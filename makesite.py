@@ -152,12 +152,9 @@ def render(template, **params):
 
 def get_categories(page_params):
     cat = []
-    if 'category' in page_params:
-        cat.append(str(page_params['category']).strip())
-    elif 'categories' in page_params:
-        for s in page_params['categories'].split(' '):
-            if s.strip():
-                cat.append(s.strip())
+    for s in page_params['category'].split(' '):
+        if s.strip():
+            cat.append(s.strip())
     return cat
 
 
@@ -212,20 +209,15 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
         for category in categories:
             out_cat = render(category_layout, category=category, url=slugify(category))
             out_cats.append(out_cat.strip())
+        page_params['categories'] = categories
         page_params['category_label'] = ''.join(out_cats)
-
-    
-        # Populate placeholders in content if content-rendering is enabled.
-        # if page_params.get('render') == 'yes':
-        #      rendered_content = render(page_params['content'], **page_params)
-        #      page_params['content'] = rendered_content
-        #      content['content'] = rendered_content
 
         summary_index = page_params['content'].find('<!-- more')
         if summary_index > 0:
             content['summary'] = clean_html_tag(render(page_params['content'][:summary_index], **page_params))
 
         content['year'] = page_params['year']
+        content['categories'] = page_params['categories']
         content['category_label'] = page_params['category_label']
         content['friendly_date'] = page_params['friendly_date']
         items.append(content)
@@ -314,6 +306,20 @@ def main():
     make_list(blog_posts, '_site/index.html',
               list_layout, item_layout, banner_layout, **params)
 
+    # Create category pages
+    catpost = {}
+    for post in blog_posts:
+        for cat in post['categories']:
+            if cat in catpost:
+                catpost[cat].append(post)
+            else:
+                catpost[cat] = [post]
+    for cat in catpost.keys():        
+        make_list(catpost[cat], '_site/' + slugify(cat) + '.html',
+            list_layout, item_layout, banner_layout, **params)
+
+    print(catpost.keys())
+    #print(blog_posts)
     # Create RSS feeds.
     #make_list(blog_posts, '_site/blog/rss.xml',
     #          feed_xml, item_xml, banner_layout, **params)

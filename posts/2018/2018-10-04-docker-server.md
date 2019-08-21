@@ -1,5 +1,5 @@
 <!-- title: Installation d'un serveur de containers -->
-<!-- categories: Hébergement Containers -->
+<!-- category: Hébergement Containers -->
 <!-- tag: planet -->
 
 Plus des notes techniques pour ma mémoire défaillante qu'un véritable article, je vais compiler les étapes d'installation d'un serveur de containers.<!-- more --> Quel système d'exploitation ? j'ai envie de dire on s'en cogne mais il est préférable de choisir une distribution poussée par Docker pour se simplifier la vie ; ce sera donc Debian 9 *Stretch* supportée sur Dedibox. 

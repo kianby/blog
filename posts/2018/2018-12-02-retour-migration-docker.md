@@ -1,5 +1,5 @@
 <!-- title: Retour sur la migration vers Docker -->
-<!-- categories: Containers Hébergement -->
+<!-- category: Containers Hébergement -->
 <!-- tag: planet -->
 
 Ce ne sera pas un scoop car j'ai distillé l'information à travers mes derniers articles : j'ai transformé mon serveur de virtualisation en serveur de containers Docker<!-- more --> depuis quelques mois. C'est l'occasion de faire un bilan en listant ce qui a bien fonctionné mais aussi ce qui a posé problème, et les avantages et inconvénients d'un serveur de containers. Au préalable, je n'utilise pas Docker dans un contexte professionnel mais pour héberger mes services personnels.

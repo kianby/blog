@@ -1,5 +1,5 @@
 <!-- title: Personnalisation de Gnome 3 -->
-<!-- categories: GNU/Linux Archlinux -->
+<!-- category: GNU/Linux Archlinux -->
 
 Pour faire suite à l'article précédent, j'ai effectué des recherches sur la
 personnalisation de Gnome 3. <!-- more -->Le fait est que c'est très flexible et accessible
