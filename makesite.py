@@ -36,6 +36,10 @@ import json
 import datetime
 from pathlib import Path
 import unicodedata
+import locale
+
+# set user locale
+locale.setlocale(locale.LC_ALL, '') 
 
 def fread(filename):
     """Read file and close the file."""
@@ -87,6 +91,7 @@ def slugify(value):
     value = re.sub('[^\w\s-]', '', value).strip().lower()
     return re.sub('[-\s]+', '-', value)
 
+
 def read_content(filename):
     """Read content and metadata from file into a dictionary."""
     # Read file content.
@@ -125,6 +130,17 @@ def read_content(filename):
     })
 
     return content
+
+
+def clean_html_tag(text):
+    """Remove HTML tags."""
+    while True:
+        original_text = text
+        text = re.sub('<\w+.*?>', '', text)
+        text = re.sub('<\/\w+>', '', text)
+        if original_text == text:
+            break
+    return text
 
 
 def render(template, **params):
@@ -171,6 +187,11 @@ def make_pages(src, dst, layout, **params):
     return sorted(items, key=lambda x: x['date'], reverse=True)
 
 
+def get_friendly_date(date_str):
+    dt = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+    return dt.strftime('%d %b %Y') 
+
+
 def make_posts(src, src_pattern, dst, layout, category_layout, **params):
     """Generate posts from posts directory."""
     items = []
@@ -182,6 +203,7 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
         page_params = dict(params, **content)
         page_params['banner'] =' '
         page_params['date_path'] = page_params['date'].replace('-', '/')
+        page_params['friendly_date'] = get_friendly_date(page_params['date'])
         page_params['year'] = page_params['date'].split('-')[0]
 
         # categories
@@ -201,11 +223,11 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
 
         summary_index = page_params['content'].find('<!-- more')
         if summary_index > 0:
-            content['summary'] = render(page_params['content'][:summary_index], **page_params)
+            content['summary'] = clean_html_tag(render(page_params['content'][:summary_index], **page_params))
 
         content['year'] = page_params['year']
         content['category_label'] = page_params['category_label']
-
+        content['friendly_date'] = page_params['friendly_date']
         items.append(content)
 
         # TODO DEBUG

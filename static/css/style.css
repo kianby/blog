@@ -141,6 +141,19 @@ a:hover, a:active {
     padding-right: 20px;
 }
 
+.summary {
+    margin-top: 0px;
+}
+
+.article > h1 {
+    margin-bottom: 0px;
+}
+
+.meta {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .meta > span {
     display: inline;
     margin-right: 10px;
