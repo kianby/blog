@@ -4,7 +4,7 @@
 <channel>
 <title>{{ title }}</title>
 <link>{{ site_url }}/</link>
-<description>Grow with Technology</description>
+<description>{{ subtitle }}</description>
 
 {{ content }}
 

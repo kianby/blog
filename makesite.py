@@ -246,8 +246,11 @@ def make_list(posts, dst, list_layout, item_layout, banner_layout, **params):
         item = render(item_layout, **item_params)
         items.append(item)
 
-    banner = render(banner_layout, **params)
-    params['banner'] = banner
+    if banner_layout is None:
+        params['banner'] = ''
+    else:
+        banner = render(banner_layout, **params)
+        params['banner'] = banner
 
     params['content'] = ''.join(items)
     dst_path = render(dst, **params)
@@ -265,7 +268,6 @@ def main():
 
     # Default parameters.
     params = {
-        'base_path': '',
         'title': 'Blog',
         'subtitle': 'Lorem Ipsum',
         'author': 'Admin',
@@ -284,7 +286,7 @@ def main():
     item_layout = fread('layout/item.html')
     banner_layout = fread('layout/banner.html')
     category_layout = fread('layout/category.html')
-    feed_xml = fread('layout/feed.xml')
+    rss_xml = fread('layout/rss.xml')
     item_xml = fread('layout/item.xml')
 
     # Combine layouts to form final layouts.
@@ -316,13 +318,14 @@ def main():
                 catpost[cat] = [post]
     for cat in catpost.keys():        
         make_list(catpost[cat], '_site/' + slugify(cat) + '.html',
-            list_layout, item_layout, banner_layout, **params)
+            list_layout, item_layout, None, **params)
 
-    print(catpost.keys())
     #print(blog_posts)
+
     # Create RSS feeds.
-    #make_list(blog_posts, '_site/blog/rss.xml',
-    #          feed_xml, item_xml, banner_layout, **params)
+    nb_items = min(10, len(blog_posts))
+    make_list(blog_posts[:nb_items], '_site/rss.xml',
+              rss_xml, item_xml, None, **params)
 
 
 # Test parameter to be set temporarily by unit tests.

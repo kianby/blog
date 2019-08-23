@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    <title>{{ title }} - {{ subtitle }}</title>
+    <title>{{ title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/pure/pure-min.css">
-    <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/pure/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
     <!--[if lte IE 8]>
-      <link rel="stylesheet" href="{{ base_path }}/css/pure/grids-responsive-old-ie-min.css">
+      <link rel="stylesheet" href="/css/pure/grids-responsive-old-ie-min.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{{ base_path }}/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
     <!--<![endif]-->
 
     <!-- favicon -->
@@ -28,9 +28,11 @@
     <link rel="icon" type="image/png" href="/logos/logo@144px.png" sizes="144x144">
     <link rel="apple-touch-icon" sizes="144x144" href="/logos/logo@144px.png">
     <link rel="shortcut icon" href="/logos/logo@32px.png">
-</head>
 
-<body id="{{ slug }}">
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="{{ site_url }}/rss.xml" title="{{ title }}" />
+</head>
+<body>
 
     <div class="pure-g">
         <div class="pure-u-1-12"></div>
@@ -41,7 +43,6 @@
             <div id="menu-blog">
                 <a href="/">Blog</a>
                 <a href="#">Archives</a>
-                <a href="#">Recherche</a>
             </div>
         </div>
         <div class="pure-u-1-12"></div>
@@ -68,5 +69,4 @@
     </footer>
 
 </body>
-
 </html>
