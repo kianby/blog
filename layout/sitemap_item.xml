@@ -1,0 +1,4 @@
+<url>
+<loc>{{ site_url }}/{{ date }}/{{ slug }}.html</loc>
+<lastmod>{{ rfc_2822_date }}</lastmod>
+</url>

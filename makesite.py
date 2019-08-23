@@ -287,7 +287,9 @@ def main():
     banner_layout = fread('layout/banner.html')
     category_layout = fread('layout/category.html')
     rss_xml = fread('layout/rss.xml')
-    item_xml = fread('layout/item.xml')
+    rss_item_xml = fread('layout/rss_item.xml')
+    sitemap_xml = fread('layout/sitemap.xml')
+    sitemap_item_xml = fread('layout/sitemap_item.xml')
 
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
@@ -325,8 +327,11 @@ def main():
     # Create RSS feeds.
     nb_items = min(10, len(blog_posts))
     make_list(blog_posts[:nb_items], '_site/rss.xml',
-              rss_xml, item_xml, None, **params)
+              rss_xml, rss_item_xml, None, **params)
 
+    # Create sitemap
+    make_list(blog_posts, '_site/sitemap.xml',
+              sitemap_xml, sitemap_item_xml, None, **params)
 
 # Test parameter to be set temporarily by unit tests.
 _test = None
