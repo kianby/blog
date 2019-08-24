@@ -299,16 +299,18 @@ def main():
     post_layout = render(page_layout, content=post_layout)
     list_layout = render(page_layout, content=list_layout)
 
-    # Create site pages.
-    make_pages('content/index.html', '_site/index.html',
-               page_layout, **params)
-    #make_pages('content/[!_]*.html', '_site/{{ slug }}/index.html',
-    #           page_layout, **params)
-
     # Create blogs.
     blog_posts = make_posts('posts', '**/*.md',
                             '_site/{{ year }}/{{ slug }}.html',
                             post_layout, category_layout, **params)
+
+    page_size = 10
+    page = 1
+    for chunk in [blog_posts[i:i + page_size] for i in range(0, len(blog_posts), page_size)]:
+        params['page'] = page
+        make_list(chunk, '_site/page' + str(page) + '.html',
+                list_layout, item_layout, banner_layout, **params)
+        page = page + 1
 
     # Create blog list pages.
     make_list(blog_posts, '_site/index.html',
