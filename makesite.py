@@ -34,6 +34,8 @@ import glob
 import sys
 import json
 import datetime
+import time
+from email import utils
 from pathlib import Path
 import unicodedata
 import locale
@@ -78,7 +80,9 @@ def read_headers(text):
 def rfc_2822_format(date_str):
     """Convert yyyy-mm-dd date string to RFC 2822 format date string."""
     d = datetime.datetime.strptime(date_str, '%Y-%m-%d')
-    return d.strftime('%a, %d %b %Y %H:%M:%S +0000')
+    dtuple = d.timetuple()
+    dtimestamp = time.mktime(dtuple)
+    return utils.formatdate(dtimestamp) 
 
 
 def slugify(value):

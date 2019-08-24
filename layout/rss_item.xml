@@ -1,4 +1,5 @@
 <item>
+<guid>{{ site_url }}/{{ year }}/{{ slug }}.html</guid>
 <title>{{ title }}</title>
 <link>{{ site_url }}/{{ year }}/{{ slug }}.html</link>
 <description>
