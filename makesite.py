@@ -26,12 +26,11 @@
 
 """Make static website/blog with Python."""
 
-
+import sys
 import os
 import shutil
 import re
 import glob
-import sys
 import json
 import datetime
 import time
@@ -39,6 +38,9 @@ from email import utils
 from pathlib import Path
 import unicodedata
 import locale
+import requests
+import commonmark
+
 
 # set user locale
 locale.setlocale(locale.LC_ALL, "")
@@ -114,19 +116,15 @@ def read_content(filename):
     for key, val, end in read_headers(text):
         content[key] = val
 
+    # slugify post title
+    content['slug'] = slugify(content['title'])
+
     # Separate content from headers.
     text = text[end:]
 
     # Convert Markdown content to HTML.
     if filename.endswith((".md", ".mkd", ".mkdn", ".mdown", ".markdown")):
-        try:
-            if _test == "ImportError":
-                raise ImportError("Error forced by test")
-            import commonmark
-
-            text = commonmark.commonmark(text)
-        except ImportError as e:
-            log("WARNING: Cannot render Markdown in {}: {}", filename, str(e))
+        text = commonmark.commonmark(text)
 
     # Update the dictionary with content and RFC 2822 date.
     content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"])})
@@ -186,7 +184,7 @@ def get_friendly_date(date_str):
     return dt.strftime("%d %b %Y")
 
 
-def make_posts(src, src_pattern, dst, layout, category_layout, **params):
+def make_posts(src, src_pattern, dst, layout, category_layout, comment_layout, **params):
     """Generate posts from posts directory."""
     items = []
 
@@ -216,10 +214,30 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
                 render(page_params["content"][:summary_index], **page_params)
             )
 
+        # stacosys comments
+        page_params['comment_count'] = 0
+        if params['stacosys_url']:
+            req_url = params['stacosys_url'] + '/comments'
+            query_params = dict(
+                token=params['stacosys_token'],
+                url='/' + page_params['year'] + '/' + page_params['slug']
+            )
+            resp = requests.get(url=req_url, params=query_params)
+            comments = resp.json()['data']
+
+            out_comments = []
+            for comment in comments:
+                out_comment = render(comment_layout, author=comment['author'], avatar=comment.get('avatar',''), site=comment.get('site', ''),
+                    date=comment['date'], content=commonmark.commonmark(comment['content']))
+                out_comments.append(out_comment)
+            page_params["comments"] = "".join(out_comments)
+            page_params['comment_count'] = len(comments)
+
         content["year"] = page_params["year"]
         content["categories"] = page_params["categories"]
         content["category_label"] = page_params["category_label"]
         content["friendly_date"] = page_params["friendly_date"]
+        content["comment_count"] = page_params["comment_count"]
         items.append(content)
 
         # TODO DEBUG
@@ -261,6 +279,13 @@ def make_list(
         item_params = dict(params, **post)
         if "summary" not in item_params:
             item_params["summary"] = truncate(post["content"])
+        if "comment_count" in item_params and item_params['comment_count']:
+            if item_params['comment_count'] == 1:
+                item_params['comment_label'] = '1 commentaire'
+            else:
+                item_params['comment_label'] = str(item_params['comment_count']) + ' commentaires'
+        else:
+            item_params['comment_label'] = ''
         item = render(item_layout, **item_params)
         items.append(item)
     params["content"] = "".join(items)
@@ -284,6 +309,8 @@ def main():
         "author": "Admin",
         "site_url": "http://localhost:8000",
         "current_year": datetime.datetime.now().year,
+        "stacosys_token": "",
+        "stacosys_url": ""
     }
 
     # If params.json exists, load it.
@@ -293,19 +320,20 @@ def main():
     # Load layouts.
     banner_layout = fread("layout/banner.html")
     paging_layout = fread("layout/paging.html")
-    category_title_layout = fread("layout/category_title.html")
     archive_title_layout = fread("layout/archives.html")
     page_layout = fread("layout/page.html")
     post_layout = fread("layout/post.html")
     list_layout = fread("layout/list.html")
     item_layout = fread("layout/item.html")
     item_nosummary_layout = fread("layout/item_nosummary.html")
+    category_title_layout = fread("layout/category_title.html")
     category_layout = fread("layout/category.html")
+    comment_layout = fread("layout/comment.html")
     rss_xml = fread("layout/rss.xml")
     rss_item_xml = fread("layout/rss_item.xml")
     sitemap_xml = fread("layout/sitemap.xml")
     sitemap_item_xml = fread("layout/sitemap_item.xml")
-
+    
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
     list_layout = render(page_layout, content=list_layout)
@@ -317,6 +345,7 @@ def main():
         "_site/{{ year }}/{{ slug }}.html",
         post_layout,
         category_layout,
+        comment_layout,
         **params
     )
 

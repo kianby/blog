@@ -152,6 +152,14 @@ a:hover, a:active {
     margin-right: 10px;
 }
 
+.hidden { 
+    display: none;
+}
+
+.comment-indicator {
+    color: coral;
+}
+
 /* Footer */
 footer {
     background: #f0f0f0;
