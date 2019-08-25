@@ -1,7 +1,7 @@
 <item>
-<guid>{{ site_url }}/{{ post_url }}</guid>
+<guid>{{ site_url }}/{{ post_url }}/</guid>
 <title>{{ title }}</title>
-<link>{{ site_url }}/{{ post_url }}</link>
+<link>{{ site_url }}/{{ post_url }}/</link>
 <description>
 <![CDATA[
 <p>
