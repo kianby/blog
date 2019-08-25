@@ -41,7 +41,6 @@ import locale
 import requests
 import commonmark
 
-
 # set user locale
 locale.setlocale(locale.LC_ALL, "")
 
@@ -117,7 +116,7 @@ def read_content(filename):
         content[key] = val
 
     # slugify post title
-    content['slug'] = slugify(content['title'])
+    content["slug"] = slugify(content["title"])
 
     # Separate content from headers.
     text = text[end:]
@@ -184,7 +183,9 @@ def get_friendly_date(date_str):
     return dt.strftime("%d %b %Y")
 
 
-def make_posts(src, src_pattern, dst, layout, category_layout, comment_layout, **params):
+def make_posts(
+    src, src_pattern, dst, layout, category_layout, comment_layout, **params
+):
     """Generate posts from posts directory."""
     items = []
 
@@ -198,6 +199,7 @@ def make_posts(src, src_pattern, dst, layout, category_layout, comment_layout, *
         page_params["date_path"] = page_params["date"].replace("-", "/")
         page_params["friendly_date"] = get_friendly_date(page_params["date"])
         page_params["year"] = page_params["date"].split("-")[0]
+        page_params["post_url"] = page_params["year"] + "/" + page_params["slug"]
 
         # categories
         categories = get_categories(page_params)
@@ -215,35 +217,35 @@ def make_posts(src, src_pattern, dst, layout, category_layout, comment_layout, *
             )
 
         # stacosys comments
-        page_params['comment_count'] = 0
-        if params['stacosys_url']:
-            req_url = params['stacosys_url'] + '/comments'
+        page_params["comment_count"] = 0
+        if params["stacosys_url"]:
+            req_url = params["stacosys_url"] + "/comments"
             query_params = dict(
-                token=params['stacosys_token'],
-                url='/' + page_params['year'] + '/' + page_params['slug']
+                token=params["stacosys_token"], url="/" + page_params["post_url"] + "/"
             )
             resp = requests.get(url=req_url, params=query_params)
-            comments = resp.json()['data']
-
+            comments = resp.json()["data"]
             out_comments = []
             for comment in comments:
-                out_comment = render(comment_layout, author=comment['author'], avatar=comment.get('avatar',''), site=comment.get('site', ''),
-                    date=comment['date'], content=commonmark.commonmark(comment['content']))
+                out_comment = render(
+                    comment_layout,
+                    author=comment["author"],
+                    avatar=comment.get("avatar", ""),
+                    site=comment.get("site", ""),
+                    date=comment["date"],
+                    content=commonmark.commonmark(comment["content"]),
+                )
                 out_comments.append(out_comment)
             page_params["comments"] = "".join(out_comments)
-            page_params['comment_count'] = len(comments)
+            page_params["comment_count"] = len(comments)
 
         content["year"] = page_params["year"]
+        content["post_url"] = page_params["post_url"]
         content["categories"] = page_params["categories"]
         content["category_label"] = page_params["category_label"]
         content["friendly_date"] = page_params["friendly_date"]
         content["comment_count"] = page_params["comment_count"]
         items.append(content)
-
-        # TODO DEBUG
-        # print(page_params)
-        # print(content)
-        # break
 
         dst_path = render(dst, **page_params)
         output = render(layout, **page_params)
@@ -279,13 +281,15 @@ def make_list(
         item_params = dict(params, **post)
         if "summary" not in item_params:
             item_params["summary"] = truncate(post["content"])
-        if "comment_count" in item_params and item_params['comment_count']:
-            if item_params['comment_count'] == 1:
-                item_params['comment_label'] = '1 commentaire'
+        if "comment_count" in item_params and item_params["comment_count"]:
+            if item_params["comment_count"] == 1:
+                item_params["comment_label"] = "1 commentaire"
             else:
-                item_params['comment_label'] = str(item_params['comment_count']) + ' commentaires'
+                item_params["comment_label"] = (
+                    str(item_params["comment_count"]) + " commentaires"
+                )
         else:
-            item_params['comment_label'] = ''
+            item_params["comment_label"] = ""
         item = render(item_layout, **item_params)
         items.append(item)
     params["content"] = "".join(items)
@@ -310,7 +314,7 @@ def main():
         "site_url": "http://localhost:8000",
         "current_year": datetime.datetime.now().year,
         "stacosys_token": "",
-        "stacosys_url": ""
+        "stacosys_url": "",
     }
 
     # If params.json exists, load it.
@@ -333,7 +337,7 @@ def main():
     rss_item_xml = fread("layout/rss_item.xml")
     sitemap_xml = fread("layout/sitemap.xml")
     sitemap_item_xml = fread("layout/sitemap_item.xml")
-    
+
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
     list_layout = render(page_layout, content=list_layout)
@@ -342,7 +346,7 @@ def main():
     blog_posts = make_posts(
         "posts",
         "**/*.md",
-        "_site/{{ year }}/{{ slug }}.html",
+        "_site/{{ post_url }}/index.html",
         post_layout,
         category_layout,
         comment_layout,
@@ -361,7 +365,7 @@ def main():
         if page == last_page:
             params["next_page"] = ""
         else:
-            params["next_page"] = "page" + str(page + 1) + ".html"
+            params["next_page"] = "/page" + str(page + 1) + "/"
         if page == 1:
             params["previous_page"] = ""
             make_list(
@@ -374,10 +378,10 @@ def main():
                 **params
             )
         else:
-            params["previous_page"] = "page" + str(page - 1) + ".html"
+            params["previous_page"] = "/page" + str(page - 1) + "/"
         make_list(
             chunk,
-            "_site/page" + str(page) + ".html",
+            "_site/page" + str(page) + "/index.html",
             list_layout,
             item_layout,
             banner_layout,
@@ -398,7 +402,7 @@ def main():
         params["category"] = cat
         make_list(
             catpost[cat],
-            "_site/" + slugify(cat) + ".html",
+            "_site/" + slugify(cat) + "/index.html",
             list_layout,
             item_nosummary_layout,
             category_title_layout,
@@ -409,7 +413,7 @@ def main():
     # Create archive page
     make_list(
         blog_posts,
-        "_site/archives.html",
+        "_site/archives/index.html",
         list_layout,
         item_nosummary_layout,
         archive_title_layout,

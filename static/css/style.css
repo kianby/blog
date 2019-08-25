@@ -156,8 +156,27 @@ a:hover, a:active {
     display: none;
 }
 
+.comment-separator { 
+    height:1px;
+    background:#717171;
+    border-bottom:2px solid #6E9CC7;
+    margin-bottom: 8px;
+}
+
 .comment-indicator {
     color: coral;
+}
+
+.comment-author {
+    font-weight: bold; 
+}
+
+.comment-detail {
+    margin-bottom: 25px;
+}
+
+.comment-body {
+    margin-left: 42px;
 }
 
 /* Footer */

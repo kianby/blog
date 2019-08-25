@@ -3,8 +3,11 @@
     <p class="meta">{{ category_label}}<span>{{ friendly_date }}</span></p>
     {{ content }}
 
+    <div class="comment-separator"></div>
+
     {{ comments }}
-    
+
+<!--
     <div id="comment-form">
         <strong>Votre commentaire</strong>
         <form role="form" action="/newcomment" autocomplete="off" method="post">
@@ -17,7 +20,7 @@
                 <input class="hidden" id="token" name="token" type="text" placeholder="Blog"
                     value="{{ stacosys_token }}">
                 <input class="hidden" id="url" name="url" type="text" placeholder="Article"
-                    value="{{ year }}/{{ slug }}">
+                    value="/{{ post_url }}">
                 <input class="hidden" id="captcha" name="captcha" type="text"
                     placeholder="Etes vous humain ?">
             </fieldset>
@@ -44,6 +47,8 @@
                 class="button--info">Prévisualiser</button>
         </form>
     </div>
+-->
+
 </div>
 
 <script type="text/javascript"><!--
