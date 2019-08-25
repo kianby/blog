@@ -6,15 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="/css/pure/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="/css/knacss.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
-    <!--[if lte IE 8]>
-      <link rel="stylesheet" href="/css/pure/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
-    <!--<![endif]-->
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="/logos/logo@16px.png" sizes="16x16">
@@ -34,40 +27,32 @@
 </head>
 <body>
 
-    <div class="pure-g">
-        <div class="pure-u-1-12"></div>
-        <div class="pure-u-1-6">
-            <a href="/"><img src="/logos/logo@96px.png"></img></a>
+    <div class="grid-2">
+        <div><a href="/"><img src="/logos/logo@96px.png"></img></a></div>
+        <div class="txtright" id="menu-blog">
+            <a href="/">Blog</a>
+            <a href="/archives.html">Archives</a>
         </div>
-        <div class="pure-u-2-3">
-            <div id="menu-blog">
-                <a href="/">Blog</a>
-                <a href="#">Archives</a>
-            </div>
-        </div>
-        <div class="pure-u-1-12"></div>
     </div>
 
     {{ header }}
 
-    <div class="pure-g">
-        <div class="pure-u-1-4"></div>
-        <div class="pure-u-1-2">{{ content }}</div>
-        <div class="pure-u-1-4"></div>
+    <div class="grid-4">
+        <div></div>
+        <div class="col-2">{{ content }}</div>
+        <div></div>
     </div>
 
     {{ footer }}
 
     <footer>
-        <section>
-            <p>
-                <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img src="/license.png"></a>
-            </p>
-            <p>
-                <a href="https://github.com/kianby/blog">Makesite.py</a>
-                <a href="https://github.com/kianby/stacosys">Stacosys</a>
-            </p>
-        </section>
+    <div class="grid-2">
+        <div><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img src="/license.png"></a></div>
+        <div class="txtright">
+            <a href="https://github.com/kianby/blog">Makesite.py</a>
+            <a href="https://github.com/kianby/stacosys">Stacosys</a>
+        </div>
+    </div>
     </footer>
 
 </body>

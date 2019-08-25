@@ -294,10 +294,12 @@ def main():
     banner_layout = fread("layout/banner.html")
     paging_layout = fread("layout/paging.html")
     category_title_layout = fread("layout/category_title.html")
+    archive_title_layout = fread("layout/archives.html")
     page_layout = fread("layout/page.html")
     post_layout = fread("layout/post.html")
     list_layout = fread("layout/list.html")
     item_layout = fread("layout/item.html")
+    item_nosummary_layout = fread("layout/item_nosummary.html")
     category_layout = fread("layout/category.html")
     rss_xml = fread("layout/rss.xml")
     rss_item_xml = fread("layout/rss_item.xml")
@@ -320,17 +322,19 @@ def main():
 
     # Create blog list pages.
     page_size = 10
-    chunk_posts = [blog_posts[i : i + page_size] for i in range(0, len(blog_posts), page_size)]
+    chunk_posts = [
+        blog_posts[i : i + page_size] for i in range(0, len(blog_posts), page_size)
+    ]
     page = 1
     last_page = len(chunk_posts)
     for chunk in chunk_posts:
         params["page"] = page
         if page == last_page:
-            params['next_page'] = ''
+            params["next_page"] = ""
         else:
-            params['next_page'] = 'page' + str(page + 1) + '.html'
+            params["next_page"] = "page" + str(page + 1) + ".html"
         if page == 1:
-            params['previous_page'] = ''
+            params["previous_page"] = ""
             make_list(
                 chunk,
                 "_site/index.html",
@@ -341,7 +345,7 @@ def main():
                 **params
             )
         else:
-            params['previous_page'] = 'page' + str(page - 1) + '.html'
+            params["previous_page"] = "page" + str(page - 1) + ".html"
         make_list(
             chunk,
             "_site/page" + str(page) + ".html",
@@ -367,11 +371,22 @@ def main():
             catpost[cat],
             "_site/" + slugify(cat) + ".html",
             list_layout,
-            item_layout,
+            item_nosummary_layout,
             category_title_layout,
             None,
             **params
         )
+
+    # Create archive page
+    make_list(
+        blog_posts,
+        "_site/archives.html",
+        list_layout,
+        item_nosummary_layout,
+        archive_title_layout,
+        None,
+        **params
+    )
 
     # Create RSS feeds.
     nb_items = min(10, len(blog_posts))

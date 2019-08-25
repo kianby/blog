@@ -113,10 +113,6 @@ a:hover, a:active {
     color: rgb(36, 46, 43);
     vertical-align: baseline;
     font-size: 250%;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .banner div > h2 {
@@ -124,11 +120,8 @@ a:hover, a:active {
     font-size: 150%;
     color: rgb(56, 71, 67);
     vertical-align: baseline;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
+
 
 #menu-blog {
     float: right;
@@ -163,44 +156,9 @@ a:hover, a:active {
 footer {
     background: #f0f0f0;
     border-top: thin solid #e0e0e0;
+    margin-left: 2em;
+    margin-right: 2em;
     margin-top: 2em;
     padding: 1em 0;
     box-shadow: 0 100vh 0 100vh #f0f0f0;
-    text-align: center;
-}
-
-footer section p {
-    font-size: 0.8em;
-}
-
-footer a {
-    margin-right: 1em;
-}
-
-footer a:last-child {
-    margin-right: 0;
-}
-
-
-
-
-/* RSS */
-.rss {
-    padding: 0.3em 0.35em;
-    border-radius: 0.25em;
-    font-size: 0.75em;
-    font-weight: bold;
-}
-
-.rss:link, .rss:visited, .rss:hover, .rss:active {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.rss:link, .rss:visited {
-    background: #ff6600;
-}
-
-.rss:hover, .rss:active {
-    background: #ff8822;
 }
