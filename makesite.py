@@ -41,11 +41,12 @@ import unicodedata
 import locale
 
 # set user locale
-locale.setlocale(locale.LC_ALL, '') 
+locale.setlocale(locale.LC_ALL, "")
+
 
 def fread(filename):
     """Read file and close the file."""
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         return f.read()
 
 
@@ -55,23 +56,23 @@ def fwrite(filename, text):
     if not os.path.isdir(basedir):
         os.makedirs(basedir)
 
-    with open(filename, 'w') as f:
+    with open(filename, "w") as f:
         f.write(text)
 
 
 def log(msg, *args):
     """Log message with specified arguments."""
-    sys.stderr.write(msg.format(*args) + '\n')
+    sys.stderr.write(msg.format(*args) + "\n")
 
 
 def truncate(text, words=25):
     """Remove tags and truncate text to the specified number of words."""
-    return ' '.join(re.sub('(?s)<.*?>', ' ', text).split()[:words])
+    return " ".join(re.sub("(?s)<.*?>", " ", text).split()[:words])
 
 
 def read_headers(text):
     """Parse headers in text and yield (key, value, end-index) tuples."""
-    for match in re.finditer(r'\s*<!--\s*(.+?)\s*:\s*(.+?)\s*-->\s*|.+', text):
+    for match in re.finditer(r"\s*<!--\s*(.+?)\s*:\s*(.+?)\s*-->\s*|.+", text):
         if not match.group(1):
             break
         yield match.group(1), match.group(2), match.end()
@@ -79,10 +80,10 @@ def read_headers(text):
 
 def rfc_2822_format(date_str):
     """Convert yyyy-mm-dd date string to RFC 2822 format date string."""
-    d = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+    d = datetime.datetime.strptime(date_str, "%Y-%m-%d")
     dtuple = d.timetuple()
     dtimestamp = time.mktime(dtuple)
-    return utils.formatdate(dtimestamp) 
+    return utils.formatdate(dtimestamp)
 
 
 def slugify(value):
@@ -91,9 +92,11 @@ def slugify(value):
     underscores) and converts spaces to hyphens. Also strips leading and
     trailing whitespace.
     """
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub('[^\w\s-]', '', value).strip().lower()
-    return re.sub('[-\s]+', '-', value)
+    value = (
+        unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    )
+    value = re.sub("[^\w\s-]", "", value).strip().lower()
+    return re.sub("[-\s]+", "-", value)
 
 
 def read_content(filename):
@@ -102,12 +105,9 @@ def read_content(filename):
     text = fread(filename)
 
     # Read metadata and save it in a dictionary.
-    date_slug = os.path.basename(filename).split('.')[0]
-    match = re.search(r'^(?:(\d\d\d\d-\d\d-\d\d)-)?(.+)$', date_slug)
-    content = {
-        'date': match.group(1) or '1970-01-01',
-        'slug': match.group(2),
-    }
+    date_slug = os.path.basename(filename).split(".")[0]
+    match = re.search(r"^(?:(\d\d\d\d-\d\d-\d\d)-)?(.+)$", date_slug)
+    content = {"date": match.group(1) or "1970-01-01", "slug": match.group(2)}
 
     # Read headers.
     end = 0
@@ -118,20 +118,18 @@ def read_content(filename):
     text = text[end:]
 
     # Convert Markdown content to HTML.
-    if filename.endswith(('.md', '.mkd', '.mkdn', '.mdown', '.markdown')):
+    if filename.endswith((".md", ".mkd", ".mkdn", ".mdown", ".markdown")):
         try:
-            if _test == 'ImportError':
-                raise ImportError('Error forced by test')
+            if _test == "ImportError":
+                raise ImportError("Error forced by test")
             import commonmark
+
             text = commonmark.commonmark(text)
         except ImportError as e:
-            log('WARNING: Cannot render Markdown in {}: {}', filename, str(e))
+            log("WARNING: Cannot render Markdown in {}: {}", filename, str(e))
 
     # Update the dictionary with content and RFC 2822 date.
-    content.update({
-        'content': text,
-        'rfc_2822_date': rfc_2822_format(content['date'])
-    })
+    content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"])})
 
     return content
 
@@ -140,8 +138,8 @@ def clean_html_tag(text):
     """Remove HTML tags."""
     while True:
         original_text = text
-        text = re.sub('<\w+.*?>', '', text)
-        text = re.sub('<\/\w+>', '', text)
+        text = re.sub("<\w+.*?>", "", text)
+        text = re.sub("<\/\w+>", "", text)
         if original_text == text:
             break
     return text
@@ -149,14 +147,16 @@ def clean_html_tag(text):
 
 def render(template, **params):
     """Replace placeholders in template with values from params."""
-    return re.sub(r'{{\s*([^}\s]+)\s*}}',
-                  lambda match: str(params.get(match.group(1), match.group(0))),
-                  template)
+    return re.sub(
+        r"{{\s*([^}\s]+)\s*}}",
+        lambda match: str(params.get(match.group(1), match.group(0))),
+        template,
+    )
 
 
 def get_categories(page_params):
     cat = []
-    for s in page_params['category'].split(' '):
+    for s in page_params["category"].split(" "):
         if s.strip():
             cat.append(s.strip())
     return cat
@@ -170,27 +170,20 @@ def make_pages(src, dst, layout, **params):
         content = read_content(src_path)
 
         page_params = dict(params, **content)
-
-        # Populate placeholders in content if content-rendering is enabled.
-        # if page_params.get('render') == 'yes':
-        #     rendered_content = render(page_params['content'], **page_params)
-        #     page_params['content'] = rendered_content
-        #     content['content'] = rendered_content
-
         items.append(content)
 
         dst_path = render(dst, **page_params)
         output = render(layout, **page_params)
 
-        log('Rendering {} => {} ...', src_path, dst_path)
+        log("Rendering {} => {} ...", src_path, dst_path)
         fwrite(dst_path, output)
 
-    return sorted(items, key=lambda x: x['date'], reverse=True)
+    return sorted(items, key=lambda x: x["date"], reverse=True)
 
 
 def get_friendly_date(date_str):
-    dt = datetime.datetime.strptime(date_str, '%Y-%m-%d')
-    return dt.strftime('%d %b %Y') 
+    dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+    return dt.strftime("%d %b %Y")
 
 
 def make_posts(src, src_pattern, dst, layout, category_layout, **params):
@@ -202,10 +195,11 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
         content = read_content(src_path)
 
         page_params = dict(params, **content)
-        page_params['banner'] =' '
-        page_params['date_path'] = page_params['date'].replace('-', '/')
-        page_params['friendly_date'] = get_friendly_date(page_params['date'])
-        page_params['year'] = page_params['date'].split('-')[0]
+        page_params["header"] = ""
+        page_params["footer"] = ""
+        page_params["date_path"] = page_params["date"].replace("-", "/")
+        page_params["friendly_date"] = get_friendly_date(page_params["date"])
+        page_params["year"] = page_params["date"].split("-")[0]
 
         # categories
         categories = get_categories(page_params)
@@ -213,135 +207,199 @@ def make_posts(src, src_pattern, dst, layout, category_layout, **params):
         for category in categories:
             out_cat = render(category_layout, category=category, url=slugify(category))
             out_cats.append(out_cat.strip())
-        page_params['categories'] = categories
-        page_params['category_label'] = ''.join(out_cats)
+        page_params["categories"] = categories
+        page_params["category_label"] = "".join(out_cats)
 
-        summary_index = page_params['content'].find('<!-- more')
+        summary_index = page_params["content"].find("<!-- more")
         if summary_index > 0:
-            content['summary'] = clean_html_tag(render(page_params['content'][:summary_index], **page_params))
+            content["summary"] = clean_html_tag(
+                render(page_params["content"][:summary_index], **page_params)
+            )
 
-        content['year'] = page_params['year']
-        content['categories'] = page_params['categories']
-        content['category_label'] = page_params['category_label']
-        content['friendly_date'] = page_params['friendly_date']
+        content["year"] = page_params["year"]
+        content["categories"] = page_params["categories"]
+        content["category_label"] = page_params["category_label"]
+        content["friendly_date"] = page_params["friendly_date"]
         items.append(content)
 
         # TODO DEBUG
-        #print(page_params) 
-        #print(content)  
-        #break
+        # print(page_params)
+        # print(content)
+        # break
 
         dst_path = render(dst, **page_params)
         output = render(layout, **page_params)
 
-        log('Rendering {} => {} ...', src_path, dst_path)
+        log("Rendering {} => {} ...", src_path, dst_path)
         fwrite(dst_path, output)
 
-    return sorted(items, key=lambda x: x['date'], reverse=True)
+    return sorted(items, key=lambda x: x["date"], reverse=True)
 
 
-def make_list(posts, dst, list_layout, item_layout, banner_layout, **params):
+def make_list(
+    posts, dst, list_layout, item_layout, header_layout, footer_layout, **params
+):
     """Generate list page for a blog."""
+
+    # header
+    if header_layout is None:
+        params["header"] = ""
+    else:
+        header = render(header_layout, **params)
+        params["header"] = header
+
+    # footer
+    if footer_layout is None:
+        params["footer"] = ""
+    else:
+        footer = render(footer_layout, **params)
+        params["footer"] = footer
+
+    # content
     items = []
     for post in posts:
         item_params = dict(params, **post)
-        if 'summary' not in item_params:
-            item_params['summary'] = truncate(post['content'])
+        if "summary" not in item_params:
+            item_params["summary"] = truncate(post["content"])
         item = render(item_layout, **item_params)
         items.append(item)
-
-    if banner_layout is None:
-        params['banner'] = ''
-    else:
-        banner = render(banner_layout, **params)
-        params['banner'] = banner
-
-    params['content'] = ''.join(items)
+    params["content"] = "".join(items)
     dst_path = render(dst, **params)
     output = render(list_layout, **params)
 
-    log('Rendering list => {} ...', dst_path)
+    log("Rendering list => {} ...", dst_path)
     fwrite(dst_path, output)
 
 
 def main():
     # Create a new _site directory from scratch.
-    if os.path.isdir('_site'):
-        shutil.rmtree('_site')
-    shutil.copytree('static', '_site')
+    if os.path.isdir("_site"):
+        shutil.rmtree("_site")
+    shutil.copytree("static", "_site")
 
     # Default parameters.
     params = {
-        'title': 'Blog',
-        'subtitle': 'Lorem Ipsum',
-        'author': 'Admin',
-        'site_url': 'http://localhost:8000',
-        'current_year': datetime.datetime.now().year
+        "title": "Blog",
+        "subtitle": "Lorem Ipsum",
+        "author": "Admin",
+        "site_url": "http://localhost:8000",
+        "current_year": datetime.datetime.now().year,
     }
 
     # If params.json exists, load it.
-    if os.path.isfile('params.json'):
-        params.update(json.loads(fread('params.json')))
+    if os.path.isfile("params.json"):
+        params.update(json.loads(fread("params.json")))
 
     # Load layouts.
-    page_layout = fread('layout/page.html')
-    post_layout = fread('layout/post.html')
-    list_layout = fread('layout/list.html')
-    item_layout = fread('layout/item.html')
-    banner_layout = fread('layout/banner.html')
-    category_layout = fread('layout/category.html')
-    rss_xml = fread('layout/rss.xml')
-    rss_item_xml = fread('layout/rss_item.xml')
-    sitemap_xml = fread('layout/sitemap.xml')
-    sitemap_item_xml = fread('layout/sitemap_item.xml')
+    banner_layout = fread("layout/banner.html")
+    paging_layout = fread("layout/paging.html")
+    category_title_layout = fread("layout/category_title.html")
+    page_layout = fread("layout/page.html")
+    post_layout = fread("layout/post.html")
+    list_layout = fread("layout/list.html")
+    item_layout = fread("layout/item.html")
+    category_layout = fread("layout/category.html")
+    rss_xml = fread("layout/rss.xml")
+    rss_item_xml = fread("layout/rss_item.xml")
+    sitemap_xml = fread("layout/sitemap.xml")
+    sitemap_item_xml = fread("layout/sitemap_item.xml")
 
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
     list_layout = render(page_layout, content=list_layout)
 
     # Create blogs.
-    blog_posts = make_posts('posts', '**/*.md',
-                            '_site/{{ year }}/{{ slug }}.html',
-                            post_layout, category_layout, **params)
-
-    page_size = 10
-    page = 1
-    for chunk in [blog_posts[i:i + page_size] for i in range(0, len(blog_posts), page_size)]:
-        params['page'] = page
-        make_list(chunk, '_site/page' + str(page) + '.html',
-                list_layout, item_layout, banner_layout, **params)
-        page = page + 1
+    blog_posts = make_posts(
+        "posts",
+        "**/*.md",
+        "_site/{{ year }}/{{ slug }}.html",
+        post_layout,
+        category_layout,
+        **params
+    )
 
     # Create blog list pages.
-    make_list(blog_posts, '_site/index.html',
-              list_layout, item_layout, banner_layout, **params)
+    page_size = 10
+    chunk_posts = [blog_posts[i : i + page_size] for i in range(0, len(blog_posts), page_size)]
+    page = 1
+    last_page = len(chunk_posts)
+    for chunk in chunk_posts:
+        params["page"] = page
+        if page == last_page:
+            params['next_page'] = ''
+        else:
+            params['next_page'] = 'page' + str(page + 1) + '.html'
+        if page == 1:
+            params['previous_page'] = ''
+            make_list(
+                chunk,
+                "_site/index.html",
+                list_layout,
+                item_layout,
+                banner_layout,
+                paging_layout,
+                **params
+            )
+        else:
+            params['previous_page'] = 'page' + str(page - 1) + '.html'
+        make_list(
+            chunk,
+            "_site/page" + str(page) + ".html",
+            list_layout,
+            item_layout,
+            banner_layout,
+            paging_layout,
+            **params
+        )
+        page = page + 1
 
     # Create category pages
     catpost = {}
     for post in blog_posts:
-        for cat in post['categories']:
+        for cat in post["categories"]:
             if cat in catpost:
                 catpost[cat].append(post)
             else:
                 catpost[cat] = [post]
-    for cat in catpost.keys():        
-        make_list(catpost[cat], '_site/' + slugify(cat) + '.html',
-            list_layout, item_layout, None, **params)
-
-    #print(blog_posts)
+    for cat in catpost.keys():
+        params["category"] = cat
+        make_list(
+            catpost[cat],
+            "_site/" + slugify(cat) + ".html",
+            list_layout,
+            item_layout,
+            category_title_layout,
+            None,
+            **params
+        )
 
     # Create RSS feeds.
     nb_items = min(10, len(blog_posts))
-    make_list(blog_posts[:nb_items], '_site/rss.xml',
-              rss_xml, rss_item_xml, None, **params)
+    make_list(
+        blog_posts[:nb_items],
+        "_site/rss.xml",
+        rss_xml,
+        rss_item_xml,
+        None,
+        None,
+        **params
+    )
 
     # Create sitemap
-    make_list(blog_posts, '_site/sitemap.xml',
-              sitemap_xml, sitemap_item_xml, None, **params)
+    make_list(
+        blog_posts,
+        "_site/sitemap.xml",
+        sitemap_xml,
+        sitemap_item_xml,
+        None,
+        None,
+        **params
+    )
+
 
 # Test parameter to be set temporarily by unit tests.
 _test = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
