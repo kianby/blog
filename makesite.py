@@ -123,7 +123,8 @@ def read_content(filename):
 
     # Convert Markdown content to HTML.
     if filename.endswith((".md", ".mkd", ".mkdn", ".mdown", ".markdown")):
-        text = mistune.markdown(text)
+        clean_text = text.replace('<!-- more -->', '')
+        text = mistune.markdown(clean_text)
 
     # Update the dictionary with content and RFC 2822 date.
     content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"])})
@@ -218,6 +219,7 @@ def make_posts(
 
         # stacosys comments
         page_params["comment_count"] = 0
+        page_params["comments"] = ''
         if params["stacosys_url"]:
             req_url = params["stacosys_url"] + "/comments"
             query_params = dict(

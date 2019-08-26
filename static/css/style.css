@@ -56,7 +56,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
     font-optical-sizing: auto;
 }
 
-p {
+p, li {
     font-feature-settings: "kern", "onum", "liga";
     font-kerning: auto;
     font-language-override: normal;
