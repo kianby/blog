@@ -39,7 +39,7 @@ from pathlib import Path
 import unicodedata
 import locale
 import requests
-import commonmark
+import mistune
 
 # set user locale
 locale.setlocale(locale.LC_ALL, "")
@@ -123,7 +123,7 @@ def read_content(filename):
 
     # Convert Markdown content to HTML.
     if filename.endswith((".md", ".mkd", ".mkdn", ".mdown", ".markdown")):
-        text = commonmark.commonmark(text)
+        text = mistune.markdown(text)
 
     # Update the dictionary with content and RFC 2822 date.
     content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"])})
@@ -233,7 +233,7 @@ def make_posts(
                     avatar=comment.get("avatar", ""),
                     site=comment.get("site", ""),
                     date=comment["date"],
-                    content=commonmark.commonmark(comment["content"]),
+                    content=mistune.markdown(comment["content"]),
                 )
                 out_comments.append(out_comment)
             page_params["comments"] = "".join(out_comments)
