@@ -48,36 +48,6 @@ from pygments.formatters import html
 locale.setlocale(locale.LC_ALL, "")
 
 # initialize markdown
-def block_code(text, lang, inlinestyles=False, linenos=False):
-    if not lang:
-        text = text.strip()
-        return u'<pre><code>%s</code></pre>\n' % mistune.escape(text)
-
-    try:
-        lexer = get_lexer_by_name(lang, stripall=True)
-        formatter = HtmlFormatter(
-            noclasses=inlinestyles, linenos=linenos
-        )
-        code = highlight(text, lexer, formatter)
-        if linenos:
-            return '<div class="highlight-wrapper">%s</div>\n' % code
-        return code
-    except:
-        return '<pre class="%s"><code>%s</code></pre>\n' % (
-            lang, mistune.escape(text)
-        )
-
-
-class HighlightMixin(object):
-
-    options = {'escape': False, 'hard_wrap':True}
-
-    def block_code(self, text, lang):
-        # renderer has an options
-        inlinestyles = self.options.get('inlinestyles', False)
-        linenos = self.options.get('linenos', False)
-        return block_code(text, lang, inlinestyles, linenos)
-
 
 class HighlightRenderer(mistune.Renderer):
    
@@ -91,8 +61,6 @@ class HighlightRenderer(mistune.Renderer):
         formatter = html.HtmlFormatter()
         return highlight(code, lexer, formatter)
 
-#markdown_renderer = mistune.Renderer(escape=False, hard_wrap=True)
-#markdown = mistune.Markdown(renderer=HighlightMixin)
 renderer = HighlightRenderer()
 markdown = mistune.Markdown(renderer=renderer)
 
