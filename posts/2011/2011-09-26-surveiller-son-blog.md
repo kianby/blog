@@ -30,3 +30,7 @@ effectuée car on vient du réseau local et non pas de l'Internet.
 
 Il faut donc modifier la résolution des noms pour le réseau local ;
 différentes possibilités s'offrent à nous :
+
+- modifier le fichier host de la machine locale. C'est une solution simple mais inadaptée si la machine est un portable car elle ne pourra plus accéder au blog si on se connecte ailleurs que chez soi.
+- modifier le fichier host de la box ADSL (c'est possible sur une SFR box). C'est élégant car la box jouant le rôle de serveur DNS pour les machines du réseau local, il n'y aucune configuration particulière des machines.
+- installer un serveur DNS local sur ... notre serveur auto-hébergé par exemple :-) C'est la solution que j'ai retenu. J'ai installé unbound dont la configuration est très simple pour surcharger ou ajouter des résolutions avec quelques directives local-data et local-data-ptr 
