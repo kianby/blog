@@ -124,7 +124,6 @@ a:hover, a:active {
 
 
 #menu-blog {
-    float: right;
     line-height: 96px;
     vertical-align: middle;
 }
@@ -132,6 +131,11 @@ a:hover, a:active {
 #menu-blog a {
     font-size: 150%;
     padding-right: 20px;
+}
+
+.post {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .summary {
