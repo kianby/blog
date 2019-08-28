@@ -142,11 +142,18 @@ def read_content(filename):
 
     # Convert Markdown content to HTML.
     if filename.endswith((".md", ".mkd", ".mkdn", ".mdown", ".markdown")):
+        summary_index = text.find("<!-- more")
+        if summary_index > 0:
+            summary = markdown(clean_html_tag(text[:summary_index]))
+        else:
+            summary = truncate(markdown(clean_html_tag(text)))
         clean_text = text.replace('<!-- more -->', '')
         text = markdown(clean_text)
+    else:
+        summary = truncate(text)
 
     # Update the dictionary with content and RFC 2822 date.
-    content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"])})
+    content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"]), "summary": summary})
 
     return content
 
@@ -230,12 +237,6 @@ def make_posts(
         page_params["categories"] = categories
         page_params["category_label"] = "".join(out_cats)
 
-        summary_index = page_params["content"].find("<!-- more")
-        if summary_index > 0:
-            content["summary"] = clean_html_tag(
-                render(page_params["content"][:summary_index], **page_params)
-            )
-
         # stacosys comments
         page_params["comment_count"] = 0
         page_params["comments"] = ''
@@ -300,8 +301,6 @@ def make_list(
     items = []
     for post in posts:
         item_params = dict(params, **post)
-        if "summary" not in item_params:
-            item_params["summary"] = truncate(post["content"])
         if "comment_count" in item_params and item_params["comment_count"]:
             if item_params["comment_count"] == 1:
                 item_params["comment_label"] = "1 commentaire"
