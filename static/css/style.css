@@ -148,10 +148,20 @@ a:hover, a:active {
 
 .meta {
     margin-top: 0px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
 }
 
 .meta > span {
+    display: inline;
+    margin-right: 10px;
+}
+
+.meta-post {
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+.meta-post > span {
     display: inline;
     margin-right: 10px;
 }
