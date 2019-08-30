@@ -23,6 +23,7 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+# Modifed by Yax
 
 """Make static website/blog with Python."""
 
@@ -178,31 +179,13 @@ def render(template, **params):
     )
 
 
-def get_categories(page_params):
-    cat = []
-    for s in page_params["category"].split(" "):
-        if s.strip():
-            cat.append(s.strip())
-    return cat
-
-
-def make_pages(src, dst, layout, **params):
-    """Generate pages from page content."""
-    items = []
-
-    for src_path in glob.glob(src):
-        content = read_content(src_path)
-
-        page_params = dict(params, **content)
-        items.append(content)
-
-        dst_path = render(dst, **page_params)
-        output = render(layout, **page_params)
-
-        log("Rendering {} => {} ...", src_path, dst_path)
-        fwrite(dst_path, output)
-
-    return sorted(items, key=lambda x: x["date"], reverse=True)
+def get_header_list_value(header_name, page_params):
+    l = []
+    if header_name in page_params:
+        for s in page_params[header_name].split(" "):
+            if s.strip():
+                l.append(s.strip())
+    return l
 
 
 def get_friendly_date(date_str):
@@ -220,6 +203,10 @@ def make_posts(
         src_path = str(posix_path)
         content = read_content(src_path)
 
+        # render text / summary for basic fields
+        content["content"] = render(content["content"], **params)
+        content["summary"] = render(content["summary"], **params)
+
         page_params = dict(params, **content)
         page_params["header"] = ""
         page_params["footer"] = ""
@@ -229,13 +216,18 @@ def make_posts(
         page_params["post_url"] = page_params["year"] + "/" + page_params["slug"]
 
         # categories
-        categories = get_categories(page_params)
+        categories = get_header_list_value('category', page_params)
         out_cats = []
         for category in categories:
             out_cat = render(category_layout, category=category, url=slugify(category))
             out_cats.append(out_cat.strip())
         page_params["categories"] = categories
         page_params["category_label"] = "".join(out_cats)
+
+        # tags
+        tags = get_header_list_value('tag', page_params)
+        page_params["tags"] = tags
+
 
         # stacosys comments
         page_params["comment_count"] = 0
@@ -265,6 +257,7 @@ def make_posts(
         content["post_url"] = page_params["post_url"]
         content["categories"] = page_params["categories"]
         content["category_label"] = page_params["category_label"]
+        content["tags"] = page_params["tags"]
         content["friendly_date"] = page_params["friendly_date"]
         content["comment_count"] = page_params["comment_count"]
         items.append(content)
@@ -441,7 +434,7 @@ def main():
         **params
     )
 
-    # Create RSS feeds.
+    # Create main RSS feed for 10 last entries
     nb_items = min(10, len(blog_posts))
     make_list(
         blog_posts[:nb_items],
@@ -452,6 +445,27 @@ def main():
         None,
         **params
     )
+
+    # Create RSS feed by tag
+    tagpost = {}
+    for post in blog_posts:
+        for tag in post["tags"]:
+            if tag in tagpost:
+                tagpost[tag].append(post)
+            else:
+                tagpost[tag] = [post]
+    for tag in tagpost.keys():
+        params["tag"] = tag
+        make_list(
+            tagpost[tag],
+            "_site/rss." + slugify(tag) + ".xml",
+            rss_xml,
+            rss_item_xml,
+            None,
+            None,
+            **params
+        )
+
 
     # Create sitemap
     make_list(
