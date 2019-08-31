@@ -1,8 +1,7 @@
 <div class="comment-detail">
     <img src="https://www.gravatar.com/avatar/{{ avatar }}.jpg" style="float:left; margin-right:10px" height="32" width="32">
     <div class="comment-body">    
-        <span class="comment-author">{{ author }}</span>
-        <!-- <span>{{ site }}</span> -->   
+        <span class="comment-author"><a href="{{ site }}">{{ author }}</a></span>
         </span><span> - {{ date }}</span>
         <p>{{ content }}</p>
     </div>
