@@ -248,11 +248,19 @@ def make_posts(
             comments = resp.json()["data"]
             out_comments = []
             for comment in comments:
+                site=comment.get("site", "")
+                if site:
+                    site_start = '<a href="' + site + '">'
+                    site_end = '</a>'
+                else:
+                    site_start = ''
+                    site_end = ''
                 out_comment = render(
                     comment_layout,
                     author=comment["author"],
                     avatar=comment.get("avatar", ""),
-                    site=comment.get("site", ""),
+                    site_start=site_start,
+                    site_end=site_end,
                     date=comment["date"],
                     content=markdown(comment["content"]),
                 )
