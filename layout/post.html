@@ -7,7 +7,6 @@
 
     {{ comments }}
 
-<!--
     <div id="comment-form">
         <strong>Votre commentaire</strong>
         <form role="form" action="/newcomment" autocomplete="off" method="post">
@@ -21,8 +20,10 @@
                     value="{{ stacosys_token }}">
                 <input class="hidden" id="url" name="url" type="text" placeholder="Article"
                     value="/{{ post_url }}">
-                <input class="hidden" id="captcha" name="captcha" type="text"
-                    placeholder="Etes vous humain ?">
+                <label class="remarque">Remarque</label>
+                <input class="remarque" name="remarque" 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                    placeholder="nom@domaine.com">
             </fieldset>
             <fieldset>
                 <textarea id="message" name="message" rows="4"
@@ -47,7 +48,6 @@
                 class="button--info">Prévisualiser</button>
         </form>
     </div>
--->
 
 </div>
 

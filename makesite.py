@@ -50,20 +50,22 @@ locale.setlocale(locale.LC_ALL, "")
 
 # initialize markdown
 
+
 class HighlightRenderer(mistune.Renderer):
-   
-    options = {'escape': False, 'hard_wrap':True}
-    
+
+    options = {"escape": False, "hard_wrap": True}
+
     def block_code(self, code, lang):
         if not lang:
-            return '\n<pre><code>%s</code></pre>\n' % \
-                mistune.escape(code)
+            return "\n<pre><code>%s</code></pre>\n" % mistune.escape(code)
         lexer = get_lexer_by_name(lang, stripall=True)
         formatter = html.HtmlFormatter()
         return highlight(code, lexer, formatter)
 
+
 renderer = HighlightRenderer()
 markdown = mistune.Markdown(renderer=renderer)
+
 
 def fread(filename):
     """Read file and close the file."""
@@ -148,13 +150,19 @@ def read_content(filename):
             summary = markdown(clean_html_tag(text[:summary_index]))
         else:
             summary = truncate(markdown(clean_html_tag(text)))
-        clean_text = text.replace('<!-- more -->', '')
+        clean_text = text.replace("<!-- more -->", "")
         text = markdown(clean_text)
     else:
         summary = truncate(text)
 
     # Update the dictionary with content and RFC 2822 date.
-    content.update({"content": text, "rfc_2822_date": rfc_2822_format(content["date"]), "summary": summary})
+    content.update(
+        {
+            "content": text,
+            "rfc_2822_date": rfc_2822_format(content["date"]),
+            "summary": summary,
+        }
+    )
 
     return content
 
@@ -216,7 +224,7 @@ def make_posts(
         page_params["post_url"] = page_params["year"] + "/" + page_params["slug"]
 
         # categories
-        categories = get_header_list_value('category', page_params)
+        categories = get_header_list_value("category", page_params)
         out_cats = []
         for category in categories:
             out_cat = render(category_layout, category=category, url=slugify(category))
@@ -225,13 +233,12 @@ def make_posts(
         page_params["category_label"] = "".join(out_cats)
 
         # tags
-        tags = get_header_list_value('tag', page_params)
+        tags = get_header_list_value("tag", page_params)
         page_params["tags"] = tags
-
 
         # stacosys comments
         page_params["comment_count"] = 0
-        page_params["comments"] = ''
+        page_params["comments"] = ""
         if params["stacosys_url"]:
             req_url = params["stacosys_url"] + "/comments"
             query_params = dict(
@@ -465,7 +472,6 @@ def main():
             None,
             **params
         )
-
 
     # Create sitemap
     make_list(
