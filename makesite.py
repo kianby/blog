@@ -202,7 +202,7 @@ def get_friendly_date(date_str):
 
 
 def make_posts(
-    src, src_pattern, dst, layout, category_layout, comment_layout, **params
+    src, src_pattern, dst, layout, category_layout, comment_layout, comment_detail_layout, **params
 ):
     """Generate posts from posts directory."""
     items = []
@@ -236,10 +236,18 @@ def make_posts(
         tags = get_header_list_value("tag", page_params)
         page_params["tags"] = tags
 
-        # stacosys comments
+        #  comments
+        page_comment = page_params.get("comment", "yes")
+        if page_comment == "no":
+            is_page_comment_enabled = False
+        else:
+            is_page_comment_enabled = True
+
         page_params["comment_count"] = 0
         page_params["comments"] = ""
-        if params["stacosys_url"]:
+        page_params["comment"] = ""
+
+        if params["stacosys_url"] and is_page_comment_enabled:
             req_url = params["stacosys_url"] + "/comments"
             query_params = dict(
                 token=params["stacosys_token"], url="/" + page_params["post_url"] + "/"
@@ -256,7 +264,7 @@ def make_posts(
                     site_start = ''
                     site_end = ''
                 out_comment = render(
-                    comment_layout,
+                    comment_detail_layout,
                     author=comment["author"],
                     avatar=comment.get("avatar", ""),
                     site_start=site_start,
@@ -267,6 +275,7 @@ def make_posts(
                 out_comments.append(out_comment)
             page_params["comments"] = "".join(out_comments)
             page_params["comment_count"] = len(comments)
+            page_params["comment"] = render(comment_layout, **page_params)
 
         content["year"] = page_params["year"]
         content["post_url"] = page_params["post_url"]
@@ -361,6 +370,7 @@ def main():
     category_title_layout = fread("layout/category_title.html")
     category_layout = fread("layout/category.html")
     comment_layout = fread("layout/comment.html")
+    comment_detail_layout = fread("layout/comment-detail.html")
     rss_xml = fread("layout/rss.xml")
     rss_item_xml = fread("layout/rss_item.xml")
     sitemap_xml = fread("layout/sitemap.xml")
@@ -378,6 +388,7 @@ def main():
         post_layout,
         category_layout,
         comment_layout,
+        comment_detail_layout,
         **params
     )
 
