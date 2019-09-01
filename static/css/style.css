@@ -48,12 +48,22 @@
 
 /* General */
 
-html, body, h1, h2, h3, h4, h5, h6 {
+html {
+    font-family: 'Merriweather', serif;
+    font-feature-settings: "dlig", "liga", "lnum", "kern";
+    font-kerning: auto;
+    font-language-override: normal;
+    font-optical-sizing: auto;    
+    font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
     font-feature-settings: "dlig", "liga", "lnum", "kern";
     font-kerning: auto;
     font-language-override: normal;
     font-optical-sizing: auto;
+    font-size: 3.2rem;
 }
 
 p, li {
@@ -62,7 +72,7 @@ p, li {
     font-language-override: normal;
     font-optical-sizing: auto;    
     font-family: Georgia, serif;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-stretch: 100%;
     font-weight: 400;
     font-size-adjust: none;
@@ -85,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 200%;
+    font-size: 4.2rem;
 }
 
 a:link, a:visited {
@@ -103,7 +113,7 @@ a:hover, a:active {
     background-size:cover;
     background-position:center;
     width: 100%;
-    line-height: 132px;
+    line-height: 13rem;
     text-align: center;
     vertical-align: middle;
     font-family: "Merriweather", serif;    
@@ -112,12 +122,12 @@ a:hover, a:active {
 .banner div > h1 {
     color: rgb(36, 46, 43);
     vertical-align: baseline;
-    font-size: 250%;
+    font-size: 5.5rem;
 }
 
 .banner div > h2 {
     font-weight: 400;
-    font-size: 150%;
+    font-size: 2.3rem;
     color: rgb(56, 71, 67);
     vertical-align: baseline;
 }
@@ -129,41 +139,41 @@ a:hover, a:active {
 }
 
 #menu-blog a {
-    font-size: 150%;
-    padding-right: 20px;
+    font-size: 2.3rem;
+    padding-right: 2rem;
 }
 
 .post {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .summary {
-    margin-top: 0px;
+    margin-top: 0rem;
 }
 
 .article > h1 {
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
 
 .meta {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
 .meta > span {
     display: inline;
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 
 .meta-post {
-    margin-top: 0px;
-    margin-bottom: 24px;
+    margin-top: 0rem;
+    margin-bottom: 2.4rem;
 }
 
 .meta-post > span {
     display: inline;
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 
 .hidden { 
@@ -175,10 +185,10 @@ a:hover, a:active {
 }
 
 .comment-separator { 
-    height:1px;
+    height:0.1rem;
     background:#717171;
-    border-bottom:2px solid #6E9CC7;
-    margin-bottom: 8px;
+    border-bottom:0.2rem solid #6E9CC7;
+    margin-bottom: 1rem;
 }
 
 .comment-indicator {
@@ -190,20 +200,20 @@ a:hover, a:active {
 }
 
 .comment-detail {
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
 }
 
 .comment-body {
-    margin-left: 42px;
+    margin-left: 4.2rem;
 }
 
 /* Footer */
 footer {
     background: #f0f0f0;
     border-top: thin solid #e0e0e0;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 2em;
-    padding: 1em 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
     box-shadow: 0 100vh 0 100vh #f0f0f0;
 }
