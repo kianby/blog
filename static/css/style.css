@@ -88,6 +88,7 @@ p, li {
     line-height: 38px;
     vertical-align: baseline;
     color: rgb(56, 71, 67);
+    margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
