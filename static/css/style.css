@@ -85,7 +85,7 @@ p, li {
     font-variant-numeric: normal;
     font-variant-position: normal;
     font-variation-settings: normal;    
-    line-height: 38px;
+    line-height: 32px;
     vertical-align: baseline;
     color: rgb(56, 71, 67);
     margin-bottom: 2rem;
@@ -102,6 +102,10 @@ h1 {
 a:link, a:visited {
     color: #05bf85;
     text-decoration: none;
+}
+
+li {
+    margin-bottom: 0rem;
 }
 
 a:hover, a:active {
