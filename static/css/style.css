@@ -222,3 +222,12 @@ footer {
     padding: 1rem 0;
     box-shadow: 0 100vh 0 100vh #f0f0f0;
 }
+
+/* extend Knacss */
+
+pre {
+    padding: 0.8em 1.4em;
+    border-left: 3px solid #124e8a;
+    background: #f4f4f4;
+}
+
