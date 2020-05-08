@@ -228,6 +228,7 @@ footer {
 pre {
     padding: 0.8em 1.4em;
     border-left: 3px solid #124e8a;
+    border-radius: 0.3em;
     background: #f4f4f4;
 }
 
