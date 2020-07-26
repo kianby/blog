@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/knacss.css">
+    <link rel="stylesheet" type="text/css" href="/css/milligram.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments-default.css">
 
@@ -42,33 +42,37 @@
 </head>
 <body>
 
-    <div class="grid-2 mod">
-        <div style="padding-top: 0.2em; padding-left: 0.4em;"><a href="/"><img src="/logo.png"></img></a></div>
-        <div class="txtright" id="menu-blog">
-            <a href="/">Blog</a>
-            <a href="/archives/">Archives</a>
+    <div class="container">
+
+        <div class="row">
+            <div class="column">
+                <a href="/"><img src="/mstile-70x70.png"/></a>
+            </div>
+            <div class="column column-50 column-offset-25 txtright" id="menu-blog">
+                <a href="/">Blog</a>
+                <a href="/archives/">Archives</a>
+            </div>
         </div>
-    </div>
 
-    {{ header }}
+        {{ header }}
 
-    <div class="grid-4">
-        <div></div>
-        <div class="col-2 post">{{ content }}</div>
-        <div></div>
-    </div>
-
-    {{ footer }}
-
-    <footer>
-    <div class="grid-2">
-        <div><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img src="/license.png"></a></div>
-        <div class="txtright">
-            <a href="https://github.com/kianby/blog">Makesite.py</a>&nbsp;
-            <a href="https://github.com/kianby/stacosys">Stacosys</a>
+        <div class="row">
+            <div class="column column-80 column-offset-10">{{ content }}</div>
         </div>
+
+        {{ footer }}
+
+        <footer>
+        <div class="row">
+            <div class="column"><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/"><img src="/license.png"></a></div>
+            <div class="column column-offset-50 txtright">
+                <a href="https://github.com/kianby/blog">Makesite.py</a>&nbsp;
+                <a href="https://github.com/kianby/stacosys">Stacosys</a>
+            </div>
+        </div>
+        </footer>
+
     </div>
-    </footer>
 
 </body>
 </html>
