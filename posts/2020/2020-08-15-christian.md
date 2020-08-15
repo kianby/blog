@@ -6,5 +6,5 @@ Mon parrain a toujours aimé le 15 août et sa fête annuelle au village. Le gro
 
 ![Mon parrain](/images/2020/christian.png)
 
-Quatre ans déjà que tu nous a quitté... tu nous manques toujours autant mais on se souvient des bons moments.  
+Quatre ans déjà que tu nous as quitté. Tu nous manques toujours autant, nous nous souvenons des bons moments.  
 
