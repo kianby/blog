@@ -7,9 +7,9 @@
     <form role="form" action="/newcomment" autocomplete="off" method="post">
         <fieldset>
             <input id="author" name="author" type="text" placeholder="Nom ou Surnom" required>
-            <input id="site" name="site" type="text" placeholder="Site Web">
+            <input id="site" name="site" type="text" placeholder="Site Web (optionnel)">
             <input style="display:none" id="email" name="email" type="text"
-                placeholder="Adresse email pour Gravatar (non publié)" onchange="grabatar()">
+                placeholder="Adresse email pour Gravatar (optionnelle, ni stockée ni publiée)" onchange="grabatar()">
             <img src="" id="gravatar" height="32" width="32" style="display:none">
             <input class="hidden" id="token" name="token" type="text" placeholder="Blog"
                 value="{{ stacosys_token }}">
@@ -26,16 +26,6 @@
             <div id="preview-container" style="display:none">
                 <p>Prévisualisation :</p>
                 <div id="preview" class="preview-markdown"></div>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div>
-                <em>Le site Web est optionel</em><br>
-                <em>Le message peut être rédigé au format <a href="http://daringfireball.net/projects/markdown/"
-                        target="_blank">Markdown</a></em>
-            </div>
-            <div id="helpgravatar" style="display:none">
-                <em>L'e-mail sert uniquement à retrouver votre <a href="https://fr.gravatar.com/">Gravatar</a></em>
             </div>
         </fieldset>
         <button type="submit" class="button--primary">Envoyer</button>
@@ -56,8 +46,7 @@
 
     function showbonus() {
         document.getElementById("email").style.display = '';
-        document.getElementById("markdown").style.display = '';
-        document.getElementById("helpgravatar").style.display = '';
+        document.getElementById("help").style.display = '';
     }
 
     window.onload = showbonus;
