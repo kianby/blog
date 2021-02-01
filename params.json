@@ -4,5 +4,6 @@
     "author": "Yax",
     "site_url": "https://blogduyax.madyanne.fr",
     "stacosys_token": "9fb3fc042c572cb831005fd16186126765140fa2bd9bb2d4a28e47a9457dc26c",
-    "stacosys_url": "http://stacosys:8100"
+    "stacosys_url": "http://stacosys:8100",
+    "external_check": "./check_git.sh"
 }
