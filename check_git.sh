@@ -7,8 +7,8 @@ UPSTREAMHASH=$(git rev-parse master@{upstream})
 if [ "$HEADHASH" != "$UPSTREAMHASH" ]
 then
   echo "remote has changed"
-  exit 0
+  exit 1
 else
   echo "no change"
-  exit 1
+  exit 0
 fi 
