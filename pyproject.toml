@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "blogduyax"
-version = "0.1.0"
+version = "1.0.0"
 description = ""
 authors = ["Yax"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 requests = "^2.25.1"
-Pygments = "^2.7.3"
+Pygments = "^2.7.4"
 mistune = "^0.8.4"
 
 [tool.poetry.dev-dependencies]
