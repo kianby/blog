@@ -221,7 +221,7 @@ def make_posts(
         page_params["date_path"] = page_params["date"].replace("-", "/")
         page_params["friendly_date"] = get_friendly_date(page_params["date"])
         page_params["year"] = page_params["date"].split("-")[0]
-        page_params["post_url"] = page_params["year"] + "/" + page_params["slug"]
+        page_params["post_url"] = page_params["year"] + "/" + page_params["slug"] + "/"
 
         # categories
         categories = get_header_list_value("category", page_params)
@@ -250,7 +250,7 @@ def make_posts(
         if params["stacosys_url"] and is_page_comment_enabled:
             req_url = params["stacosys_url"] + "/comments"
             query_params = dict(
-                token=params["stacosys_token"], url="/" + page_params["post_url"] + "/"
+                token=params["stacosys_token"], url="/" + page_params["post_url"] 
             )
             resp = requests.get(url=req_url, params=query_params)
             comments = resp.json()["data"]
