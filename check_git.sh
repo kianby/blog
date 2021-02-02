@@ -1,9 +1,14 @@
 #!/bin/bash
 
-if git diff-index --quiet HEAD --; then
-    # no change
-    exit 0
+git fetch
+HEADHASH=$(git rev-parse HEAD)
+UPSTREAMHASH=$(git rev-parse master@{upstream})
+
+if [ "$HEADHASH" != "$UPSTREAMHASH" ]
+then
+  echo "remote has changed"
+  exit 0
 else
-    # change
-    exit 1
-fi
+  echo "no change"
+  exit 1
+fi 
