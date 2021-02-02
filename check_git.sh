@@ -9,6 +9,6 @@ then
   echo "remote has changed"
   exit 1
 else
-  echo "no change"
+  #echo "no change"
   exit 0
 fi 
