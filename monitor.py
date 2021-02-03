@@ -43,7 +43,6 @@ while True:
         time.sleep(60)
         if initial_count != get_nb_of_comments():
             exit_program()
-        break
     # check if git repo changed every 15 minutes
     if external_check_cmd and os.system(external_check_cmd):
         exit_program()
