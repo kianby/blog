@@ -250,7 +250,7 @@ def make_posts(
         if params["stacosys_url"] and is_page_comment_enabled:
             req_url = params["stacosys_url"] + "/comments"
             query_params = dict(
-                token=params["stacosys_token"], url="/" + page_params["post_url"] 
+                url="/" + page_params["post_url"] 
             )
             resp = requests.get(url=req_url, params=query_params)
             comments = resp.json()["data"]
@@ -349,8 +349,7 @@ def main():
         "subtitle": "Lorem Ipsum",
         "author": "Admin",
         "site_url": "http://localhost:8000",
-        "current_year": datetime.datetime.now().year,
-        "stacosys_token": "",
+        "current_year": datetime.datetime.now().year,        
         "stacosys_url": "",
     }
 
