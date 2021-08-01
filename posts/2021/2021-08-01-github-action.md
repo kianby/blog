@@ -1,4 +1,4 @@
-<!-- title: Github action et Docker -->
+<!-- title: Github et Docker -->
 <!-- category: Développement -->
 
 J'ai utilisé les workflows de Github, appelés *"Github Actions"* pour constuire et publier mes images Docker sur le Docker Hub. Jusqu'à aujourd'hui, c'était un process géré *à la papa* ; j'avais un projet commun avec tous mes docker files, la plupart n'était plus utilisés depuis un bail et je lançais les quelques commandes docker build / tag / push à la demande. 
