@@ -3,14 +3,16 @@
 
 import sys
 import os
-import requests 
+import requests
 import time
 import json
+
 
 def fread(filename):
     """Read file and close the file."""
     with open(filename, "r") as f:
         return f.read()
+
 
 def get_nb_of_comments():
     req_url = params["stacosys_url"] + "/comments/count"
@@ -20,8 +22,10 @@ def get_nb_of_comments():
     resp = requests.get(url=req_url, params=query_params)
     return 0 if not resp.ok else int(resp.json()["count"])
 
+
 def exit_program():
     sys.exit(0)
+
 
 # Default parameters.
 params = {

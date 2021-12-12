@@ -27,35 +27,36 @@
 
 """Make static website/blog with Python."""
 
-import sys
-import os
-import shutil
-import re
-import glob
-import json
+import argparse
 import datetime
+import json
+import locale
+import os
+import re
+import shutil
+import sys
 import time
+import unicodedata
 from email import utils
 from pathlib import Path
-import unicodedata
-import locale
-import requests
+
 import mistune
+import requests
 from pygments import highlight
-from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html
+from pygments.lexers import get_lexer_by_name
 
 # set user locale
 locale.setlocale(locale.LC_ALL, "")
+
 
 # initialize markdown
 
 
 class HighlightRenderer(mistune.Renderer):
-
     options = {"escape": False, "hard_wrap": True}
 
-    def block_code(self, code, lang):
+    def block_code(self, code, lang=None):
         if not lang:
             return "\n<pre><code>%s</code></pre>\n" % mistune.escape(code)
         lexer = get_lexer_by_name(lang, stripall=True)
@@ -202,7 +203,7 @@ def get_friendly_date(date_str):
 
 
 def make_posts(
-    src, src_pattern, dst, layout, category_layout, comment_layout, comment_detail_layout, **params
+        src, src_pattern, dst, layout, category_layout, comment_layout, comment_detail_layout, **params
 ):
     """Generate posts from posts directory."""
     items = []
@@ -250,13 +251,13 @@ def make_posts(
         if params["stacosys_url"] and is_page_comment_enabled:
             req_url = params["stacosys_url"] + "/comments"
             query_params = dict(
-                url="/" + page_params["post_url"] 
+                url="/" + page_params["post_url"]
             )
             resp = requests.get(url=req_url, params=query_params)
             comments = resp.json()["data"]
             out_comments = []
             for comment in comments:
-                site=comment.get("site", "")
+                site = comment.get("site", "")
                 if site:
                     site_start = '<a href="' + site + '">'
                     site_end = '</a>'
@@ -296,7 +297,7 @@ def make_posts(
 
 
 def make_list(
-    posts, dst, list_layout, item_layout, header_layout, footer_layout, **params
+        posts, dst, list_layout, item_layout, header_layout, footer_layout, **params
 ):
     """Generate list page for a blog."""
 
@@ -323,7 +324,7 @@ def make_list(
                 item_params["comment_label"] = "1 commentaire"
             else:
                 item_params["comment_label"] = (
-                    str(item_params["comment_count"]) + " commentaires"
+                        str(item_params["comment_count"]) + " commentaires"
                 )
         else:
             item_params["comment_label"] = ""
@@ -337,7 +338,7 @@ def make_list(
     fwrite(dst_path, output)
 
 
-def main():
+def main(param_file):
     # Create a new _site directory from scratch.
     if os.path.isdir("_site"):
         shutil.rmtree("_site")
@@ -349,13 +350,13 @@ def main():
         "subtitle": "Lorem Ipsum",
         "author": "Admin",
         "site_url": "http://localhost:8000",
-        "current_year": datetime.datetime.now().year,        
+        "current_year": datetime.datetime.now().year,
         "stacosys_url": "",
     }
 
-    # If params.json exists, load it.
-    if os.path.isfile("params.json"):
-        params.update(json.loads(fread("params.json")))
+    log("use params from " + param_file)
+    if os.path.isfile(param_file):
+        params.update(json.loads(fread(param_file)))
 
     # Load layouts.
     banner_layout = fread("layout/banner.html")
@@ -394,7 +395,7 @@ def main():
     # Create blog list pages.
     page_size = 10
     chunk_posts = [
-        blog_posts[i : i + page_size] for i in range(0, len(blog_posts), page_size)
+        blog_posts[i: i + page_size] for i in range(0, len(blog_posts), page_size)
     ]
     page = 1
     last_page = len(chunk_posts)
@@ -429,17 +430,17 @@ def main():
         page = page + 1
 
     # Create category pages
-    catpost = {}
+    cat_post = {}
     for post in blog_posts:
         for cat in post["categories"]:
-            if cat in catpost:
-                catpost[cat].append(post)
+            if cat in cat_post:
+                cat_post[cat].append(post)
             else:
-                catpost[cat] = [post]
-    for cat in catpost.keys():
+                cat_post[cat] = [post]
+    for cat in cat_post.keys():
         params["category"] = cat
         make_list(
-            catpost[cat],
+            cat_post[cat],
             "_site/" + slugify(cat) + "/index.html",
             list_layout,
             item_nosummary_layout,
@@ -472,17 +473,17 @@ def main():
     )
 
     # Create RSS feed by tag
-    tagpost = {}
+    tag_post = {}
     for post in blog_posts:
         for tag in post["tags"]:
-            if tag in tagpost:
-                tagpost[tag].append(post)
+            if tag in tag_post:
+                tag_post[tag].append(post)
             else:
-                tagpost[tag] = [post]
-    for tag in tagpost.keys():
+                tag_post[tag] = [post]
+    for tag in tag_post.keys():
         params["tag"] = tag
         make_list(
-            tagpost[tag],
+            tag_post[tag],
             "_site/rss." + slugify(tag) + ".xml",
             rss_xml,
             rss_item_xml,
@@ -506,6 +507,8 @@ def main():
 # Test parameter to be set temporarily by unit tests.
 _test = None
 
-
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description='Makesite')
+    parser.add_argument('--params', dest='param_file', type=str, default="params.json", help='Custom param file')
+    args = parser.parse_args()
+    main(args.param_file)
