@@ -1,11 +1,11 @@
 site:
 	./makesite.py
 
-serve: site
-	cd _site && python -m SimpleHTTPServer 2> /dev/null || python3 -m http.server
-
 site_local:
 	./makesite.py --params params-local.json
+
+serve: site_local
+	cd _site && python -m SimpleHTTPServer 2> /dev/null || python3 -m http.server
 
 dock: site_local
 	docker run --name bloglocal -p 8000:8000 -v `pwd`/_site:/usr/share/nginx/html:ro -v `pwd`/local-nginx.conf:/etc/nginx/nginx.conf:ro nginx 
