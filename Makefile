@@ -8,11 +8,17 @@ serve: site_local
 	cd _site && python -m SimpleHTTPServer 2> /dev/null || python3 -m http.server
 
 dock: site_local
-	docker run --name bloglocal -p 80:80 -p 443:443 -v `pwd`/_site:/usr/share/nginx/html:ro -v `pwd`/nginx/nginx.conf:/etc/nginx/nginx.conf:ro -v `pwd`/nginx/dhparam.pem:/etc/nginx/dhparam.pem:ro -v `pwd`/ssl:/etc/nginx/ssl:ro nginx 
+	$(shell docker start --interactive bloglocal || docker run --name bloglocal -p 80:80 -p 443:443 -v `pwd`/_site:/usr/share/nginx/html:ro -v `pwd`/nginx/nginx.conf:/etc/nginx/nginx.conf:ro -v `pwd`/nginx/dhparam.pem:/etc/nginx/dhparam.pem:ro -v `pwd`/ssl:/etc/nginx/ssl:ro nginx)
 
 undock:
 	docker stop bloglocal
-	docker rm bloglocal
+	
+certs:
+	mkdir -p ssl
+	cd ssl ; wget -N https://traefik.me/cert.pem
+	cd ssl ; wget -N https://traefik.me/chain.pem
+	cd ssl ; wget -N https://traefik.me/fullchain.pem 
+	cd ssl ; wget -N https://traefik.me/privkey.pem
 
 venv2:
 	virtualenv ~/.venv/makesite
