@@ -6,6 +6,7 @@ rm -rf /blog
 git clone https://github.com/kianby/blog.git
 cd /blog
 ~/.poetry/bin/poetry install
+~/.poetry/bin/poetry shell
 make
 
 # nginx serve
