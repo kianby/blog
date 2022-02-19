@@ -53,7 +53,7 @@ locale.setlocale(locale.LC_ALL, "")
 # initialize markdown
 
 
-class HighlightRenderer(mistune.Renderer):
+class HighlightRenderer(mistune.HTMLRenderer):
     options = {"escape": False, "hard_wrap": True}
 
     def block_code(self, code, lang=None):
@@ -64,8 +64,7 @@ class HighlightRenderer(mistune.Renderer):
         return highlight(code, lexer, formatter)
 
 
-renderer = HighlightRenderer()
-markdown = mistune.Markdown(renderer=renderer)
+markdown = mistune.Markdown(renderer=HighlightRenderer())
 
 
 def fread(filename):
