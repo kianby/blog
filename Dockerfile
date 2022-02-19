@@ -1,7 +1,8 @@
 FROM nginx:1.19.0-alpine
 
-RUN apk update && apk add bash git python3 make tzdata && rm -rf /var/cache/apk/* 
-RUN python3 -m pip install requests mistune pygments toml
+RUN apk update && apk add bash git python3 make tzdata curl && rm -rf /var/cache/apk/* 
+#RUN python3 -m pip install requests mistune pygments toml
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
 # install locales

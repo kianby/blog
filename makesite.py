@@ -53,7 +53,7 @@ locale.setlocale(locale.LC_ALL, "")
 # initialize markdown
 
 
-class HighlightRenderer(mistune.HTMLRenderer):
+class HighlightRenderer(mistune.Renderer):
     options = {"escape": False, "hard_wrap": True}
 
     def block_code(self, code, lang=None):
