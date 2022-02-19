@@ -6,12 +6,11 @@ rm -rf /blog
 git clone https://github.com/kianby/blog.git
 cd /blog
 ~/.poetry/bin/poetry install
-~/.poetry/bin/poetry shell
-make
+~/.poetry/bin/poetry run make
 
 # nginx serve
 #nginx -g 'daemon off;'
 nginx
 
 # exit on change in stacosys or Git repo
-python3 monitor.py
+~/.poetry/bin/poetry run python3 monitor.py
