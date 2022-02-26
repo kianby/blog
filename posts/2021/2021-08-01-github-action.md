@@ -3,7 +3,7 @@
 
 J'ai utilisé les workflows de Github, appelés *"Github Actions"* pour constuire et publier mes images Docker sur le Docker Hub. Jusqu'à aujourd'hui, c'était un process géré *à la papa* ; j'avais un projet commun avec tous mes docker files, la plupart n'était plus utilisés depuis un bail et je lançais les quelques commandes docker build / tag / push à la demande. 
 
-Et puis la finalisation de la version 2.0 de Stacosys qui est une version orientée qualité (suppression de demi-fonctionalités jamais mises en oeuvre, ajout de tests unitaires, simplification de la base de code existante), m'a ramené sur le sujet de la CI/CD complètement laissé de côté dans mes projets perso.
+Et puis la finalisation de la version 2.0 de Stacosys qui est une version orientée qualité (suppression de demi-fonctionnalités jamais mises en œuvre, ajout de tests unitaires, simplification de la base de code existante), m'a ramené sur le sujet de la CI/CD complètement laissé de côté dans mes projets perso.
 
 J'ai donc fait la liste des images réellement utilisées dans mon docker-compose : 
 - les dockerfiles qui correspondent à un projet de dev ont été rapatriés dans le projet Github correspondant,

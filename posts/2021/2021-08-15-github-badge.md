@@ -43,7 +43,7 @@ Le workflow est exécuté à chaque push sur n'importe quelle branche. On défin
 
 - les version de Python : je retiens la première 3.9 (GA) et la dernière mineure de la 3.9
 - les versions de Poetry, le système de build : la dernière stable me suffit, ce n'est pas Poetry que je teste.
-- les systèmes d'exploitation : le tryptique classique Linux / MacOS / Ms Win 
+- les systèmes d'exploitation : le triptyque classique Linux / MacOS / Ms Win 
 
 A partir de cette matrice, le workflow va calculer le produit cartésien de tous les environnements de tests et dérouler les actions sur chacun. On s'appuie sur l'action poetry du [marketplace Github](https://github.com/marketplace?type=actions) pour avoir un workflow plus concis et plus lisible :
 
