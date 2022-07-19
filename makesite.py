@@ -295,6 +295,41 @@ def make_posts(
     return sorted(items, key=lambda x: x["date"], reverse=True)
 
 
+def make_notes(
+        src, src_pattern, dst, layout, **params
+):
+    """Generate notes from notes directory."""
+    items = []
+
+    for posix_path in Path(src).glob(src_pattern):
+        src_path = str(posix_path)
+        content = read_content(src_path)
+
+        # render text / summary for basic fields
+        content["content"] = render(content["content"], **params)
+        content["summary"] = render(content["summary"], **params)
+
+        page_params = dict(params, **content)
+        page_params["header"] = ""
+        page_params["footer"] = ""
+        page_params["friendly_date"] = ""
+        page_params["category_label"] = ""        
+        page_params["post_url"] = "notes/" + page_params["slug"] + "/"
+
+        content["post_url"] = page_params["post_url"]
+        content["friendly_date"] = page_params["friendly_date"]
+        content["category_label"] = page_params["category_label"]        
+        items.append(content)
+
+        dst_path = render(dst, **page_params)
+        output = render(layout, **page_params)
+
+        log("Rendering {} => {} ...", src_path, dst_path)
+        fwrite(dst_path, output)
+
+    return sorted(items, key=lambda x: x["date"], reverse=True)
+
+
 def make_list(
         posts, dst, list_layout, item_layout, header_layout, footer_layout, **params
 ):
@@ -374,10 +409,12 @@ def main(param_file):
     rss_item_xml = fread("layout/rss_item.xml")
     sitemap_xml = fread("layout/sitemap.xml")
     sitemap_item_xml = fread("layout/sitemap_item.xml")
+    note_layout = fread("layout/note.html")
 
     # Combine layouts to form final layouts.
     post_layout = render(page_layout, content=post_layout)
     list_layout = render(page_layout, content=list_layout)
+    note_layout = render(page_layout, content=note_layout)
 
     # Create blogs.
     blog_posts = make_posts(
@@ -502,6 +539,25 @@ def main(param_file):
         **params
     )
 
+
+    # Create notes.
+    notes = make_notes(
+        "notes",
+        "**/*.md",
+        "_site/{{ post_url }}/index.html",
+        note_layout,
+        **params
+    )
+
+    make_list(
+        notes,
+        "_site/notes/index.html",
+        list_layout,
+        item_nosummary_layout,
+        archive_title_layout,
+        None,
+        **params
+    )    
 
 # Test parameter to be set temporarily by unit tests.
 _test = None
