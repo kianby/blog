@@ -31,7 +31,7 @@ Compression moins efficace mais plus rapide avec LZOP :
     tar --lzop -cvf archive.tar.lzo dossier/
     tar xvf archive.tar.lzo
 
-# Les processus ======
+# Les processus
   
 Lister les ports ouverts et l'application :    
 
@@ -42,7 +42,7 @@ Donner accès aux ports réservés (<1024) à un processus exécuté par un util
 
     setcap CAP_NET_BIND_SERVICE=+eip /usr/bin/python3.9
 
-# Listage ======
+# Listage
 
 Lister par date de modif du - récent au + récent
 
@@ -56,20 +56,12 @@ Lister les plus gros fichiers ou répertoires
 
     du -cks * | sort -rn | head
 
-====== Conversion ======
+# Conversion 
 
 du format HEIF (Apple) vers JPEG
 
-<code>
+```
 for file in *.heic; do heif-convert $file ${file/%.heic/.jpg}; done
-</code>
+```
 
-====== Systemd ======
-
-https://serverfault.com/questions/746909/journalctl-stop-following-without-exiting-pager
-
-<code>
-# ^C after Shift-F does not completely quit
-journalctl -u nginx | less -FRSXM
-</code>
 

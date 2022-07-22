@@ -106,4 +106,4 @@ Lister les images
 
     buildah images
 
-Stockage local dans //~/.local/share/containers//
+Stockage local dans *~/.local/share/containers*
