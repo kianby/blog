@@ -4,7 +4,7 @@
 
 ## docker-compose.yml
 
-Concaténation de //docker-compose.yml// :
+Concaténation de *docker-compose.yml* :
 
     # composition de docker-compose
     # si ficher d'environnement ajouter --env-file submodule/A_SUB_PROJECT/.env 
@@ -16,7 +16,7 @@ Concaténation de //docker-compose.yml// :
     config > docker-compose.yml
     rm _tmp_.*.yml
 
-Gérer les //docker-compose.yml// des sous-répertoires comme un seul avec une fonction bash
+Gérer les *docker-compose.yml* des sous-répertoires comme un seul avec une fonction bash
 
     docker-compose ()
     {
