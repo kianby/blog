@@ -23,17 +23,21 @@ Gérer les *docker-compose.yml* des sous-répertoires comme un seul avec une fon
         /usr/local/bin/docker-compose $(find -name 'docker-compose*.yml' -type f -printf '%p\t%d\n'  2>/dev/null | sort -n -k2 | cut -f 1 | awk '{print "-f "$0}') $@
     }
 
+Mettre à jour toutes les images 
+
+    docker compose pull && docker compose up -d
+
 ## Manipuler les images
 
-construire depuis le répertoire du Dockerfile
+Construire depuis le répertoire du Dockerfile
 
     docker build -t srmail .
 
-lister les images :
+Lister les images :
 
     docker images
 
-supprimer une image :
+Supprimer une image :
 
     docker rmi <image id>
 
