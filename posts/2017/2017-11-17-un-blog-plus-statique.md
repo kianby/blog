@@ -57,8 +57,7 @@ page.
 Voici le *template* Hugo des commentaires qui utilise la fonction **getJSON** pour récupérer les commentaires
 de la page en cours :
 
-``` html
-{% raw %}
+```html
     <div id="stacosys-comments">
       {{ $restParam := (printf "/comments?token=%v&url=%v" .Site.Params.widgets.stacosys_token .URL) }}
       {{ $resp := getJSON .Site.Params.widgets.stacosys_url $restParam }}
@@ -79,14 +78,12 @@ de la page en cours :
       {{ .content | markdownify }}
       </p>
       {{ end }}
-    </div> 
-{% endraw %}    
+    </div>   
 ```
 
 et un exemple de données renvoyée par Stacosys :
 
-``` json
-{% raw %}
+```json
     {
       "data": [
         {
@@ -103,7 +100,6 @@ et un exemple de données renvoyée par Stacosys :
         }
       ]
     }
-{% endraw %}
 ```
 
 Il reste une interaction entre le serveur HTTP et Stacosys pour poster des

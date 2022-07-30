@@ -10,7 +10,7 @@ des versions précédentes ou d'autres distrib les bonnes étapes pour Karmic.
 D'abord il faut installer le paquet usb-modeswitch fourni dans les dépôts
 standards (version actuelle 1.0.2-1) :
 
-``` shell
+```shell
 sudo apt-get install usb-modeswitch
 ```
 
@@ -19,7 +19,7 @@ périphérique de stockage et non pas comme un périphérique de communication.
 C'est là  que la usb-modeswitch intervient... Cette commande doit être
 lancée à chaque branchement de la clef :
 
-``` shell
+```shell
 sudo usb_modeswitch --default-vendor 0x19d2 --default-product 0x2000
     --target-vendor 0X19d2 --target-product 0x0052 -s 8 --message-endpoint 0x01
     --message-content 55534243123456782000000080000c85010101180101010101000000000000

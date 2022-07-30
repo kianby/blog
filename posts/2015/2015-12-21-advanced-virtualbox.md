@@ -64,7 +64,7 @@ port 80 alors qu'on l'attaque sur le port 8080. Un moyen de contourner ce
 problème si l'application n'est pas configurable, consiste à installer un NginX
 sur la machine hôte pour faire office de proxy.
 
-``` nginx
+```nginx
 # Proxy
 
 upstream vbox-vm {

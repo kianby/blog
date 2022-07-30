@@ -8,7 +8,7 @@ rajouter le mode dynamiquement. J'ai privilégié la seconde option. La commande
 gtf permet de calculer les bons paramètres en fonction d'une résolution et
 d'un taux de rafraîchissement :
 
-``` shell
+```shell
 $ gtf 1280 800 60
 # 1280x800 @ 60.00 Hz (GTF) hsync: 49.68 kHz; pclk: 83.46 MHz
 Modeline "1280x800_60.00"  83.46  1280 1344 1480 1680  800 801 804 828  -HSync +Vsync
@@ -17,7 +17,7 @@ Modeline "1280x800_60.00"  83.46  1280 1344 1480 1680  800 801 804 828  -HSy
 Le résultat peut être passé à la commande xrandr pour ajouter le mode
 dynamiquement. Voici le script complet à exécuter au démarrage :
 
-``` shell
+```shell
 xrandr --newmode "1280x800_60.00"  83.46  1280 1344 1480 1680  800 801 804 828  -HSync +Vsync
 xrandr --addmode LVDS1 "1280x800_60.00"
 xrandr --output LVDS1 --mode "1280x800_60.00"

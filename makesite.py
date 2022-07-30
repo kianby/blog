@@ -40,11 +40,11 @@ import unicodedata
 from email import utils
 from pathlib import Path
 
-import mistune
 import requests
+import mistune
 from pygments import highlight
-from pygments.formatters import html
 from pygments.lexers import get_lexer_by_name
+from pygments.formatters import html
 
 # set user locale
 locale.setlocale(locale.LC_ALL, "")
@@ -52,19 +52,15 @@ locale.setlocale(locale.LC_ALL, "")
 
 # initialize markdown
 
-
-class HighlightRenderer(mistune.Renderer):
-    options = {"escape": False, "hard_wrap": True}
-
+class HighlightRenderer(mistune.HTMLRenderer):
     def block_code(self, code, lang=None):
-        if not lang:
-            return "\n<pre><code>%s</code></pre>\n" % mistune.escape(code)
-        lexer = get_lexer_by_name(lang, stripall=True)
-        formatter = html.HtmlFormatter()
-        return highlight(code, lexer, formatter)
+        if lang:
+            lexer = get_lexer_by_name(lang, stripall=True)
+            formatter = html.HtmlFormatter()
+            return highlight(code, lexer, formatter)
+        return '<pre><code>' + mistune.escape(code) + '</code></pre>'
 
-
-markdown = mistune.Markdown(renderer=HighlightRenderer())
+markdown = mistune.create_markdown(renderer=HighlightRenderer())
 
 
 def fread(filename):

@@ -99,7 +99,7 @@ A ce niveau, on peut essayer de faire communiquer deux applications à travers R
 
 Code du producteur :
 
-``` python
+```python
 #!/usr/bin/env python
 import pika
 import sys
@@ -122,7 +122,7 @@ connection.close()
 
 Code du consommateur :
 
-``` python
+```python
 #!/usr/bin/env python
 import pika
 import sys

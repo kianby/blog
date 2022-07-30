@@ -78,7 +78,7 @@ leur fonctionnement en groupe. Pour cela, on doit générer une clef d'authenfic
 les noeuds du cluster. L'utilitaire **corosync-keygen** permet de générer cette clef à partir d'entrées clavier
 pseudo-aléatoires qu'il faut ensuite sécuriser et copier sur les autres noeuds.
 
-``` shell  
+```shell
 # génération de la clef depuis vm-node1
 corosync-keygen
 mv authkey /etc/corosync/authkey
@@ -217,7 +217,7 @@ Vous remarquerez qu'on va plus loin que la définition d'une ressource Apache. L
 Pacemaker d'utiliser la page de statut d'Apache pour décider d'une bascule. Il ne faut donc pas oublier de
 configurer cette URL dans Apache pour que cela fonctionne :
 
-``` apache 
+```apache
     <Location /server-status>
         SetHandler server-status
         Order deny,allow

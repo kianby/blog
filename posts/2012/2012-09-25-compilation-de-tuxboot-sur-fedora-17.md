@@ -21,7 +21,7 @@ exécutables pour Fedora
 
 Voici le source du fichier INSTALL
 
-``` shell
+```shell
 cp tuxboot.pro tuxboot-pro.bak
 sed -i '/^RESOURCES/d' tuxboot.pro
 lupdate-qt4 tuxboot.pro

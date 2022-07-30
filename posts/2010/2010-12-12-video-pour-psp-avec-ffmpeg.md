@@ -20,7 +20,7 @@ fr.org/ffmpeg) pour ffmpeg apporte l'essentiel de la solution à part une
 coquille sur un paramètre et le nom des librairies h264 qu'il faut adapter. La
 commande ultime est donc :
 
-``` shell
+```shell
 ffmpeg -i [input_file] -r 29.97 -vcodec libx264 -s 640x480 -aspect 16:9 -flags +loop -cmp
     +chroma -deblockalpha 0 -deblockbeta 0 -b 768k -maxrate 1500k -bufsize 4M -bt 256k
     -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7

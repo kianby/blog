@@ -131,7 +131,7 @@ s'inspirant de [cette
 discussion](http://askubuntu.com/questions/360466/ubuntu-touch-officially-launched-version-how-to-sync-contacts)
 sur AskUbuntu. D'abord on configure syncevolution :
 
-``` shell
+```shell
 # les valeurs username, password et syncurl doivent être adaptées
 syncevolution --keyring=no --configure --template webdav username=yax password=??? syncurl="mycloud.madyanne.fr" target-config@owncloud
 syncevolution --configure --template SyncEvolution_Client sync=none syncURL=local://@owncloud username= password= peerIsClient=1 owncloud
@@ -163,7 +163,7 @@ valeurs dans le shell script qu'on va lancer en CRON, merci
 [Alexandre](http://askubuntu.com/questions/611761/syncevolution-in-cronjob-to-sync-the-ubuntu-phone-via-caldav-arddav).
 Donc finalement c'est ce script qu'on va mettre sous CRON :
 
-``` shell
+```shell
 export DISPLAY=:0.0
 export DBUS_SESSION_BUS_ADDRESS=$(ps -u phablet e | grep -Eo 'dbus-daemon.*address=unix:abstract=/tmp/dbus-[A-Za-z0-9]{10}' | tail -c35)
 syncevolution owncloud contacts

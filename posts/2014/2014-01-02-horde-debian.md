@@ -54,7 +54,7 @@ L'installation de PEAR sur Debian est galette.
 Puis, on enregistre le canal Horde sur Pear et on installe les composants
 nécessaires :
 
-``` shell
+```shell
 mkdir -p /var/www/horde
 cd /var/www/horde
 pear channel-discover pear.horde.org
@@ -74,7 +74,7 @@ Dans le cas de NginX sur Debian, il faut ajuster les permissions du répertoire.
 Et il faut créer les fichiers de configuration de chaque application à partir
 des modèles fournis :
 
-``` shell
+```shell
 cd /var/www/horde/config
 for f in *.dist; do cp $f `basename $f .dist`; done
 cd /var/www/horde/kronolith/config
@@ -90,7 +90,7 @@ for f in *.dist; do cp $f `basename $f .dist`; done
 Il reste à configurer NginX. Je force l'utilisation de HTTPS en redirigeant les
 requêtes HTTP vers la version sécurisée du site.
 
-``` nginx
+```nginx
 server {
     listen 80;
     server_name groupware.exemple.fr;

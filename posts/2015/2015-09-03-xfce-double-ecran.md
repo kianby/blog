@@ -40,7 +40,7 @@ ajoute la directive *display-setup-script* dans la section SeatDefaults :
 
 et voici le script **lightdm-monitor.sh** :
 
-``` shell
+```shell
 if (xrandr | grep "VGA1 disconnected"); then
     xrandr --output HDMI1 --off --output LVDS1 --mode 1366x768 --pos 0x0 \
             --rotate normal --output DP1 --off --output VGA1 --off
@@ -63,7 +63,7 @@ programme en ligne de commande de configurationde XFCE) adéquate.
 
 Finalement, cela donne le script **xfce-monitor.sh** au démarrage de la session:
 
-``` shell
+```shell
 sleep 3
 if (xrandr | grep "VGA1 disconnected"); then
     xrandr --output HDMI1 --off --output LVDS1 --mode 1366x768 --pos 0x0 \

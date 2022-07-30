@@ -157,7 +157,7 @@ le fichier */etc/fail2ban/action.d/sendmail-cron.conf* complet :
 
 Dans mon cas, la tâche CRON est journalière :
 
-``` shell
+```shell
 # fail2ban report
 @daily touch /var/run/fail2ban/mail.flag
 ```

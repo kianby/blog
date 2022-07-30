@@ -28,7 +28,7 @@ l'arrêt fiable du processus en manipulant son PID.
 Voici un exemple de script d'init à la sauce Debian pour un programme
 JAVA :
 
-``` shell
+```shell
 ### BEGIN INIT INFO
 # Provides:          monprog
 # Required-Start:    $local_fs $remote_fs $network $syslog
@@ -185,7 +185,7 @@ Dans cet exemple, on envoie un signal SIGINT à monprog pour lui demander un arr
 
 #### Interception d'un signal SIGINT en JAVA
 
-``` java
+```java
 // register a shutdown hook
 Runtime.getRuntime().addShutdownHook(new Thread() {
     @Override

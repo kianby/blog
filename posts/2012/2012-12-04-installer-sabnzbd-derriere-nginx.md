@@ -16,7 +16,7 @@ télécharger les sources Python. Les manipulations suivantes sont réalisées
 sur une Debian 6 avec Python, Nginx et OpenSSH installés.
 
 
-``` shell
+```shell
 # on installe sous /srv
 cd /srv
 wget http://sourceforge.net/projects/sabnzbdplus/files/sabnzbdplus/0.7.6/
@@ -32,7 +32,7 @@ générale et **aussi restreindre l'adresse d'écoute** à l'interface localhost
 allons mettre en place par la suite. On peut automatiser le démarrage en
 rajoutant un script sabnzbd sous /etc/init.d tel que celui-ci :
 
-``` shell
+```shell
 ### BEGIN INIT INFO
 # Provides:          sabnzd
 # Required-Start:    $local_fs $remote_fs
@@ -80,7 +80,7 @@ On active ce script sous Debian avec update-rc.d sabnzbd defaults. Finalement on
 configure Nginx comme proxy. Je me suis borné à un accès HTTP protégé par
 une authentification utilisateur / mot de passe mais HTTPS est recommandé.
 
-``` nginx
+```nginx
 server {
     listen 80;
     server_name www.yourserver.yourdomain;
@@ -107,7 +107,7 @@ Nginx. A ce stade SABnzbd fonctionne à moitié :-) En effet SABnzbd ne va pas
 servir toutes les ressources (HTML / CSS) et il faut les lier statiquement à
 Nginx.
 
-``` shell 
+```shell
 # on lie les ressources statiques du thème Plush
 mkdir -p /var/www/www/sabnzbd
 ln -s /srv/sabnzbd/interfaces/Plush/templates/static /var/www/www/sabnzbd/static

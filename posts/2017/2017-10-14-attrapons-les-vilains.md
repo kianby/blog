@@ -73,7 +73,7 @@ jette dans le puits, où il resteront... jusqu'au prochain redémarrage du serve
 
 Voici le script en Korn Shell :
 
-``` shell
+```shell
 #!/bin/ksh
 
 if [ $# != 1 ]; then

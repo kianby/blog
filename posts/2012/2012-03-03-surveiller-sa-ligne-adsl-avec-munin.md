@@ -44,7 +44,7 @@ qui appelle le script PERL de teebeenator et qui sauve les donnée dans un
 fichier texte. Cette collecte est réalisée toutes les 5 minutes grâce à
 CRON.
 
-``` shell
+```shell
 perl livebox.pl --user=admin --pass=<VotreMotDePasse>
     -page=infosys_main -v 2>/dev/null | html2text >/adsl_stats.txt
 ```
@@ -68,7 +68,7 @@ unités, le libellé de chaque variable graphée
 Voici shell script du plugin adsl_download qui collecte la valeur de la bande
 passante descendante :
 
-``` shell
+```shell
 if [ $# = 1 ]; then
     echo "graph_title Bandwidth - Download"
     echo "graph_category ADSL"

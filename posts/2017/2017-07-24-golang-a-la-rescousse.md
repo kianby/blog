@@ -71,7 +71,7 @@ Golang pour gérer la concurrence de traitement.
 
 Pour les fans de code, voici celui du serveur HTTP avec cache :
 
-``` go
+```go
     package main
 
     import (

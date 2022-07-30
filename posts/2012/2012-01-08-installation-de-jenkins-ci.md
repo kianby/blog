@@ -20,13 +20,13 @@ CI](http://jenkins-ci.org/) dans le conteneur de Servlet
 [Tomcat](http://tomcat.apache.org/) sous Ubuntu Server 10.4. D'abord on installe
 Tomcat 6 avec le système de paquets :
 
-``` shell
+```shell
 sudo apt-get install tomcat6
 ```
 
 Ensuite on installe manuellement le WAR de Jenkins CI :
 
-``` shell
+```shell
 # move to tomcat webapps dir
 cd /var/lib/tomcat6/webapps
 sudo wget http://mirrors.jenkins-ci.org/war/latest/jenkins.war
@@ -35,7 +35,7 @@ sudo wget http://mirrors.jenkins-ci.org/war/latest/jenkins.war
 Si Tomcat était lancé, Jenkins va être déployé et disponible en quelques
 secondes. Sinon démarrez Tomcat :
 
-``` shell
+```shell
 sudo /etc/init.d/tomcat6 start
 ```
 

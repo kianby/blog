@@ -21,7 +21,7 @@ le développement d'un logiciel écrit en Java qui utilise le système de build
 [Apache Maven](http://fr.wikipedia.org/wiki/Apache_Maven) pour construire le
 projet. D'abord il faut installer Maven
 
-``` shell
+```shell
 $ apt-get install maven2
 ```
 

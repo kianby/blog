@@ -20,7 +20,7 @@ A ce stade, vous pensez : *"c'est bizarre il ne nous a pas encore bassiné avec 
 
 La mise en prod a pris 15 minutes chrono : écriture d'un docker-compose en utilisant [mon image pour les applications Python](https://hub.docker.com/r/kianby/pythonapp/) et déploiement sur le serveur de containers.
 
-``` docker
+```docker
 popforward:
   image: kianby/pythonapp:latest
   environment:       

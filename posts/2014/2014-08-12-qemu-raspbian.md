@@ -17,7 +17,7 @@ En pré-requis, on suppose que Qemu est installé sur le système hôte. On
 vérifie que le processeur ARM du Raspberry est supporté par Qemu avec la
 commande suivante :
 
-``` shell
+```shell
 $ qemu-system-arm -cpu ?
 ```
 
@@ -34,7 +34,7 @@ La modification d'un fichier est nécessaire pour que la distribution
 fonctionne avec Qemu. On effectue donc un premier démarrage particulier avec
 BASH en processus INIT pour la réaliser.
 
-``` shell
+```shell
 $ qemu-system-arm -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw init=/bin/bash" -hda 2014-06-20-wheezy-raspbian.img
 ```
 
@@ -66,7 +66,7 @@ D'abord on élargit le disque avec l'utilitaire qemu-resize.
 
 Ensuite on démarre la Raspbian avec Qemu
 
-``` shell
+```shell
 $ qemu-system-arm -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda 2014-06-20-wheezy-raspbian.img
 ```
 

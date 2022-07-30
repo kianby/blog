@@ -110,7 +110,7 @@ jour et envoie un e-mail par évènement avec le fichier ICS en pièce jointe.
 L'envoi est réalisé par l'utilitaire **mpack**. Le résultat final espéré pour
 notre exemple est ce script :
 
-``` shell
+```shell
 #
 STARTDATE="`date -d '2015-09-14 10:30:00-000' '+%a %e %b %R'`"
 SUMMARY="Déjeuner avec M."
@@ -167,7 +167,7 @@ régulière.
 
 Voci le script awk complet :
 
-``` awk
+```awk
 BEGIN {
     FS="\n"    
     OFS=""
