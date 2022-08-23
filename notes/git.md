@@ -44,6 +44,7 @@ Récupérer toutes les branches localement :
 Rechercher dans toutes les branches :
 
     git grep "the magic string" `git show-ref --heads`
+    git rev-list –all | xargs git grep -F "the magic string"
 
 La plupart des commandes peuvent être restreintes à un chemin de fichier :
 
