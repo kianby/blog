@@ -4,10 +4,10 @@ RUN apk update && apk add bash git python3 make tzdata curl py3-pip && rm -rf /v
 #RUN python3 -m pip install requests mistune pygments toml
 
 # install poetry
-export POETRY_HOME=/opt/poetry
-python3 -m venv $POETRY_HOME
-$POETRY_HOME/bin/pip install poetry==1.2.0
-$POETRY_HOME/bin/poetry --version
+ENV POETRY_HOME=/opt/poetry
+RUN python3 -m venv $POETRY_HOME
+RUN $POETRY_HOME/bin/pip install poetry==1.2.0
+RUN $POETRY_HOME/bin/poetry --version
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
