@@ -1,12 +1,12 @@
 FROM nginx:1.19.0-alpine
 
-RUN apk update && apk add bash git python3 make tzdata curl py3-pip && rm -rf /var/cache/apk/* 
-#RUN python3 -m pip install requests mistune pygments toml
+RUN apk update 
+RUN apk add --no-cache bash git python3 make tzdata curl py3-pip libressl-dev musl-dev libffi-dev
 
 # install poetry
 ENV POETRY_HOME=/opt/poetry
-ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 RUN python3 -m venv $POETRY_HOME
+RUN $POETRY_HOME/bin/pip install --upgrade pip
 RUN $POETRY_HOME/bin/pip install setuptools_rust poetry==1.2.0
 RUN $POETRY_HOME/bin/poetry --version
 
