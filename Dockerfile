@@ -5,9 +5,9 @@ RUN apk update && apk add bash git python3 make tzdata curl py3-pip && rm -rf /v
 
 # install poetry
 ENV POETRY_HOME=/opt/poetry
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 RUN python3 -m venv $POETRY_HOME
-RUN $POETRY_HOME/bin/pip install setuptools_rust
-RUN $POETRY_HOME/bin/pip install poetry==1.2.0
+RUN $POETRY_HOME/bin/pip install setuptools_rust poetry==1.2.0
 RUN $POETRY_HOME/bin/poetry --version
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
