@@ -1,8 +1,14 @@
 FROM nginx:1.19.0-alpine
 
-RUN apk update && apk add bash git python3 make tzdata curl && rm -rf /var/cache/apk/* 
+RUN apk update && apk add bash git python3 make tzdata curl py3-pip && rm -rf /var/cache/apk/* 
 #RUN python3 -m pip install requests mistune pygments toml
-RUN curl -sSL https://install.python-poetry.org | POETRY_VERSION=1.2.0 python3 -
+
+# install poetry
+export POETRY_HOME=/opt/poetry
+python3 -m venv $POETRY_HOME
+$POETRY_HOME/bin/pip install poetry==1.2.0
+$POETRY_HOME/bin/poetry --version
+
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
 # install locales
