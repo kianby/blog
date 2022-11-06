@@ -6,6 +6,7 @@ RUN apk update && apk add bash git python3 make tzdata curl py3-pip && rm -rf /v
 # install poetry
 ENV POETRY_HOME=/opt/poetry
 RUN python3 -m venv $POETRY_HOME
+RUN $POETRY_HOME/bin/pip setuptools_rust
 RUN $POETRY_HOME/bin/pip install poetry==1.2.0
 RUN $POETRY_HOME/bin/poetry --version
 
