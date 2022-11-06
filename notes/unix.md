@@ -60,8 +60,11 @@ Lister les plus gros fichiers ou répertoires
 
 du format HEIF (Apple) vers JPEG
 
-```
-for file in *.heic; do heif-convert $file ${file/%.heic/.jpg}; done
-```
+    for file in *.heic; do heif-convert $file ${file/%.heic/.jpg}; done
 
+# Historique
+
+Vider l'historique de Bash (source [StackOverflow](https://askubuntu.com/questions/191999/how-to-clear-bash-history-completely)) 
+
+    cat /dev/null > ~/.bash_history && history -c && exit
 
