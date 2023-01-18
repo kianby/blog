@@ -122,6 +122,20 @@ Transformer un id long de commit en id court
 
     git rev-parse --short d40f13c5886a8f44e7653f68829dd094045a5499
 
+Annuler un rebase avec reflog
+
+```
+$ git reflog
+
+b710729 HEAD@{0}: rebase: some commit
+5ad7c1c HEAD@{1}: rebase: another commit
+deafcbf HEAD@{2}: checkout: moving from master to my-branch
+...
+
+$ git reset HEAD@{2} --hard
+```
+
+
 # GitHub
 
 Générer un Personal Access Token pour les accès HTTPS
