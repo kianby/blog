@@ -9,3 +9,5 @@ venv
 .vscode
 posts/images
 .idea/
+build/
+dist/
