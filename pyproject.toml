@@ -5,7 +5,7 @@ description = ""
 authors = ["Yax"]
 
 [tool.poetry.dependencies]
-python = ">=3.11.0,<3.12"
+python = ">=3.8.0,<3.12"
 requests = "^2.25.1"
 Pygments = "^2.7.4"
 mistune = "^2.0.3"
