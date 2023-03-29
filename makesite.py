@@ -494,15 +494,16 @@ def main(param_file):
 
     # Create main RSS feed for 10 last entries
     nb_items = min(10, len(blog_posts))
-    make_list(
-        blog_posts[:nb_items],
-        "_site/rss.xml",
-        rss_xml,
-        rss_item_xml,
-        None,
-        None,
-        **params
-    )
+    for filename in ("_site/rss.xml", "_site/index.xml"):
+        make_list(
+            blog_posts[:nb_items],
+            filename,
+            rss_xml,
+            rss_item_xml,
+            None,
+            None,
+            **params
+        )
 
     # Create RSS feed by tag
     tag_post = {}
