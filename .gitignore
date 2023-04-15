@@ -11,3 +11,6 @@ posts/images
 .idea/
 build/
 dist/
+blog.sublime-project
+blog.sublime-workspace
+ssl/
