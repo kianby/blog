@@ -1,5 +1,7 @@
 site:
-	./makesite.py
+	git pull
+	makesite
+	systemctl reload nginx	
 
 site_local:
 	./makesite.py --params params-local.json
