@@ -31,7 +31,7 @@ Grub EFI
 
 ([Source](https://docs.fedoraproject.org/en-US/fedora/latest/system-administrators-guide/kernel-module-driver-configuration/Working_with_the_GRUB_2_Boot_Loader/))
 
-#  NixOs 
+#  Nix 
 
 Recherche des paquets disponibles (ou [sur le site officiel](https://search.nixos.org/packages))
 
@@ -81,4 +81,11 @@ Pour transférer une machine WSL sur une autre machine, il faut compresser avec 
     7z.exe a  debian.7z Debian\* -ssc -r
 
 
+# Fish Shell 
+
+pas une distribution mais une exoplanète ;-) 
+
+Profiler le temps de démarrage 
+
+    fish --profile-startup /tmp/fish.profile -i -c exit
 
