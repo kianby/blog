@@ -168,3 +168,15 @@ Vider l'historique de Bash (source [StackOverflow](https://askubuntu.com/questio
 journalctl -u nginx | less -FRSXM
 ```
 
+# Nvim
+
+Supprimer les configurations 
+
+```shell
+rm -rf ~/.config/nvim
+rm -rf  ~/.local/share/nvim
+rm -rf  ~/.local/state/nvim
+rm -rf ~/.cache/nvim
+```
+
+Installer [NvChad](https://nvchad.com/)
