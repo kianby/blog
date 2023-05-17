@@ -80,6 +80,16 @@ Pour transférer une machine WSL sur une autre machine, il faut compresser avec 
 
     7z.exe a  debian.7z Debian\* -ssc -r
 
+Distribution recommandée : [ArchWSL](https://github.com/yuk7/ArchWSL)
+
+Ne pas alourdir le PATH WSL avec le PATH de Windows 
+
+Editer */etc/wsl.conf* et ajouter : 
+
+    [interop]
+    appendWindowsPath = false
+
+[Référence](https://stackoverflow.com/questions/51336147/how-to-remove-the-win10s-path-from-wsl)
 
 # Fish Shell 
 
