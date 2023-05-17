@@ -79,9 +79,21 @@ Lister les commits manquants sur la branche release par rapport à develop
     # la version one-liner
     git log --oneline --graph --decorate --abbrev-commit release..develop
 
+Créer un patch à partir du dernier commit 
+
+    git format-patch -1 HEAD
+
+Créer un patch à partir d'un id de commit
+
+    git format-patch -1 <sha>
+
 Créer un patch à partir d'une suite de commits consécutifs
 
     git format-patch cc1dde0dd^..6de6d4b06 --stdout > foo.patch
+
+Extraire un diff d'un commit 
+
+    git diff <sha>^ <sha> > stash.diff
 
 Restaurer un fichier pendant une phase de merge
 
