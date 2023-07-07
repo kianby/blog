@@ -3,7 +3,7 @@ FROM nginx:1.19.0-alpine
 RUN apk update 
 RUN apk add --no-cache build-base bash git python3 make tzdata curl py3-pip libressl-dev musl-dev libffi-dev python3-dev cargo
 
-RUN curl -sSL https://install.python-poetry.org | python - --version 1.4.0
+RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.4.0
 RUN poetry config virtualenvs.create false
 
 # install poetry
