@@ -1,7 +1,7 @@
 FROM nginx:1.19.0-alpine
 
 RUN apk update 
-RUN apk add --no-cache build-base bash git python3 make tzdata curl py3-pip libressl-dev musl-dev libffi-dev python3-dev
+RUN apk add --no-cache build-base bash git python3 make tzdata curl py3-pip libressl-dev musl-dev libffi-dev python3-dev cargo
 
 # install poetry
 ENV POETRY_HOME=/opt/poetry
