@@ -1,14 +1,16 @@
 #!/bin/bash
 
-export POETRY_HOME=/opt/poetry
+#export POETRY_HOME=/opt/poetry
 
 # clone and build  blog
 cd / 
 rm -rf /blog
 git clone https://github.com/kianby/blog.git
 cd /blog
-$POETRY_HOME/bin/poetry install
-$POETRY_HOME/bin/poetry run make
+#$POETRY_HOME/bin/poetry install
+#$POETRY_HOME/bin/poetry run make
+poetry install
+poetry run make
 
 # nginx serve
 #nginx -g 'daemon off;'
