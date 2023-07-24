@@ -144,9 +144,15 @@ Lister récursivement par taille ascendante
 
     find . -type f -exec ls -lSr {} +
     
+
 Lister les plus gros fichiers ou répertoires 
 
-    du -cks * | sort -rn | head
+```shell
+du -cks * | sort -rn | head
+
+# Lister les 15 plus gros fichiers ou répertoire en excluant des répertoires
+du -ah --exclude=mnt --exclude sys --exclude proc | sort -hr | head -n 15
+```
 
 # Conversion 
 
