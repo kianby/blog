@@ -2,7 +2,7 @@
     "title": "Le blog du Yax",
     "subtitle": "GNU, Linux, BSD et autres libertés",
     "author": "Yax",
-    "site_url": "https://blogduyax.traefik.me",    
+    "site_url": "http://127.0.0.1:8000",    
     "stacosys_url": "http://127.0.0.1:8100/api",
     "external_check": "./check_git.sh"
 }

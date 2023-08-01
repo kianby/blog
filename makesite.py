@@ -397,6 +397,7 @@ def main(param_file):
     list_layout = fread("layout/list.html")
     item_layout = fread("layout/item.html")
     item_nosummary_layout = fread("layout/item_nosummary.html")
+    item_note_layout = fread("layout/item_note.html")
     category_title_layout = fread("layout/category_title.html")
     category_layout = fread("layout/category.html")
     comment_layout = fread("layout/comment.html")
@@ -550,7 +551,7 @@ def main(param_file):
         notes,
         "_site/notes/index.html",
         list_layout,
-        item_nosummary_layout,
+        item_note_layout,
         archive_title_layout,
         None,
         **params
