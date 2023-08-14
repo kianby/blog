@@ -44,7 +44,7 @@ a:hover, a:active {
 }
 
 .banner div {
-    background-image: url(/fond.jpg);
+    background-image: url(/fond-resized.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
