@@ -14,3 +14,5 @@ dist/
 blog.sublime-project
 blog.sublime-workspace
 ssl/
+.python-version
+poetry.toml
