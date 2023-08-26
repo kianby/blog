@@ -31,7 +31,7 @@ pyenv local 3.11.0
 
 L'installation des dépendances après activation du bon interpréteur sous réserve qu'il soit compatible avec la version de Python spécifiée dans la configuration du projet *pyproject.toml* devrait initialiser l'environnement virtuel du projet dans le répertoire .venv du projet. Il est de bon ton d'aider Poetry à sélectionner la bonne version en activant le paramètre :   
 
-    poetry config prefer-active-python true --local
+    poetry config virtualenvs.prefer-active-python true --local
 
 Au final, le ficher de surcharge de la configuration Poetry *poetry.toml* pour le projet est tel que : 
 
