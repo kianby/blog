@@ -72,24 +72,39 @@ Rollbacker
 
 # WSL
 
-Problème de tail entre WSL et NTFS : 
+pas une distribution mais un cheval de Troie ;-)
+
+## Problème de tail entre WSL et NTFS 
 
     tail -F ---disable-inotify <mon_fichier>
+
+## Transfert entre machines 
 
 Pour transférer une machine WSL sur une autre machine, il faut compresser avec le mode "sensitive case mode" : 
 
     7z.exe a  debian.7z Debian\* -ssc -r
 
-Distribution recommandée : [ArchWSL](https://github.com/yuk7/ArchWSL)
+## Distribution recommandée 
 
-Ne pas alourdir le PATH WSL avec le PATH de Windows 
+[ArchWSL](https://github.com/yuk7/ArchWSL)
 
-Editer */etc/wsl.conf* et ajouter : 
+## Ne pas alourdir le PATH WSL 
+
+Ne pas alourdir le PATH WSL avec le PATH de Windows. Editer */etc/wsl.conf* et ajouter : 
 
     [interop]
     appendWindowsPath = false
 
-[Référence](https://stackoverflow.com/questions/51336147/how-to-remove-the-win10s-path-from-wsl)
+Source : https://stackoverflow.com/questions/51336147/how-to-remove-the-win10s-path-from-wsl
+
+## Compacter le disque WSL2 
+
+Lancer l'outil diskpart et exécuter les deux commandes suivantes :
+
+    select vdisk file "C:\Users\yannic.arnoux\Documents\Arch\ext4.vhdx"
+    compact vdisk
+
+Source :  https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
 
 # Fish Shell 
 
