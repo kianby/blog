@@ -2,6 +2,7 @@
 
 html {
     font-family: system-ui, sans-serif;
+    background-color: #fbfefb;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +32,7 @@ h2 {
 }
 
 a:link, a:visited {
-    color: #05bf85;
+    color: rgb(0, 108, 172);
     text-decoration: none;
 }
 
@@ -40,7 +41,7 @@ li {
 }
 
 a:hover, a:active {
-    color:green;
+    color:seagreen;
 }
 
 .banner div {
