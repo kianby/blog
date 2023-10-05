@@ -1,16 +1,16 @@
 /* General */
 
-html {
+body {
     font-family: system-ui, sans-serif;
     background-color: #fbfefb;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: system-ui, sans-serif;
+body,p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
 }
 
 p, li {
-    font-family: system-ui, sans-serif;
     font-weight: 400;   
     font-size: large;
     line-height: 28px;
@@ -24,11 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {    
-    font-weight: 600;
-}
-
-h2 {
-    margin: 0
+    font-weight: 400;
 }
 
 a:link, a:visited {
@@ -156,14 +152,5 @@ footer {
 
 .txtright {
     text-align: right;
-}
-
-/* extend Knacss */
-
-pre {
-    padding: 0.8em 1.4em;
-    border-left: 3px solid #124e8a;
-    border-radius: 0.3em;
-    background: #f4f4f4;
 }
 
