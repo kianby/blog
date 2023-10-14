@@ -1,12 +1,23 @@
-site:
+# Makefile
+# 
+
+# if a file .local exists run site locally 
+ifeq ($(wildcard .local),) 
+	TARGET = site_remote
+else 
+	TARGET = site_local
+endif
+
+site: $(TARGET) 	
+	echo $(TARGET)
+
+site_remote:
 	git pull
 	makesite
 	systemctl reload nginx	
 
-site_local:
+site_local:	
 	./makesite.py --params params-local.json
-
-serve: site_local
 	cd _site && python -m SimpleHTTPServer 2> /dev/null || python3 -m http.server
 
 dock: site_local
