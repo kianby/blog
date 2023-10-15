@@ -1,5 +1,5 @@
 <!-- title: Applications mobiles -->
-<!-- category: Mobilité -->
+<!-- category: Mobilité Android -->
 
 Pour mémo j'ai recensé mes applications indispensables pour Android : 
 - F-Droid, le magasin d'applications alternatif et de confiance
