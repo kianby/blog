@@ -101,7 +101,7 @@ Source : https://stackoverflow.com/questions/51336147/how-to-remove-the-win10s-p
 
 Lancer l'outil diskpart et exécuter les deux commandes suivantes :
 
-    select vdisk file "C:\Users\yannic.arnoux\Documents\Arch\ext4.vhdx"
+    select vdisk file "C:\yax\Arch\ext4.vhdx"
     compact vdisk
 
 Source :  https://stephenreescarter.net/how-to-shrink-a-wsl2-virtual-disk/
