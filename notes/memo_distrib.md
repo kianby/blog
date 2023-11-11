@@ -114,3 +114,16 @@ Profiler le temps de démarrage
 
     fish --profile-startup /tmp/fish.profile -i -c exit
 
+# Gnome
+
+Désactiver les raccourcis CTRL+ALT LEFT ou RIGHT pour changer de workspace car ils ont priorité sur mes raccourcis de Tmux (source : [stackoverflow](https://stackoverflow.com/questions/47808160/intellij-idea-ctrlaltleft-shortcut-doesnt-work-in-ubuntu))
+
+Supprimer les raccourcis :
+
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "[]"
+    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
+
+Restaurer les raccourcis :
+
+    gsettings reset org.gnome.desktop.wm.keybindings switch-to-workspace-left
+    gsettings reset org.gnome.desktop.wm.keybindings switch-to-workspace-right
