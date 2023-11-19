@@ -17,7 +17,7 @@ site_remote:
 	systemctl reload nginx	
 
 site_local:	
-	./makesite.py --params params-local.json
+	rye run python makesite.py --params params-local.json
 	cd _site && python -m SimpleHTTPServer 2> /dev/null || python3 -m http.server
 
 dock: site_local
