@@ -2,9 +2,39 @@
 
 # Arch
 
+## Supprimer des paquets
+
+Supprimer un paquet et ses dépendances 
+
+    pacman -Rs package_name
+
 Supprimer les dépendances des paquets orphelins
 
     pacman -Rsn $(pacman -Qtdq)
+
+## *Downgrader* des paquets
+
+Récupérer la liste des upgraded ([source](https://wiki.archlinux.org/title/Downgrading_packages))
+
+    grep -i upgraded /var/log/pacman.log
+
+Réinstaller un paquet
+
+    pacman -U file:///var/cache/pacman/pkg/package-old_version.pkg.tar.type
+
+Rollbacker plusieurs paquets par date d'installation ([source](https://linuxconfig.org/how-to-rollback-pacman-updates-in-arch-linux))
+
+```shell
+# exemple avec les paquets installés le 15/11/2023
+grep -a upgraded /var/log/pacman.log| grep 2023-11-15 > /tmp/lastupdates.txt
+awk '{print $4}' /tmp/lastupdates.txt > /tmp/lines1;awk '{print $5}' /tmp/lastupdates.txt | sed 's/(/-/g' > /tmp/lines2
+paste /tmp/lines1 /tmp/lines2 > /tmp/lines
+tr -d "[:blank:]" < /tmp/lines > /tmp/packages
+cd /var/cache/pacman/pkg/
+for i in $(cat /tmp/packages); do sudo pacman --noconfirm -U "$i"*.zst; done
+```
+
+(potentiel problème d'ordre, réarranger le fichier /tmp/packages en fonction des dépendances entre les paquets)
 
 # Fedora 
 
