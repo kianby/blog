@@ -2,20 +2,14 @@
 
 <!-- category: Hébergement -->
 
-Pas de révolution cette année, le stockage Cloud reste [chez Infomaniak avec son kDrive](https://www.infomaniak.com), seule la facture a grimpé, inflation oblige :-( On est à 95 euros l'année pour un stockage de 3To, soit quasi 8 euros par mois + 1 euro pour le domaine et les e-mails. 
+Pas de révolution cette année, le stockage Cloud reste [chez Infomaniak avec son kDrive](https://www.infomaniak.com), seule la facture a grimpé. Je suis à 95 euros l'année pour un stockage de 3To (ils ont ajouté 1To pour faire passer la pilule), soit quasi 8 euros par mois + 1 euro pour le domaine et les e-mails. Pour le VPS, je suis toujours chez [Neo-Serv](https://neo-serv.fr/) avec une modeste CPU, 2 Go de RAM et 40Go de disque pour 2 euros. Les tarifs n'ont pas bronché et la qualité de service a été irréprochable sur l'année écoulée. Il était illusoire de faire du Docker sur cette configuration et je suis revenu à un hébergement classique. 
 
-Pour le VPS, je suis toujours chez [Neo-Serv](https://neo-serv.fr/) avec une modeste CPU, 2 Go de RAM et 40Go de disque pour 2 euros. Les tarifs n'ont pas bronché et la qualité de service a été irréprochable sur l'année écoulée. Il était illusoire de faire du Docker sur cette configuration et je suis revenu à un hébergement classique avec ma stack habituelle PHP / SQLite / Python et mes incontournables : ce blog et son [modérateur de commentaires *maison*](https://github.com/kianby/stacosys/), [Wallabag](https://www.wallabag.it/fr) pour la lecture hors-ligne, [Shaarli](https://shaarli.readthedocs.io) pour gérer les favoris, [Selfoss](https://selfoss.aditu.de/) pour lire les flux RSS, [Gitea](https://about.gitea.com/) pour quelques dépôts privés (privés dans le sens pas servis sur un plateau à Microsoft pour entraîner son IA) et le miroir automatique de mes dépôts publiques sur GitHub, et enfin ma galerie familiale en moyenne résolution générée par [Sigal](https://sigal.saimon.org/en/latest/). C'est une belle liste pour les capacités de la machine. 
+Donc grosso modo 11 euros par mois pour l'hébergement des services. C'est de l'ordre de ce que je dépendais pour une dédibox 8 ans auparavant. Le coût de la vie et l'inflation sont  passés par là et je limite la casse car je maintiens les services mais je ne fais plus rien qui exige de la puissance. C'est le prix d'une certaine indépendance. 
 
+ Côté services, ma stack habituelle à base de PHP / SQLite / Python m'accompagne avec ses incontournables : ce blog et son [modérateur de commentaires](https://github.com/kianby/stacosys/), [Wallabag](https://www.wallabag.it/fr) pour la lecture hors-ligne, [Shaarli](https://shaarli.readthedocs.io) pour gérer les favoris, [Selfoss](https://selfoss.aditu.de/) pour lire les flux RSS, [Gitea](https://about.gitea.com/) pour maintenir un miroir de mes dépôt GitHub et aussi héberger quelques dépôts privés (privés dans le sens qu'ils ne sont pas servis sur un plateau à Microsoft pour entraîner son IA). Enfin ma galerie familiale en moyenne résolution est générée par [Sigal](https://sigal.saimon.org/en/latest/). Tout tient sur les 40Go de disque du VPS et la puissance est largement suffisante.
 
+Côté domestique j'ai acheté un PC tour (après 15 ans en mobilité sur des portables). D'abord pour jouer avec des jeux plus récents que ceux sortis en 2011 que mon portable peinait à faire tourner ;-) Bon c'était l'idée de départ et puis l'envie d'avoir un ordinateur fixe, extensible pour centraliser les backups de la maison est venue ; quand je pense que j'avais hésité avec une XBox, cet achat a été ma meilleure décision d'achat de l'année avec un tarif contenu auprès de CSL Computers. Équipe d'un NVM de 1 To pour  Win11 / Gaming (comme dirait Phil : "Windows c'est juste un game launcher") et d'un SSD de 1To avec Fedora pour les choses sérieuses, j'ai pu y intégrer le Barracuda méca de 2To acheté l'année dernière. C'est ma référence qui m'a permis enfin de respecter la règle du 3 2. 1 pour les sauvegardes. 
 
-PC tour + backup 
+Avec de multiples configurations [SyncThing](https://syncthing.net/) je sauvegarde tout ce qui est important dans la maison. J'ai mis du temps à tester SyncThing mais ce logiciel de synchronisation décentralisé est incroyable par sa flexibilité et sa couverture de systèmes d'exploitation (Linux, BSD, Win, MacOS et Android).
 
-
-Pour le reste, je rééquilibre un peu mon hébergement en ligne et mon installation locale. J'ai acheté un bon vieux disque à 7200 tours/minutes (Barracuda 2To) et un boitier USB pour réaliser des sauvegardes à froid.  
-
-Bon bout d'an.
-
-/Yax
-
-
-
+Bonnes fêtes de fin d'année.

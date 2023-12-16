@@ -144,6 +144,10 @@ Profiler le temps de démarrage
 
     fish --profile-startup /tmp/fish.profile -i -c exit
 
+Supprimer le 3ème élément du path (index de 1 à n)
+
+    set --erase --universal fish_user_paths[3]
+
 # Gnome
 
 Désactiver les raccourcis CTRL+ALT LEFT ou RIGHT pour changer de workspace car ils ont priorité sur mes raccourcis de Tmux (source : [stackoverflow](https://stackoverflow.com/questions/47808160/intellij-idea-ctrlaltleft-shortcut-doesnt-work-in-ubuntu))
