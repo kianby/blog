@@ -2,7 +2,7 @@
 <!-- category: Hébergement Containers -->
 <!-- tag: planet -->
 
-Dans le prolongement de mon article ["Choix du système pour s'auto-héberger"](https://blogduyax.madyanne.fr/2018/quel-systeme-serveur), je peux faire un bilan des 6 mois écoulés avec mon hébergement à base de containers LXC avec la distribution [Proxmox](https://fr.wikipedia.org/wiki/Proxmox_VE).<!-- more -->
+Dans le prolongement de mon article ["Choix du système pour s'auto-héberger"](/2018/choix-du-systeme-pour-sauto-heberger), je peux faire un bilan des 6 mois écoulés avec mon hébergement à base de containers LXC avec la distribution [Proxmox](https://fr.wikipedia.org/wiki/Proxmox_VE).<!-- more -->
 
 # Commençons par les avantages
 

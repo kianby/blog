@@ -2,7 +2,7 @@
 <!-- category: Hébergement -->
 <!-- tag: planet -->
 
-Voici un rapide état de l'hébergement et des changements survenus l'année dernière. Mon serveur est toujours chez Online mais j'ai troqué ma Dédibox Start avec 1 téra de disque SATA contre le modèle avec 120 giga de SSD et je sens vraiment la différence sur la latence des services Web. Je ne m'étends pas sur la migration de OpenBSD vers Proxmox puis Docker en 14 mois, largement décrite [ici](https://blogduyax.madyanne.fr/2018/hebergement-containers/) et [là](https://blogduyax.madyanne.fr/2018/retour-sur-la-migration-vers-docker/). 
+Voici un rapide état de l'hébergement et des changements survenus l'année dernière. Mon serveur est toujours chez Online mais j'ai troqué ma Dédibox Start avec 1 téra de disque SATA contre le modèle avec 120 giga de SSD et je sens vraiment la différence sur la latence des services Web. Je ne m'étends pas sur la migration de OpenBSD vers Proxmox puis Docker en 14 mois, largement décrite [ici](/2018/hebergement-et-taille-de-containers) et [là](/2018/retour-sur-la-migration-vers-docker). 
 
 ### Mes incontournables 
 

@@ -3,7 +3,7 @@
 <!-- tag: planet -->
 
 Ma dernière tentative d'utiliser Gnome en environnement professionnel date de
-[fin 2011](gnome-3-pour-un-usage-professionnel.html). Le changement avait été
+[fin 2011](/2011/gnome-3-pour-un-usage-professionnel). Le changement avait été
 trop brutal et déclenché [mon passage à XFCE](quelle-distribution-gnome-2
 -choisir-en-2012.html)<!-- more --> où je suis resté depuis, que ce soit sous Arch à la
 maison ou au bureau sous Fedora. En 2 ans, les développeurs de Gnome ont

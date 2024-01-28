@@ -2,7 +2,7 @@
 <!-- category: Hébergement BSD -->
 
 A la fin de [mon article sur le blocage des attaques de brute
-force](/2017/nextcloud-securite/), j'étais resté sur l'envoi quotidien d'un
+force](/2017/securite-des-donnees-focus-sur-nextcloud), j'étais resté sur l'envoi quotidien d'un
 e-mail avec le log des attaques de la journée, histoire d'avoir une idée de ce
 qui s'est passé.<!-- more --> Pour rappel, mon serveur tourne sous OpenBSD et l'outil de
 protection contre les attaques est Vilain, un équivalent de Fail2ban sous Linux.
