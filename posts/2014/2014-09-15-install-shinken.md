@@ -93,7 +93,7 @@ Nagios introduit la notion de *host* et de *service* pour désigner les
 machines et les services s'exécutant sur ces machines. La configuration de
 Shinken après installation est minimale :
 
--    les notifications par email sont activées et seront utilisées si [votre serveur peut envoyer des emails](http://blogduyax.madyanne.fr/smtp-relay-avec-qmail-sur-debian-wheezy.html)
+-    les notifications par email sont activées et seront utilisées si [votre serveur peut envoyer des emails](/2014/smtp-relay-avec-qmail-sur-debian-wheezy/)
 -    la machine locale est elle-même supervisée de manière générique, je crois que le seul indicateur c'est le Ping pour vérifier qu'elle est accessible.
 
 On va enrichir tout cela en installant un agent SNMP sur le serveur Shinken ce qui permet de surveiller, entre autre, l'utilisation CPU, RAM, occupation des disques.

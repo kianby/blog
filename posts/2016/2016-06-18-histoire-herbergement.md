@@ -3,7 +3,7 @@
 <!-- tag: planet -->
 
 Dans la continuité de [mon article
-précédent](http://blogduyax.madyanne.fr/mon-informatique-personnelle.html) je
+précédent](/2016/mon-informatique-personnelle) je
 continue à mettre de l'ordre dans mon informatique.<!-- more --> Après le renoncement de
 confier à Hubic mes 70 Go de photos familiales j'ai recherché une solution
 classique : un hébergement de serveur avec suffisamment d'espace disque qui

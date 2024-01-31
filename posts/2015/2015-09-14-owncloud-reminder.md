@@ -5,8 +5,7 @@
 Un souci de synchronisation du calendrier entre Owncloud et mon téléphone a
 été le prétexte à bidouiller une fonctionnalité de rappel des événements par
 e-mail.<!-- more --> Pourquoi des e-mail ? Parce que je suis un fana de ce moyen de
-communication, la preuve [ici](http://blogduyax.madyanne.fr/du-nouveau-sur-
-pecosys.html) et [là](http://blogduyax.madyanne.fr/srmail.html).
+communication, la preuve [ici](/2014/du-nouveau-sur-pecosys) et [là](/2015/srmail).
 
 Donc ce que je veux c'est un joli e-mail le lundi matin qui résume mes rendez-
 vous de la semaine (description, date et heure) et puis chaque matin au réveil

@@ -8,7 +8,7 @@ container OpenVz dédié.<!-- more -->
 
 Les services hébergés sont à peu près les mêmes avec quelques nouveautés :
 
-- ce blog statique et [son serveur de commentaires](http://blogduyax.madyanne.fr/du-nouveau-sur-pecosys.html),
+- ce blog statique et [son serveur de commentaires](/2014/du-nouveau-sur-pecosys/),
 - une instance de Shaarli pour les favoris [merci SEB Sauvage](http://sebsauvage.net/wiki/doku.php?id=php:shaarli),
 - un lecteur de flux RSS : [Tiny Tiny RSS](http://tt-rss.org),
 - l'analyseur du trafic du blog : [Piwik](http://piwik.org),

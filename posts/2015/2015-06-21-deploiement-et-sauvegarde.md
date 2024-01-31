@@ -3,7 +3,7 @@
 <!-- tag: planet -->
 
 J'ai terminé la migration de mon serveur.<!-- more --> [Comme
-annoncé](http://blogduyax.madyanne.fr/hebergement-en-mouvance.html) j'ai
+annoncé](/2015/hebergement-en-mouvance) j'ai
 utilisé l'outil de déploiement
 [Ansible](https://fr.wikipedia.org/wiki/Ansible_%28logiciel%29) pour :
 

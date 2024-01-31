@@ -3,7 +3,7 @@
 <!-- tag: planet -->
 
 Après [l'aspect de la
-sauvegarde](http://blogduyax.madyanne.fr/deploiement-et-sauvegarde.html) je me
+sauvegarde](/2015/deploiement-et-sauvegarde) je me
 suis attaqué à la sécurisation du serveur.<!-- more --> C'est un vaste sujet et on n'est
 jamais certain d'être parfaitement protégé : on se documente et on essaie de
 parer à l'essentiel. Je recommande cet article publié sur [Mes potes

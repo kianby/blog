@@ -6,7 +6,7 @@ Les vacances approchent ! Avant d'aller construire des châteaux de sable, c'est
 le bon moment pour mettre de l'ordre dans ses dossiers, faire le point sur
 l'année professionnelle écoulée et... tenir à jour son curriculum vitae.<!-- more --> [La
 dernière fois que je m'étais prêté à
-l'exercice](http://blogduyax.madyanne.fr/index.php?article25/decouvrir-latex)
+l'exercice](/2010/decouvrir-latex/)
 avait été l'occasion de me familiariser avec LaTeX, d'apprécier la clarté du
 langage et la qualité du rendu en PDF avec pdflatex. J'ai décidé de continuer
 sur la même voie, avec l'objectif de produire une mise en page moins austère

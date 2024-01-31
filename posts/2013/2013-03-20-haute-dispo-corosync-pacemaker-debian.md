@@ -16,7 +16,7 @@ Pour GNU/Linux, j'ai expérimenté deux logiciels permettant de gérer une infra
 
 *   Heartbeat qui a fait ses preuves mais qui est limité : pas de cluster à plus de 2 noeuds,
 pas de gestion très fine des ressources et des règles pour basculer d'un noeud sur l'autre.  
-*   [Corosync](http://www.corosync.org) et [Pacemaker](http://clusterlabs.org/wiki/Main_Page) :
+*   [Corosync](http://www.corosync.org) et [Pacemaker](https://www.clusterlabs.org/pacemaker/doc/) :
 c'est le choix de la distribution Red Hat et celui que je vais détailler dans la suite de cet article.  
 
 J'ai monté une maquette assez représentative composée de deux machines virtuelles Debian Wheezy

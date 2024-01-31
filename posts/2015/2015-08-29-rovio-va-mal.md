@@ -3,7 +3,7 @@
 <!-- tag: planet -->
 
 En 2010 j'achetais [un Motorola Milestone sous Android 2.1
-*Eclair*](http://blogduyax.madyanne.fr/hello-moto-droid.html). C'était mon
+*Eclair*](/2010/hello-moto-droid). C'était mon
 premier (et dernier à ce jour) téléphone sous ce système<!-- more --> et aussi mon premier
 tactile. Un bel object de type *slider* avec un clavier physique qu'on pouvait
 sortir en mode paysage. J'ai utilisé beaucoup d'applications sur ce téléphone
