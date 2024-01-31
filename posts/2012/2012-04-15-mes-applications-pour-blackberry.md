@@ -3,7 +3,7 @@
 
 Après une longue période sous Android j'ai migré vers Blackberry.<!-- more --> Certes,
 Android est ce qui s'approche le plus d'un OS libre (on peut même le
-[degoogler](http://blogduyax.madyanne.fr/index.php?article41/syncml) ) mais j'ai
+[degoogler](/2010/syncml) ) mais j'ai
 eu envie de découvrir autre chose : d'abord un système non tactile, ça peut
 sembler à un retour en arrière mais ça me correspond bien (ça me rappelle
 mon Nokia E61), une vraie bouffée d'air frais même après une période à
