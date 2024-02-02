@@ -22,8 +22,7 @@ la durée de vie du téléphone. L'équipe Ubuntu promet une mise à jour des
 téléphones sans intermédiaire tant que le matériel sera suffisamment puissant
 pour supporter les évolutions d'Ubuntu Touch.
 
-<img src="/images/2015/poussiere.jpg" alt="poussiere" style="float:left; margin:
-0px 25px 20px 25px;"/> Pour les PC, un coup de pouce peut rajeunir un matériel
+![poussiere](/images/2015/poussiere.jpg#left) Pour les PC, un coup de pouce peut rajeunir un matériel
 vieillissant : une distribution GNU/Linux légère et l'investissement dans un
 SSD. J'ai profité des soldes de l'été pour acheter un SSD de 64 Go pour ma
 machine principale, un portable Toshiba de 2009 (processeur Core 2 Duo et 4 Go

@@ -12,8 +12,7 @@ langage et la qualité du rendu en PDF avec pdflatex. J'ai décidé de continuer
 sur la même voie, avec l'objectif de produire une mise en page moins austère
 à défaut de pouvoir rajeunir le candidat ;-)
 
- <img src="/images/06x/trollface_cv.png" width="50%" height="50%" alt="CV
-de Jean Code" style="float:left; margin: 0px 20px;" /> En cherchant des idées
+![CV de Jean Code](/images/06x/trollface_cv.png#left) En cherchant des idées
 de mise en forme j'ai découvert [moderncv](http://www.ctan.org/pkg/moderncv),
 une classe de document LaTeX qui permet de structurer le document par des
 commandes supplémentaires (définir les données personnelles, définir une

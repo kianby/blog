@@ -13,8 +13,7 @@ ont été commercialisés : deux modèles du constructeur espagnol BQ qui semble
 très appréciés par la communauté Ubuntu et un modèle assez puissant, le MX4 du
 constructeur chinois Meizu.
 
-<img src="/images/2015/ubuntu-about.png" alt="A propos" style="margin: 0px 20px;
-float:left;" />Ca commence donc par l'installation du système qui est assez
+![A propos](/images/2015/ubuntu-about.png#left) Ca commence donc par l'installation du système qui est assez
 simple car d'une part le Nexus 4 a un booloader facile à déverrouiller et
 Ubuntu Touch est basé sur un Android, on utilise donc des outils Android (adb,
 fastreboot) pour flasher le système. Ensuite les outils Canonical
@@ -49,30 +48,30 @@ je m'emballe, faisons d'abord un petit tour en images du système.
 
 **L'écran de déverrouillage et ses statistiques amusantes :**
 
-<img src="/images/2015/ubuntu-unlock1.png" alt="ubuntu unlock"/>
+![ubuntu unlock](/images/2015/ubuntu-unlock1.png)
 
-<img src="/images/2015/ubuntu-unlock2.png" alt="ubuntu unlock"/>
+![ubuntu unlock](/images/2015/ubuntu-unlock2.png)
 
 **L'écran principal avec ses applications en rang d'oignons:**
 
-<img src="/images/2015/ubuntu-appli1.png" alt="ubuntu application"/>
+![ubuntu application](/images/2015/ubuntu-appli1.png)
 
-<img src="/images/2015/ubuntu-appli2.png" alt="ubuntu application"/>
+![ubuntu application](/images/2015/ubuntu-appli2.png)
 
 **Les applications favorites sur la gauche en faisant glisser le bord gauche de l'écran**
 
 **et les applications lancées en faisant glisser le bord droit de l'écran :**
 
-<img src="/images/2015/ubuntu-unity.png" alt="ubuntu unity"/>
+![ubuntu unity](/images/2015/ubuntu-unity.png)
 
-<img src="/images/2015/ubuntu-tasks.png" alt="ubuntu tasks"/>
+![ubuntu tasks](/images/2015/ubuntu-tasks.png)
 
 **Les paramètres système et un aperçu du magasin d'applications :**
 
 
-<img src="/images/2015/ubuntu-settings.png" alt="ubuntu settings"/>
+![ubuntu settings](/images/2015/ubuntu-settings.png)
 
-<img src="/images/2015/ubuntu-store.png" alt="ubuntu store"/>
+![ubuntu store](/images/2015/ubuntu-store.png)
 
 A part la particularité du tirage des bords d'écran pour faire apparaître la
 barre latérale ou passer d'une application à l'autre mais on pige vite le coup,

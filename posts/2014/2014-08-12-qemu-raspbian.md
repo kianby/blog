@@ -2,13 +2,9 @@
 <!-- category: Debian Matériel Virtualisation -->
 <!-- tag: planet -->
 
-<img src="/images/2014/rasplogo.png" alt="Raspberry logo" style="margin: 0px
-20px; float:left;" />Je m'intéresse de plus en plus au Raspberry et je
-franchirai peut-être le pas de l'achat dans quelque temps. J'ai voulu voir à
+![Raspberry logo](/images/2014/rasplogo.png#left) Je m'intéresse de plus en plus au Raspberry et je franchirai peut-être le pas de l'achat dans quelque temps. J'ai voulu voir à
 quoi ressemble sa distribution principale Raspbian (basée sur Debian) en
-l'émulant sous Qemu. <!-- more -->Je me suis basé sur [le tutorial pointé par beaucoup de
-gens dans les forums](http://xecdesign.com/qemu-emulating-raspberry-pi-the-
-easy-way/)  et j'ai effectué des recherches annexes pour résoudre
+l'émulant sous Qemu. <!-- more -->Je me suis basé sur [le tutorial pointé par beaucoup de gens dans les forums](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/) et j'ai effectué des recherches annexes pour résoudre
 certains problèmes : taille des partitions, gestion de la souris sous Qemu. Ce
 qui suit est le résultat de mes manipulations pour émuler Raspbian avec Qemu
 depuis une distribution GNU/Linux 64 bits.

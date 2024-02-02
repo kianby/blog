@@ -22,7 +22,7 @@ Côté ordinateur, Lightning supporte nativement le protocole CalDav et le carne
 d'adresse peut être synchronisé avec CardDAV en installant le [module
 complémentaire pour Sogo](http://www.sogo.nu/english/downloads/frontends.html).
 
-<img src="/images/2014/logo-horde.jpg" style="float:left; margin: 0px 20px;"/>A
+![logo horde](/images/2014/logo-horde.jpg#left) A
 l'époque de mon Motorola Droid, j'avais déjà utilisé le client Funambol pour
 synchroniser mes données avec
 [eGroupware](http://www.egroupware.org/community_edition) et je m'étais
@@ -144,31 +144,31 @@ en tant qu'administrateur sans mot de passe.
 
 1. Aller dans le menu Administration / Configuration
 
-    <img src="/images/2014/horde-config.png"/>
+![horde config](/images/2014/horde-config.png#center)
 
 2. Cliquer sur le composant Horde (horde)
 
-    <img src="/images/2014/horde-application.png"/>
+![horde application](/images/2014/horde-application.png#center)
 
 3. Configurer la base de donnée dans l'onglet Database
 
-    <img src="/images/2014/horde-database.png"/>
+![horde database](/images/2014/horde-database.png#center)
 
 #### 2ème étape : créer un utilisateur avec les droits d'administration.
 
 1. Aller dans le menu Administration / Utilisateur
 
-    <img src="/images/2014/horde-user.png"/>
+![horde user](/images/2014/horde-user.png#center)
 
 2. Créer un nouvel utilisateur
 
-    <img src="/images/2014/horde-adduser.png"/>
+![horde adduser](/images/2014/horde-adduser.png#center)
 
 3. Retourner dans le menu Administration / Configuration et rajouter
    l'utilisateur nouvellement créé dans les admins de l'onglet
    Authentification.
 
-    <img src="/images/2014/horde-setadmin.png"/>
+![horde setadmin](/images/2014/horde-setadmin.png#center)
 
 4. Il est conseillé de tester le nouvel utilisateur en se déconnectant et en se
    reconnectant. Si cela fonctionne, on peut enlever l'utilisateur

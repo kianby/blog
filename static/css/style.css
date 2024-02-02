@@ -154,3 +154,18 @@ footer {
     text-align: right;
 }
 
+/* image placement (https://stackoverflow.com/questions/255170/markdown-and-image-alignment) */
+img[src*='#left'] {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+img[src*='#right'] {
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;    
+}
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}

@@ -15,9 +15,7 @@ L'auteur va très loin, du rajout d'un menu d'application discret sur le panel
 au déplacement des icônes de la systray vers le panel... exactement ce que je
 cherchais pour ne plus rater les notifications de Choqok, Empathy et Dropbox.
 
- [<img src="/images/04x/systray2panel.jpg" alt="déplacer les apps systray
-vers le panel" width="600" style="margin: 0px 20px" />
-](/images/04x/systray2panel.jpg)
+ ![déplacer les apps systray vers le panel](/images/04x/systray2panel.jpg#center)
 
 Je vous conseille aussi la lecture des trucs et astuces Gnome 3 parus sur [Tux-
 Planet](http://www.tux-planet.fr/toutes-les-astuces-pour-gnome-shell/) et la

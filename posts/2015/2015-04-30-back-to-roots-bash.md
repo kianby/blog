@@ -14,9 +14,7 @@ intéressant de personnaliser la configuration de son shell pour se l'approprier
 C'est *fun à réaliser* et cela donne envie de faire plus de choses depuis le
 terminal.
 
-<img src="/images/2015/stallman-code.jpg" alt="Un barbu" style="margin: 0px
-20px; float:right;" /> Bon si dans quelques mois, les annonces de sortie du nouveau KDE ou
-Gnome vous font ricaner, que vous ne jurez que par
+![un barbu](/images/2015/stallman-code.jpg#right) Bon si dans quelques mois, les annonces de sortie du nouveau KDE ou Gnome vous font ricaner, que vous ne jurez que par
 [Awesome](http://awesome.naquadah.org),
 [Rxvt](http://sourceforge.net/projects/rxvt) et
 [Tmux](http://tmux.sourceforge.net), vous êtes au bout du chemin, peut-être un

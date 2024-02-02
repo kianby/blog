@@ -17,7 +17,7 @@ nous sommes arrivés à **"le meilleur système c'est AUCUN"**.
 
 ### Phase 1 : le monolithe
 
-![Monolithe](/images/2018/monolithe.jpg)
+![Monolithe](/images/2018/monolithe.jpg#left)
 
 Le serveur est monolithique donc le choix du système d'exploitation est crucial.
 
@@ -104,7 +104,7 @@ Bon j'ai l'air emballé sur Docker et c'est le cas, d'un point de vue
 professionnel. Ce n'est pas mon rêve pour mon auto-hébergement, les conteneurs
 ont tous la même taille, ça manque de diversité et de fun pour moi.
 
-![Have Fun](/images/2018/havefun.jpg)
+![Have Fun](/images/2018/havefun.jpg#left)
 
 La plupart des entreprises sont entre la phase 2 et la phase 3 : elle ont
 virtualisé tout ce qui est possible et elles migrent des services sous

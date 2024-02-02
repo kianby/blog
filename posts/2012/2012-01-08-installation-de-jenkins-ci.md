@@ -2,8 +2,7 @@
 <!-- category: Développement -->
 <!-- tag: planet -->
 
-<img src="/images/06x/jenkins-logo.png" alt="Jenkins CI" title="Jenkins
-CI" style="float:left; margin: 0px 20px" checked="true" /> L'intégration
+![Jenkins CI](/images/06x/jenkins-logo.png#left) L'intégration
 continue s'inscrit dans [la méthodologie
 Agile](http://fr.wikipedia.org/wiki/M%C3%A9thode_agile) ; Son objectif est de
 garantir que le projet est stable tout au long du développement et qu'on peut
@@ -39,8 +38,8 @@ secondes. Sinon démarrez Tomcat :
 sudo /etc/init.d/tomcat6 start
 ```
 
-Jenkins est accessible ici : [http://&lt;nom du
-serveur&gt;:8080/jenkins](http://localhost:8080/jenkins)
+Jenkins est accessible ici : [http://nom du
+serveur:8080/jenkins](http://localhost:8080/jenkins)
 
 Par défaut la sécurité n'est pas activée et tout le monde peut accéder et
 administrer Jenkins. Nous allons remédier à cela en modifiant les paramètres

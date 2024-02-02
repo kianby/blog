@@ -11,9 +11,7 @@ intégré une nouvelle société avec une double casquette développeur Java /
 admin système GNU/Linux qui m'amène à mettre en place des solutions de Haute
 Disponibilité.
 
-<img src="/images/07x/calendar.png" style="float:left; margin: 0px 20px;"
-/> Sinon ma belle découverte de l'année c'est Fedora que j'utilise au travail et
-à la maison depuis 6 mois. Alors que j'ai surtout utilisé des distributions
+![31-dec-calendrier](/images/07x/calendar.png#left) Sinon ma belle découverte de l'année c'est Fedora que j'utilise au travail et à la maison depuis 6 mois. Alors que j'ai surtout utilisé des distributions
 basées sur Debian hormis ArchLinux par le passé, j'ai été enchanté par le
 spin XFCE de Fedora 17. Mon portable relativement récent est correctement
 géré *"out of the box"*, les dépôts Fedora sont plutôt complets et

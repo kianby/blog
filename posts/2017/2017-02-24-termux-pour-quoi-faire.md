@@ -13,9 +13,7 @@ régulières. La série de Cascador décrit différents scénarios d'utilisation
 installer un serveur SSH, utiliser des outils console, accéder à des API
 Android. 
 
-<img src="/images/2017/termux-esynic.jpg" alt="termux" style="margin: 0px 20px;
-float:left;" />J'ai bien mordu, jusqu'à me faire offrir un super clavier
-bluetooth pour Noël (merci frérot).
+![Clavier esynic](/images/2017/termux-esynic.jpg#left) J'ai bien mordu, jusqu'à me faire offrir un super clavier bluetooth pour Noël (merci frérot).
 
 Le risque était que le coup de coeur retombe ; qu'après avoir
 bien rigolé à installer **vim** et consorts, on s'essoufle à cause des
