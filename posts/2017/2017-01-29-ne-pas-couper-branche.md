@@ -5,7 +5,7 @@
 Je continue à héberger mes services personnels sur un serveur Dedibox propulsé
 par une Debian.<!-- more --> En 2016, j'ai rajouté deux services : mon instance de
 [Wallbag](https://wallabag.org/fr) et le [serveur de
-mail](http://blogduyax.madyanne.fr/peu-de-neuf.html) du domaine *madyanne.fr* à
+mail](/2016/peu-de-neuf/) du domaine *madyanne.fr* à
 ceux existants : mon lecteur de flux RSS (Tiny Tiny RSS), mon cloud (NextCloud)
 et ce blog. La reprise en main des e-mails a été une très bonne idée, c'est
 formateur et on décide des limites : le nombre de comptes et d'alias, l'espace

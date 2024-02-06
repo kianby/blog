@@ -14,7 +14,7 @@ sa base d'utilisateurs pour pouvoir financer les évolutions majeures annoncées
 en 2017.
 
 [Trois ans plus
-tard](http://blogduyax.madyanne.fr/mes-extensions-firefox.html), je refais la
+tard](/2013/mes-extensions-firefox/), je refais la
 liste des extensions que j'utilise quotidiennement ; pas de révolution mais des
 mises à jour sur les thèmes qui me tiennent à coeur : sécurité de navigation,
 protection de la vie privée. Quand je relis ma liste, je ne vois aucune

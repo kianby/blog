@@ -8,8 +8,8 @@ recommandation du médecin de rester tranquille. La cervelle fonctionnant encore
 un peu, j'ai consulté ma liste de projets pour l'année, vous savez cette liste
 mi-voeux / mi-résolutions qu'on établit en début d'année. En bonne place,
 j'avais noté *"apprentissage ou perfectionnement dans un langage informatique"*.
-Les années précédentes, j'ai fait un peu de Javascript, notamment [un prototype
-de MVC avec MEAN](https://github.com/kianby/sandbox), de la glue Web à droite à
+Les années précédentes, j'ai fait un peu de Javascript, notamment un prototype
+de MVC avec MEAN, de la glue Web à droite à
 gauche mais j'ai toujours l'impression de partir de zéro avec ce langage.
 Pourtant Javascript est de plus en plus incontournable professionnellement, même
 pour un développeur plutôt teinté backend. Mais pour bien progresser il aurait
