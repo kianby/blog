@@ -2,7 +2,7 @@
 <!-- category: Mobilité -->
 
 Poussé par un engouement certain pour les netbooks et une lecture enthousiaste
-de l'actualité de ce marché (merci [Blogeee](http://www.blogeee.net/) pour la
+de l'actualité de ce marché (merci Blogeee (lien obsolète : http://www.blogeee.net) pour la
 qualité de vos articles) je me suis lancé et j'ai acheté un Asus 1000HE blanc :
  très très bel objet.... Maryse ;-) <!-- more --> Il est très bien fini, le touchpad est
 le plus agréable que j'ai pu tester sur un portable, le clavier est

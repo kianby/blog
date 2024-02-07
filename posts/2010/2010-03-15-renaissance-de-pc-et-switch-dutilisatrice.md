@@ -38,7 +38,7 @@ Une distribution suisse super légère mais sans compromis au niveau de la
 couverture des applications fournies. Le logiciel de mail
 [Sylpheed](http://sylpheed.sraoss.jp/en/) ne dépayse pas et il gère le
 protocol IMAP. Pour la lecture des documents Word,
-[Abiword](http://www.abisource.com/) est parfait, et
+Abiword (lien obsolète : http://www.abisource.com) est parfait, et
 [GNUmeric](http://projects.gnome.org/gnumeric/) a pu relire sans problèmes les
 documents Excel 97 sauvegardés. En renfort et au cas où, j'ai installé
 [OpenOffice](http://fr.openoffice.org/) mais le lancement est vraiment lent. Il

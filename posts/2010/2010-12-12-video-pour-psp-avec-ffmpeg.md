@@ -7,16 +7,13 @@ YouTube il n'y a que l'embarras du choix : de l'extension Firefox à l'outil en
 ligne de commande. Mon choix s'est porté sur ClipGrab qui permet de choisir la
 qualité de vidéo désirée.
 
- [<img class="alignnone size-medium wp-image-288" title="clipgrab"
-src="/images/03x/clipgrab-300x176.png" alt="" width="300" height="176" />
-](/images/03x/clipgrab.png)
+![Clip Grab](/images/03x/clipgrab-300x176.png)
 
 Pour convertir au format PSP j'avais utilisé PSPVC disponible sur
-[AUR](http://aur.archlinux.org/index.php?setlang=fr) mais il ne fonctionne plus
+[AUR](https://aur.archlinux.org) mais il ne fonctionne plus
 depuis le passage d'Arch à Python2. J'ai donc fouillé du côté des forums
 pour voir ce qu'on pouvait faire avec les 2 ténors de la conversion vidéo sur
-GNU/Linux : mencoder et ffmpeg. La [documentation Ubuntu](http://doc.ubuntu-
-fr.org/ffmpeg) pour ffmpeg apporte l'essentiel de la solution à part une
+GNU/Linux : mencoder et ffmpeg. La [documentation Ubuntu](http://doc.ubuntu-fr.org/ffmpeg) pour ffmpeg apporte l'essentiel de la solution à part une
 coquille sur un paramètre et le nom des librairies h264 qu'il faut adapter. La
 commande ultime est donc :
 

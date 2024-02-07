@@ -5,8 +5,8 @@ Presque un mois plus tard nous avons fait un bilan de l'utilisation de Slitaz.
 Le ressenti de l'utilisateur est bon<!-- more -->, elle trouve la machine plus réactive,
 effectue toutes les tâches habituelles : emails, bureautique, musique. Je
 m'attelle à l'installation de l'imprimante HP Deskjet 610 : installation de
-CUPS. Je fais un  détour par
-[google](http://forum.slitaz.org/index.php/discussion/comment/1986/) car le port
+CUPS. Je fais un détour par
+Ggoogle (lien obsolète : http://forum.slitaz.org/index.php/discussion/comment/1986/) car le port
 LPT1 n'est pas détecté par défaut. Et je remplace la version de PDF Viewer
 par celle qui gère l'impression (Slitaz propose les deux paquets). L'impression
 depuis AbiWord et Open Office fonctionne sans surprise. La gestion de

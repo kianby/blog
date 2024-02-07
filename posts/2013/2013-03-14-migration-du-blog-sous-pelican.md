@@ -36,7 +36,7 @@ templating Python [Jinja 2](http://jinja.pocoo.org).
 A chacun de voir s'il veut un thème simple ou un thème plus dynamique avec du
 JavaScript. Quelques thèmes d'exemple sont fournis sur
 [GitHub](http://github.com/getpelican/pelican-themes). Pour ma part, Je suis parti d'un thème
-basé sur [Bootstrap](http://twitter.github.com/bootstrap), le kit CSS qui permet
+basé sur [Bootstrap](https://getbootstrap.com), le kit CSS qui permet
 facilement de faire du Responsive Design afin d'avoir un site qui s'adapte à
 tous les périphériques Web (ordinateurs de bureau, tablettes, téléphones) et je
 l'ai adapté à ma sauce.

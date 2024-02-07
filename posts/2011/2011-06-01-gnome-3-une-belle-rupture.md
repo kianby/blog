@@ -2,7 +2,7 @@
 <!-- category: GNU/Linux -->
 
 Depuis plusieurs semaines l'actu déborde de comparatifs entre
-[Gnome](http://gnome3.org/) 3 et [Unity](http://unity.ubuntu.com/)<!-- more --> et de retours
+[Gnome](http://gnome3.org/) 3 et Unity <!-- more -->(lien obsolète : http://unity.ubuntu.com/) et de retours
 d'expérience (souvent négatifs) envers ces deux évolutions majeures.
 Utilisateur d'[Archlinux](http://archlinux.fr/) je n'ai pas considéré Unity
 mais je me suis intéressé à Gnome 3. J'ai noté deux doléances : les super-

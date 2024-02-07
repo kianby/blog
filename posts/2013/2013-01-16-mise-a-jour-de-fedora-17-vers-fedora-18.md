@@ -48,5 +48,4 @@ llaumgui](http://www.llaumgui.com/post/fedora-17-in-da-place) restent
 d'actualité.
 
 J'ai aussi eu un problème avec la gestion de l'énergie interceptée par
-systemd avant XFCE. C'est résolu [dans ce
-post.](http://comments.gmane.org/gmane.linux.redhat.fedora.general/423516)
+systemd avant XFCE. C'est résolu dans ce post (lien obsolète : http://comments.gmane.org/gmane.linux.redhat.fedora.general/423516).

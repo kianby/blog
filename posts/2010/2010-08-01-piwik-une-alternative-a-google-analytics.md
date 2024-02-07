@@ -1,11 +1,8 @@
 <!-- title: Piwik, une alternative à Google Analytics -->
 <!-- category: Hébergement -->
 
-[Piwik](http://piwik.org/) est une alternative crédible sous licence GPL à
-Google Analytics. <!-- more -->Cerise sur le gateau, il requiert [LAMP](http://www.google.fr/
-url?sa=t&source=web&cd=1&ved=0CBUQFjAA&url=http%3A%2F%2Ffr.wikipedia.org%2Fwiki%
-2FLAMP&ei=U3xVTK-PL9_Q4wbZnYmnBQ&usg=AFQjCNHmQzZpoG3qGXQq9bp6HXe09cNoOA&sig2=ZbX
-bao85XawqcsmE_cIWiQ) ce qui permet de l'héberger sans effort sur la même
+[Piwik](http://piwik.org) est une alternative crédible sous licence GPL à
+Google Analytics. <!-- more -->Cerise sur le gateau, il requiert [LAMP](https://fr.wikipedia.org/wiki/LAMP) ce qui permet de l'héberger sans effort sur la même
 machine que  WordPress et il s'inscrit parfaitement dans ma démarche de
 contrôler l'accès à mes données. Le projet est  jeune et actif, une version
 majeure 0.8 est sortie cette semaine et la version 1.0  est [planifiée en
@@ -30,5 +27,4 @@ exporter en PDF. De l'utilisation personnelle et simpliste que j'en ai, on peut
 aller beaucoup plus loin dans le cadre d'une utilisation professionnelle où on
 doit fournir du reporting multi-sites régulièrement.
 
- [<img title="piwik" src="images/02x/piwik.jpg" alt="" width="448"
-height="280" /> ](/images/02x/piwik.jpg)
+![Piwik](/images/02x/piwik.jpg#center)

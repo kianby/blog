@@ -2,8 +2,7 @@
 <!-- category: Développement -->
 <!-- tag: planet -->
 
-<img style="width: 96px; height: 96px;" alt="Jenkins CI  logo"
-src="/images/06x/jenkins-logo.png" align="left" /> Faisant suite à
+![Jenkins Logo](/images/06x/jenkins-logo.png#left) Faisant suite à
 [l'article décrivant l'installation de Jenkins
 CI](http://blogduyax.madyanne.fr/index.php?article63/installation-de-jenkins-
 ci), nous allons voir comment gérer un projet en reprenant la configuration

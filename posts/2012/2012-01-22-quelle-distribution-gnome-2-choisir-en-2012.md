@@ -13,9 +13,7 @@ paquets sur 1 an** (hors mise à jour de Mozilla et patchs de sécurité bien
 sûr) et **une distribution proche de Debian**. Pour ces raisons j'ai écarté
 Archlinux, bien ce que soit mon coup de coeur depuis 2 ans.
 
- <img xmlns="http://www.w3.org/1999/xhtml" src="images/06x/gnome-
-logo.png" alt="Gnome logo" title="Gnome logo" style="margin: 0px 20px; float:
-right; width: 118px; height: 160px;" checked="true" align="right" /> Mon grand
+ ![Gnome logo](/images/06x/gnome-logo.png#right") Mon grand
 espoir était d'utiliser une [Debian](http://www.debian.org/) stable, ce qui
 m'aurait laissé encore 1 an de tranquillité sous Gnome 2. Mais j'ai déchanté
 ! Après installation à partir des beaux DVD "Squeeze" récemment reçus j'ai

@@ -20,12 +20,12 @@ ancienne qui suffit pour la synchro des contacts, du calendrier et des tâches
 depuis [ce lien](http://www.memotoo.com/how-to-sync-your-blackberry-phone.php).
 Côté ordinateur, Lightning supporte nativement le protocole CalDav et le carnet
 d'adresse peut être synchronisé avec CardDAV en installant le [module
-complémentaire pour Sogo](http://www.sogo.nu/english/downloads/frontends.html).
+complémentaire pour Sogo](https://www.sogo.nu/download.html#/frontends).
 
 ![logo horde](/images/2014/logo-horde.jpg#left) A
 l'époque de mon Motorola Droid, j'avais déjà utilisé le client Funambol pour
 synchroniser mes données avec
-[eGroupware](http://www.egroupware.org/community_edition) et je m'étais
+[eGroupware](https://www.egroupware.org) et je m'étais
 intéressé à *Horde*. Ce dernier semblait plus difficile à installer,
 l'interface Web était peu conviviale et j'avais mis en place eGroupware que
 j'avais utilisé 1 an avec satisfaction. J'ai su qu'une version 5 de Horde était

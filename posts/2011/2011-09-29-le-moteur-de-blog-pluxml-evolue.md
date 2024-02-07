@@ -2,8 +2,8 @@
 <!-- category: Blog -->
 
 La version 5.1.3 de [PluXml](http://pluxml.org/) est sortie ! Elle contient un
-joli [lot de corrections et
-d'évolutions](http://telechargements.pluxml.org/changelog) <!-- more -->dont je n'ai pas
+joli lot de corrections et
+d'évolutions <!-- more --> (lien obsolète : http://telechargements.pluxml.org/changelog) dont je n'ai pas
 fait le tour complet (mais j'apprécie le repli de la zone chapô lors de la
 création d'un article et la re-génération des miniatures dans la gestion des
 médias). La mise à jour s'est passée sans problème :

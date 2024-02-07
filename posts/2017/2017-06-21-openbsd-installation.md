@@ -75,7 +75,7 @@ réseau. Un message au boot suggère que le firmware du chipset n'est pas
 disponible. En effet, aucun code propriétaire n'est embarqué dans OpenBSD.
 Depuis un autre PC, j'ai téléchargé [le firmware
 nécessaire](http://firmware.openbsd.org/firmware/6.1) et je l'ai installé avec
-[fw_update](http://man.openbsd.org/fw_update.1). J'ai du wifi après c'est de la
+fw_update (lien obsolète : http://man.openbsd.org/fw_update.1). J'ai du wifi après c'est de la
 configuration : l'installation de xfce (il paraît que mate est pour bientôt),
 mes outils habituels (Vim, Tmux, Firefox, Thunderbird).
 

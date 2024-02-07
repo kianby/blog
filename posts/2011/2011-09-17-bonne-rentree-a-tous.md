@@ -1,7 +1,7 @@
 <!-- title: Bonne rentrée à tous -->
 <!-- category: Hébergement -->
 
-La fièvre [Minecraft](http://www.minecraft.net/) a atteint mon fils et quelques
+La fièvre [Minecraft](https://www.minecraft.net) a atteint mon fils et quelques
 uns de ses copains depuis deux mois. Il est amusant de voir qu'un jeu avec des
 graphismes *old-school* provoque autant d'engouement.<!-- more --> Comme quoi c'est l'aspect
 ludique qui prime... plutôt rassurant en ces temps où la poudre aux yeux est

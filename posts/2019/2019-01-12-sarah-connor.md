@@ -20,4 +20,4 @@ Quelques références en vrac :
 
 1. Usbek et Rica : [Lanceurs d'alerte ou survivalistes sectaires : qui sont vraiment les collapsologues ?](https://usbeketrica.com/article/lanceurs-d-alerte-ou-survivalistes-sectaires-qui-sont-vraiment-les-collapsologues)
 2. Peertube: [Pablo Servigne : penser l'effondrement de notre monde](https://peertube.fr/videos/watch/5c59e576-f56c-4178-bd0a-bfca7b75db3d)
-3. partage-le.com : [Nicolas Casaux : Le problème de la collapsologie](http://partage-le.com/2018/01/8648/)
+3. partage-le.com : Nicolas Casaux : Le problème de la collapsologie (lien obsolète : http://partage-le.com/2018/01/8648/)

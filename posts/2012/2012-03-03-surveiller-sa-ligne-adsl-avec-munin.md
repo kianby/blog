@@ -22,7 +22,7 @@ sympathiquement fourni à la communauté des utilisateurs. Ce script est
 téléchargeable [ici](http://www.forum-
 orange.com/forums/viewtopic.php?id=32420).
 
- <img style="width: 305px; height: 80px;" alt="Munin" src="/images/06x/munin-logo.png" align="right" /> La deuxième étape consiste à choisir un
+![Munin Logo](/images/06x/munin-logo.png#right) La deuxième étape consiste à choisir un
 outil de supervision capable de collecter des valeurs et de créer des graphes,
 un outil de la famille [MRTG](http://fr.wikipedia.org/wiki/MRTG) : après un
 test de [Cacti](http://www.cacti.net/) qui est un bon outil mais que j'ai jugé
@@ -52,17 +52,15 @@ perl livebox.pl --user=admin --pass=<VotreMotDePasse>
 Je sauve les données dans un fichier texte car 3 plugins Munin vont les
 consommer :
 
-*    un plugin qui graphe la bande passante descendante (download) en kb/s
-*    un plugin qui graphe la bande passante montante (upload) en kb/s
-*    un plugin qui graphe le bruit montant / descendant ainsi que l'atténuation
-montante / descendante en dB.
+* un plugin qui graphe la bande passante descendante (download) en kb/s
+* un plugin qui graphe la bande passante montante (upload) en kb/s
+* un plugin qui graphe le bruit montant / descendant ainsi que l'atténuation montante / descendante en dB.
 
 Un plugin est un exécutable (Bash, Perl, Python, ce que vous préférez) qui
 doit répondre à deux types de requêtes :
 
 - avec l'argument 'config' il renvoie la configuration du graphe : titre, les
 unités, le libellé de chaque variable graphée
-
 - sans argument il renvoie une nouvelle valeur pour chaque variable du graphe.
 
 Voici shell script du plugin adsl_download qui collecte la valeur de la bande

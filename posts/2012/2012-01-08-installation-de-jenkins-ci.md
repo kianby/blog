@@ -38,13 +38,12 @@ secondes. Sinon démarrez Tomcat :
 sudo /etc/init.d/tomcat6 start
 ```
 
-Jenkins est accessible ici : [http://nom du
-serveur:8080/jenkins](http://localhost:8080/jenkins)
+Jenkins est accessible ici : http://nom du serveur:8080/jenkins
 
 Par défaut la sécurité n'est pas activée et tout le monde peut accéder et
 administrer Jenkins. Nous allons remédier à cela en modifiant les paramètres
 de sécurité dans la partie administration qu'on accède en cliquant sur le
-lien *[Administrer Jenkins](http://localhost:8080/jenkins/manage)* puis *[Configurer le système](http://localhost:8080/jenkins/configure)*.
+lien *Administrer Jenkins* (http://localhost:8080/jenkins/manage) puis *Configurer le système* (http://localhost:8080/jenkins/configure).
 
 ![Sécurité](/images/06x/jenkins-security.png)
 

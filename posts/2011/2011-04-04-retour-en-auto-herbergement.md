@@ -14,12 +14,11 @@ qui seront probablement modestes (low-watt => low-perf).
 Le système est donc une Debian Squeeze. Fi de l'originalité ce qui compte
 c'est l'éthique de cette distribution, sa stabilité et son adaptation aux
 matériels récents et anciens ainsi que son énorme logithèque. Pour le
-serveur HTTP j'ai choisi [Nginx](http://wiki.nginx.org/NginxFr), parce que j'ai
+serveur HTTP j'ai choisi [Nginx](https://docs.nginx.com), parce que j'ai
 lu quelques articles à son propos, que c'est beaucoup plus léger. La
 documentation est encore légère mais on trouve des bons blogs pour le reste
 (comme installer et configurer [php-fm avec
-Nginx](http://blog.nicolargo.com/2011/01/installation-automatique-de-nginx-php-
-fpm-memcached-sous-debian.html) ).
+Nginx](http://blog.nicolargo.com/2011/01/installation-automatique-de-nginx-php-fpm-memcached-sous-debian.html) ).
 
 La pièce principale de mes services et aussi la plus publique est bien sûr ce
 blog qui a été migré vers [PluXml](http://pluxml.org/). J'en parlerais plus

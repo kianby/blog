@@ -41,8 +41,8 @@ de Golang. Un test HTTP (hors contexte) de Golang m'a convaincu que je pourrais
 m'en servir. Le langage [Golang](https://golang.org) a la particularité d'être
 compilé, typé, multi-plateforme et il fournit  en standard des fonctionalités de
 haut niveau comme HTTP (client et serveur), de la crypto et de la compression,
-le support du JSON. [Le débat reste
-ouvert](http://spf13.com/post/is-go-object-oriented) sur le fait que Golang soit
+le support du JSON. Le débat reste
+ouvert (lien obsolète : http://spf13.com/post/is-go-object-oriented) sur le fait que Golang soit
 un langage orienté objet. En tout cas, il propose un paradigme de programmation
 simple et une richesse de librairies qui le rendent très intéressant pour du
 développement généraliste où la performance compte.

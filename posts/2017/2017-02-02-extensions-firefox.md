@@ -48,5 +48,5 @@ alternative crédible à Firefox.
 - [Simple Locale Switcher](https://addons.mozilla.org/fr/firefox/addon/simple-locale-switcher) : changement de langue de l'interface utilisateur
 - [Firestorage Plus](https://addons.mozilla.org/fr/firefox/addon/firestorage-plus/?src=search) : inspection du stockage local
 - [Firebreak](https://addons.mozilla.org/fr/firefox/addon/firebreak/?src=search) : trouver le point de rupture dans les *responsive designs*
-- [En-tête HTTP](http://livehttpheaders.mozdev.org) : afficher les en-têtes HTTP
+- En-tête HTTP (lien obsolète : http://livehttpheaders.mozdev.org) : afficher les en-têtes HTTP
 - [Cookie Manager](https://addons.mozilla.org/en-US/firefox/addon/cookies-manager-plus) : gestion des cookies installés

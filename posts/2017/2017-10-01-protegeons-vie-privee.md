@@ -98,8 +98,8 @@ semaine un e-mail d'encouragement pour s'inscrire sur le site de la Française
 des Jeux, probablement car elle est passée sur leur site pour consulter les
 résultats. Elle navigue sur un Samsung A5 avec Chrome donc qu'ils aient obtenu
 l'e-mail ne m'étonne pas, mais qu'ils connaissent mon prénom un peu plus. En bas
-de l'e-mail, [la société tierce responsable de ce
-profilage](http://www.eperflex.com/lg/fr/fonctionnalites) propose de se
+de l'e-mail, la société tierce responsable de ce
+profilage (lien obsolète : http://www.eperflex.com/lg/fr/fonctionnalites) propose de se
 désabonner de leurs services. J'aime me désabonner quand je n'ai jamais été
 invité à m'abonner... Bref ma moitié navigue essentiellement en 4G donc cela
 exclut le recoupement avec notre adresse IP domestique. Je penche plutôt pour un
