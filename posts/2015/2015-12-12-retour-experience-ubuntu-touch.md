@@ -19,10 +19,9 @@ Ubuntu Touch est basé sur un Android, on utilise donc des outils Android (adb,
 fastreboot) pour flasher le système. Ensuite les outils Canonical
 interviennent, la voie simple consiste donc à s'installer une version Desktop
 de Ubuntu 14.04 ou supérieure sur un PC afin d'obtenir ces outils facilement.
-Je me suis donc basé sur [la documentation officielle du Ubuntu
-Developer](https://developer.ubuntu.com/en/start/ubuntu-for-devices/installing-ubuntu-for-devices)
-et [sur cet
-article](http://www.pcadvisor.co.uk/how-to/linux/how-install-ubuntu-touch-image-3531970)
+Je me suis donc basé sur la documentation officielle du Ubuntu
+Developer (lien obsolète : https://developer.ubuntu.com/en/start/ubuntu-for-devices/installing-ubuntu-for-devices)
+et [sur cet article](http://www.pcadvisor.co.uk/how-to/linux/how-install-ubuntu-touch-image-3531970)
 qui apporte quelques précisions pour le Nexus 4. On a le choix entre deux
 canaux de mise à jour système : stable ou développement.  Pour me faire une
 idée la plus juste du système et ne pas la fausser avec des bugs d'une version
