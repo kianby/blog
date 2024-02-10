@@ -6,8 +6,8 @@ Voici l'état de l'hébergement et un récapitulatif des changements survenus pe
 
 Mes services hébergés restent essentiellement les mêmes : 
 
-- l'excellent [Wallabag](https://wallabag.org/fr) pour lire en différé mes articles rencontrés au détour d'une recherche,
-- le fidèle [Selfoss](https://www.selfoss.aditu.de/) pour lire mes flux RSS,
+- l'excellent [Wallabag](https://wallabag.org) pour lire en différé mes articles rencontrés au détour d'une recherche,
+- le fidèle [Selfoss](https://selfoss.aditu.de/) pour lire mes flux RSS,
 - l'incontournable [Shaarli](https://sebsauvage.net/wiki/doku.php?id=php:shaarli) qui stocke mes favoris,
 - j'ai opté pour le svelte [Baïkal](https://www.baikal-server.com/) pour synchroniser les contacts et les tâches,
 - j'auto-héberge le très performant [Seafile](https://www.seafile.com) pour mes données et il est secondé par un modeste abonnement chez [Cozy Cloud](https://cozy.io) pour bénéficier de leurs services numériques,

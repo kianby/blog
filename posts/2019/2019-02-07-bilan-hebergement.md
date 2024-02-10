@@ -8,9 +8,9 @@ Voici un rapide état de l'hébergement et des changements survenus l'année der
 
 Mes services hébergés restent essentiellement les mêmes. 
 
-J'use et abuse de l'excellent [Wallabag](https://wallabag.org/fr) pour lire en différé mes articles rencontrés au détour d'une recherche.
+J'use et abuse de l'excellent [Wallabag](https://wallabag.org) pour lire en différé mes articles rencontrés au détour d'une recherche.
 
-Je lis quotidiennent mes flux RSS. J'ai récemment viré Tiny Tiny RSS dont l'application mobile m'insupportait de plus en plus pour une découverte opportune (merci F-Droid): [Selfoss](https://www.selfoss.aditu.de/) qui prouve qu'on peut faire mieux avec moins (au revoir PostgreSQL et bonjour SQLite) et avoir une application mobile **ergonomique**. 
+Je lis quotidiennent mes flux RSS. J'ai récemment viré Tiny Tiny RSS dont l'application mobile m'insupportait de plus en plus pour une découverte opportune (merci F-Droid): [Selfoss](https://selfoss.aditu.de/) qui prouve qu'on peut faire mieux avec moins (au revoir PostgreSQL et bonjour SQLite) et avoir une application mobile **ergonomique**. 
 
 C'est d'ailleurs mon leitmotiv : privilégier le minimalisme s'il apporte le service rendu et l'isolation des services (Docker quoi) donc SQLite c'est parfait. 
 

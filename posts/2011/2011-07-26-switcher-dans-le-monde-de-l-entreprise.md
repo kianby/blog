@@ -4,8 +4,8 @@
 
 Dans beaucoup d'entreprises il
 est interdit de s'écarter de l'OS officiellement supporté, dans d'autres c'est
-toléré mais généralement sans filet (ne comptez pas sur le [support
-IT](http://fr.wikipedia.org/wiki/Services_d%27assistance) ) <!-- more -->; celles où règne
+toléré mais généralement sans filet (ne comptez pas sur le support
+IT) <!-- more -->; celles où règne
 le libre choix sont rares. J'ai eu la chance de travailler pour l'une d'entre
 elles ces derniers 18 mois. Ce qui rend le switch difficile ce sont les
 applications sans alternative. Heureusement elles sont de moins en moins

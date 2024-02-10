@@ -4,7 +4,7 @@
 
 J'ai effectué la mise à jour de mon *véloce serveur* <i class="icon-smile"></i>
 (un Dell latitude D610 sous Céléron) vers Debian Wheezy.<!-- more --> Ca s'est plutôt bien passé
-en suivant [les conseils de Nicolargo](http://blog.nicolargo.com/2013/05/de-squeeze-a-wheezy.html).
+en suivant les conseils de Nicolargo (http://blog.nicolargo.com/2013/05/de-squeeze-a-wheezy.html).
 J'ai seulement eu quelques problèmes avec l'interpréteur PERL, je me suis retrouvé
 avec un mix : l'interpréteur 5.16.3 de Wheezy et d'anciens modules PERL.
 Peut-être que j'avais installé ces librairies manuellement, je ne me souviens

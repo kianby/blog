@@ -17,7 +17,7 @@ Poettering, un employé de Redhat, Ubuntu et... Debian qui a dérogé à sa lign
 de conduite d'intégrer des outils mâtures et stables et a misé sur systemd,
 probablement trop tôt, et s'est mis en conflit avec une partie de ses
 contributeurs qui ont pris la porte et démarré le projet
-[Devuan](https://devuan.org/fr/). Je ne vais pas m'étendre car c'est polémique
+[Devuan](https://devuan.org). Je ne vais pas m'étendre car c'est polémique
 mais il y a une pression de l'équipe systemd, depuis sa création, pour forcer
 son adoption rapide par les distributions ce qui a fortement contribué à son
 image de [boatware](https://fr.wikipedia.org/wiki/Bloatware) truffé de bugs.

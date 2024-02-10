@@ -143,7 +143,7 @@ D'abord je teste les accès distants :
 - on peut scanner les ports avec NMAP depuis sa machine : on voit le port 22 ouvert 
 - on vérifie facilement que SSH est limité à 3 connexions par minute
 
-Enfin je teste la sécurité intra-docker en déployant 3 containers Docker avec [l'image tcpping](https://hub.docker.com/r/kianby/tcpping/) :
+Enfin je teste la sécurité intra-docker en déployant 3 containers Docker avec l'image tcpping (lien obsolète : https://hub.docker.com/r/kianby/tcpping/) :
 
     version: "3"
     services:
