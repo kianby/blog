@@ -5,7 +5,7 @@ J'ai réalisé que mon flux RSS est tronqué depuis [ma migration sous
 Hugo](/2017/migration-du-blog-sous-hugo) et je viens de corriger le tir.<!-- more --> Loin de moi
 l'idée de forcer les gens à venir sur le blog pour lire l'article en entier et
 ainsi gonfler mes statistiques (ridiculement basses) ou flatter mon égo. Mea
-culpa auprès du [Planet Libre](http://www.planet-libre.org) aussi d'avoir fourni
+culpa auprès du Planet Libre (lien obsolète : http://www.planet-libre.org) aussi d'avoir fourni
 un article tronqué.
 
 En cherchant des informations pour définir mon flux RSS correctement je suis

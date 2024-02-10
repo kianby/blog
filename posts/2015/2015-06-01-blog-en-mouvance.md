@@ -43,6 +43,6 @@ professionnelle quant à la gestion des configurations du serveur.
 Pour l'anecdote, Ansible est un outil Python (hé oui encore un) comme
 [Fabric](http://www.fabfile.org) (que je connais et utilise déjà) et il ne
 demande qu'un accès SSH pour interagir avec les serveurs. De bons articles ont
-déjà été publiés sur le [Planet](http://www.planet-libre.org), je peux rajouter
+déjà été publiés sur le Planet (lien obsolète : http://www.planet-libre.org), je peux rajouter
 l'excellent [tuto de leucos](https://github.com/leucos/ansible-tuto)  qui
 complète la documentation officielle déjà très complète par des exemples.

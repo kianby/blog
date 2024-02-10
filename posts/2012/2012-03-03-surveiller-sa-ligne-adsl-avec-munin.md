@@ -25,7 +25,7 @@ orange.com/forums/viewtopic.php?id=32420).
 ![Munin Logo](/images/06x/munin-logo.png#right) La deuxième étape consiste à choisir un
 outil de supervision capable de collecter des valeurs et de créer des graphes,
 un outil de la famille [MRTG](http://fr.wikipedia.org/wiki/MRTG) : après un
-test de [Cacti](http://www.cacti.net/) qui est un bon outil mais que j'ai jugé
+test de [Cacti](https://www.cacti.net/) qui est un bon outil mais que j'ai jugé
 trop complexe par rapport à mon besoin initial, mon choix s'est porté sur
 [Munin](http://munin-monitoring.org/) : un outil simple (voire rustique) écrit
 en PERL, aucune interface graphique d'administration, une interface Web 1.0

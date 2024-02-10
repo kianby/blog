@@ -18,7 +18,7 @@ Bon rapatrier une boite e-mail par POP3 et faire un transfert SMTP c'est pas sor
 
 A ce stade, vous pensez : *"c'est bizarre il ne nous a pas encore bassiné avec Docker"*... j'y viens :-)
 
-La mise en prod a pris 15 minutes chrono : écriture d'un docker-compose en utilisant [mon image pour les applications Python](https://hub.docker.com/r/kianby/pythonapp/) et déploiement sur le serveur de containers.
+La mise en prod a pris 15 minutes chrono : écriture d'un docker-compose en utilisant mon image pour les applications Python (lien obsolète : https://hub.docker.com/r/kianby/pythonapp/) et déploiement sur le serveur de containers.
 
 ```docker
 popforward:
@@ -35,5 +35,5 @@ Bon... je retourne courir !
 
 ![furet](/images/2018/furet.jpg)
 
-*[Photo by Alex Makarov on Unsplash](https://unsplash.com/photos/pIarqh5GU0I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+*Photo by Alex Makarov on Unsplash*
 

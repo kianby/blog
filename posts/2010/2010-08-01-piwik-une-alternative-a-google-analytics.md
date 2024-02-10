@@ -5,8 +5,8 @@
 Google Analytics. <!-- more -->Cerise sur le gateau, il requiert [LAMP](https://fr.wikipedia.org/wiki/LAMP) ce qui permet de l'héberger sans effort sur la même
 machine que  WordPress et il s'inscrit parfaitement dans ma démarche de
 contrôler l'accès à mes données. Le projet est  jeune et actif, une version
-majeure 0.8 est sortie cette semaine et la version 1.0  est [planifiée en
-détail](http://dev.piwik.org/trac/wiki/Piwik-Vision-Roadmap) pour le deuxième
+majeure 0.8 est sortie cette semaine et la version 1.0  est planifiée en
+détail (lien obsolète : http://dev.piwik.org/trac/wiki/Piwik-Vision-Roadmap) pour le deuxième
 semestre.
 
 L'installation prend vraiment 5 minutes. On extrait l'archive à l'endroit

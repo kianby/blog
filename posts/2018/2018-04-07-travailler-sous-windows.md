@@ -23,7 +23,7 @@ disponible dans Chocolatey, je me rabats sur les méthodes traditionnelles.
 Le second point qui pique c'est l'absence d'un terminal digne de ce nom. La
 taille des fenêtres CMD n'est toujours pas redimensionnable dynamiquement et il
 n'y a pas d'onglets. Plusieurs alternatives existent, j'ai opté pour
-[Cmder](http://cmder.net) basé sur [ConEmu](https://conemu.github.io), un peu
+Cmder (lien obsolète : http://cmder.net) basé sur [ConEmu](https://conemu.github.io), un peu
 plus connu, qui comble ces lacunes. J'ai aussi besoin d'un shell Unix pour
 certaines tâches et me connecter en SSH sur des serveurs. Après beaucoup de
 recherches infructueuses, j'ai opté pour [MSYS2](https://www.msys2.org), un
@@ -44,7 +44,7 @@ pour ~~ne plus avoir à fouiller le menu Démarrer~~ lancer les applications
 rapidement. Pour le reste, mes outils n'ont pas vraiment changé : je navigue
 sur la toile avec [Firefox](https://www.mozilla.org/fr/firefox), mon bloc-notes
 déstructuré est [Zim](http://zim-wiki.org), je me connecte aux bases de données
-avec [DBeaver](https://dbeaver.jkiss.org), je reste fidèle à
+avec [DBeaver](https://dbeaver.io/), je reste fidèle à
 [Eclipse](https://eclipse.org) pour le développement Java et pour le reste
 (JavaScript, HTML, CSS, Python, Markdown) j'ai goûté à [Visual Studio
 Code](https://code.visualstudio.com), fortement inspiré du meilleur de Sublime

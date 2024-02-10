@@ -29,7 +29,7 @@ approximative. J'ai donc écrit un outil de migration dédié en langage Python.
 qu'il apporte c'est une mise en forme plus fidèle lors de la conversion en
 Markdown, une gestion des catégories **et des tags**. Il ne couvre peut-être
 pas tous les cas mais il m'a permis de migrer mes articles sans retouche
-manuelle. ~~Cet outil est disponible sur mon compte GitHub~~
+manuelle (obsolète : Cet outil est disponible sur mon compte GitHub).
 
 Pour les thèmes c'est selon les goûts de chacun. Pelican fournit un langage de
 templating Python [Jinja 2](http://jinja.pocoo.org).

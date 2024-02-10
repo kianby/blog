@@ -28,7 +28,7 @@ synchronisation d'agenda et de carnet d'adresse (NextCloud), lecture hors ligne
 (Wallabag) et ce blog (Pelican / Stacosys). Des services classiques mais sur un
 nouveau système avec des programmes différents et une administration
 différente. Ma cible c'est donc [ma Dedibox chez
-Online](https://www.online.net/fr/serveur-dedie/dedibox-sc) pour laquelle
+Online](https://www.scaleway.com/fr/dedibox/) pour laquelle
 OpenBSD n'est pas encore officiellement supporté mais FreeBSD est proposé, ce
 qui augure du bon concernant le support du matériel. En cherchant un peu sur la
 toile, quelques courageux aguerris avaient déjà expérimenté et [partagé une
@@ -39,7 +39,7 @@ Je me suis donc lancé, muni :
 - des [pages man](http://man.openbsd.org/cgi-bin/man.cgi) : sur OpenBSD c'est
   beaucoup plus que de simples pages man ; très détaillées, agrémentées
   d'exemples, c'est l'essentiel de la documentation officielle.  
-- du livre [Héberger son serveur avec OpenBSD](https://www.atramenta.net/books/heberger-son-serveur-avec-openbsd/562)
+- du livre Héberger son serveur avec OpenBSD (lien obsolète : https://www.atramenta.net/books/heberger-son-serveur-avec-openbsd/562)
 - de quelques retours d'expérience sur le Net.
 - [du Wiki OBSD4](https://obsd4a.net/wiki)
 

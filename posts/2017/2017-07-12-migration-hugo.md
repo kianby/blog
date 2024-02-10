@@ -50,7 +50,7 @@ page, ça ferait moins de gris. Quand le thème a été achevé on aurait dit un
 copie du blog original mais qui se **génère en 1/2 seconde au lieu de 5
 secondes**, la rapidité du langage Go compilé est réelle. J'ai retravaillé les
 catégories et utilise intelligemment les tags pour générer des flux RSS
-spécifiques notamment celui du [Planet Libre](http://planet-libre.org). Le
+spécifiques notamment celui du Planet Libre (lien obsolète : http://planet-libre.org). Le
 résultat est propre, exempt des années de bidouilles et de verrues que j'avais
 ajouté sur Pélican.
 

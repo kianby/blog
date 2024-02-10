@@ -9,8 +9,7 @@ migrer son blog vers [Hugo](https://gohugo.io) et d'utiliser le gestionnaire
 de commentaires [staticman](https://staticman.net) dont la particularité est
 de soumettre les commentaires par des pull-request GIT. 
 
-Cela m'a rappelé [le projet Pecosys](https://blogduyax.madyanne.fr/2014
-/pecosys-les-commentaires-avec-pelican) qui avait une approche similaire : les
+Cela m'a rappelé [le projet Pecosys](/2014/pecosys-les-commentaires-avec-pelican/) qui avait une approche similaire : les
 commentaires étaient partie intégrante du blog, publiés dans GIT sous forme de
 fichiers au format Markdown et convertis en HTML par le moteur de blog
 Pelican. La complexité de mise en oeuvre de Pecosys (un dépôt GIT privé, un

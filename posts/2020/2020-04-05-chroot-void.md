@@ -1,7 +1,7 @@
 <!-- title: Installation de Void sur un VPS -->
 <!-- category: Hébergement --> 
 
-L'objectif est d'utiliser une distribution Void Linux  non proposée en standard  sur [un VPS Contabo](https://contabo.com/?show=vps) en réalisant une installation via CHROOT. <!-- more -->
+L'objectif est d'utiliser une distribution Void Linux  non proposée en standard  sur [un VPS Contabo](https://contabo.com) en réalisant une installation via CHROOT. <!-- more -->
 
 Cet article a été écrit sur  la base de [la procédure du wiki](https://docs.voidlinux.org/installation/guides/chroot.html) et de [cet article du blog mitchriedstra.com](https://mitchriedstra.com/2018/12/void-on-digital-ocean) en adaptant à mes besoins et en mettant à jour certaines opérations obsolètes. 
 

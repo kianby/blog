@@ -9,8 +9,8 @@ pendant 3 ans et Mate depuis le début de cette année, sans oublier mes outils
 *console* [configurés aux petits oignons](https://github.com/kianby/dotfiles)
 (BASH, TMUX, VIM). Ensuite j'avais éténdu au système d'exploitation en
 remplaçant ma Fedora du bureau par une Debian stable, identique à celle qui
-tourne sur mon fidèle compagnon à la maison, un petit [portable Toshiba
-Portégé](http://www.toshiba.fr/discontinued-products/portege-m800-10d) acquis
+tourne sur mon fidèle compagnon à la maison, un petit portable Toshiba
+Portégé (lien obsolète : http://www.toshiba.fr/discontinued-products/portege-m800-10d) acquis
 en 2009 et qui a retrouvé la pêche avec un SDD à 30 euros. Mon second portable,
 qui a lui aussi de la bouteille mais beaucoup plus de puissance, un portable
 LDLC de 2011 en Core i7 avec 8Go de RAM faisait tourner ArchLinux depuis 5 ans.

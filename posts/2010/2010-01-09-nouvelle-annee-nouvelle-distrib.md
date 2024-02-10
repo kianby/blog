@@ -3,7 +3,7 @@
 
 Comme j'ai toujours beaucoup de temps libre, je l'ai passé sur la planète
 Linux ces dernières semaines<!-- more -->  : quelques révisions de base, des lectures de
-blogs (issus de [Planet Libre](http://www.planet-libre.org/) en autre).
+blogs (issus de Planet Libre (lien obsolète : http://www.planet-libre.org/) en autre).
 
 La lecture de l'excellent blog de [Frédéric
 Bezier](http://frederic.bezies.free.fr/blog) et de certains articles tendance

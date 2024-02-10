@@ -1,7 +1,7 @@
 <!-- title: La version Noël de Tiny Tiny RSS -->
 <!-- category: Hébergement -->
 
-L'excellent [logiciel d'aggrégation de flux RSS](http://tt-rss.org)
+L'excellent [logiciel d'aggrégation de flux RSS](https://tt-rss.org/)
 est sorti en version 1.5.8.1 peu avant Noël. <!-- more -->Quelques bugs sont
 corrigés et la version mobile "classic", classée obsolète depuis quelques
 versions, a été enlevé. C'est facheux car si elle ne brillait pas par son

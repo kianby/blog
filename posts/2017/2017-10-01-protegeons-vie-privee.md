@@ -109,8 +109,8 @@ pour parvenir à lier nos identités.
 La semaine d'avant nous avons été confrontés, toujours sur le Samsung, au
 mini-scandale de l'enregistrement des visages, une sympathique fonctionnalité,
 [découverte par Seb Sauvage](http://sebsauvage.net/links/?0vFdFg), destinée à
-enrichir la base de reconnaissance faciale de Google. [Dans son dernier
-article](http://standblog.org/blog/post/2017/09/29/Payer-son-smartphone-avec-ses-donn%C3%A9es-personnelles),
+enrichir la base de reconnaissance faciale de Google. Dans son dernier
+article (lien obsolète : http://standblog.org/blog/post/2017/09/29/Payer-son-smartphone-avec-ses-donn%C3%A9es-personnelles),
 Tristan Nitot clarifie bien ce *deal* entre Google et les constructeurs de
 téléphone.
 

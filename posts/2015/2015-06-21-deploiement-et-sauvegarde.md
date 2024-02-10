@@ -79,8 +79,8 @@ a le bon goût de gérer la rotation des sauvegardes, pour :
 - et ensuite envoyer la sauvegarde quelque part.
 
 Sachant que je n'ai pas d'autre serveur ou d'espace FTP je me suis demandé où
-serait ce *quelque part*. J'ai regardé un peu [la solution
-Hubic](https://hubic.com/fr/) mais la complexité pour en détourner l'usage de
+serait ce *quelque part*. J'ai regardé un peu la solution
+Hubic (lien obsolète : https://hubic.com/fr/) mais la complexité pour en détourner l'usage de
 base qui est la synchronisation de fichiers et monter l'espace Hubic comme
 stockage distant m'a peu motivé. Une sauvegarde c'est bien quand ça fait son
 boulôt et qu'on l'oublie. J'ai moins de 2 Mo à sauvegarder par jour j'ai donc
