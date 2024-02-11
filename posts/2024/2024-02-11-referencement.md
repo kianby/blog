@@ -29,7 +29,7 @@ img[src*='#center'] {
 
 Exemple de source Markdown : 
 
-``` 
+```
 ![Jenkins Logo](/images/06x/jenkins-logo.png#left) Voici un logo 
 centré à gauche et mon texte qui commence à coté. Incroyable !   
 ```
