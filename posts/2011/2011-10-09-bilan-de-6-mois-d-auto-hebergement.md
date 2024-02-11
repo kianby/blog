@@ -21,7 +21,7 @@ exigeraient un serveur dédié en hébergement classique,
 
 Aujourd'hui j'héberge [PluXml](http://pluxml.org/) (moteur de blog),
 [Piwik](http://fr.piwik.org/) (statistiques sur la fréquentation du blog),
-[Tiny Tiny RSS](https://gitlab.tt-rss.org/tt-rss/tt-rss) (lecteur de flux RSS),
+[Tiny Tiny RSS](https://tt-rss.org/) (lecteur de flux RSS),
 [Prosody](http://prosody.im/) (Jabber), [Subsonic](http://www.subsonic.org)
 (streaming audio), [Shaarli](http://sebsauvage.net/wiki/doku.php?id=php:shaarli)
 (partage des favoris), [Minecraft](http://www.minecraft.net/) (limité à 5

@@ -10,7 +10,7 @@ avoir un serveur dédié à bidouiller qui me fournit quelques services :
 
 - l'hébergement de ce blog,
 - une instance de Shaarli pour les favoris [merci SEB Sauvage](http://sebsauvage.net/wiki/doku.php?id=php:shaarli),
-- un lecteur de flux RSS : [Tiny Tiny RSS](https://gitlab.tt-rss.org/tt-rss/tt-rss)
+- un lecteur de flux RSS : [Tiny Tiny RSS](https://tt-rss.org/)
 
 C'est le minimum vital que j'ai réinstallé depuis la migration de mon ancien
 serveur auto-hébergé. J'ai encore beaucoup à faire pour automatiser certaines
