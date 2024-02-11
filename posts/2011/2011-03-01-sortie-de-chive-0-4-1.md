@@ -14,5 +14,5 @@ certains nombre de bugs. Voici le change log officiel.
     - get error after login of version 0.4.0
     - it is better to use class CJSON instead of json_encode/json_decode
 
-J'ai mis à jour le [paquet AUR](http://aur.archlinux.org/packages.php?ID=45734)
+J'ai mis à jour le paquet AUR (lien obsolète: http://aur.archlinux.org/packages.php?ID=45734)
 correspondant pour Archlinux :-)

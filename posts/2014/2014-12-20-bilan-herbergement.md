@@ -10,7 +10,7 @@ Les services hébergés sont à peu près les mêmes avec quelques nouveautés :
 
 - ce blog statique et [son serveur de commentaires](/2014/du-nouveau-sur-pecosys/),
 - une instance de Shaarli pour les favoris [merci SEB Sauvage](http://sebsauvage.net/wiki/doku.php?id=php:shaarli),
-- un lecteur de flux RSS : [Tiny Tiny RSS](https://tt-rss.org/),
+- un lecteur de flux RSS : [Tiny Tiny RSS](https://gitlab.tt-rss.org/tt-rss/tt-rss),
 - l'analyseur du trafic du blog : [Piwik](http://piwik.org),
 - mon cloud personnel [ownCloud](http://owncloud.org) auquel j'ai confié récemment le partage de quelques fichiers et de mon calendrier,
 - l'interface Web de consultation des e-mails [Roundcube](http://roundcube.net) mais les e-mails restent chez Gandi.

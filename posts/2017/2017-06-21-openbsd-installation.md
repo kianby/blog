@@ -41,7 +41,7 @@ Je me suis donc lancé, muni :
   d'exemples, c'est l'essentiel de la documentation officielle.  
 - du livre Héberger son serveur avec OpenBSD (lien obsolète : https://www.atramenta.net/books/heberger-son-serveur-avec-openbsd/562)
 - de quelques retours d'expérience sur le Net.
-- [du Wiki OBSD4](https://obsd4a.net/wiki)
+- du Wiki OBSD4 (lien obsolète : https://obsd4a.net/wiki)
 
 J'ai pris mon temps pour me familiariser avec les programmes développés par
 OpenBSD. C'était le principal intérêt : ne pas juste réinstaller un serveur Web
@@ -73,8 +73,8 @@ Configuration) j'ai pu mener l'installation jusqu'au bout.
 Le démarrage se passe bien, le système est fonctionnel mais je n'ai pas de
 réseau. Un message au boot suggère que le firmware du chipset n'est pas
 disponible. En effet, aucun code propriétaire n'est embarqué dans OpenBSD.
-Depuis un autre PC, j'ai téléchargé [le firmware
-nécessaire](http://firmware.openbsd.org/firmware/6.1) et je l'ai installé avec
+Depuis un autre PC, j'ai téléchargé le firmware
+nécessaire (lien obsolète : http://firmware.openbsd.org/firmware/6.1) et je l'ai installé avec
 fw_update (lien obsolète : http://man.openbsd.org/fw_update.1). J'ai du wifi après c'est de la
 configuration : l'installation de xfce (il paraît que mate est pour bientôt),
 mes outils habituels (Vim, Tmux, Firefox, Thunderbird).

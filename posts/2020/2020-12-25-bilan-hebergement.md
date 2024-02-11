@@ -2,7 +2,7 @@
 
 <!-- category: Hébergement -->
 
-Voici l'état de l'hébergement et un récapitulatif des changements survenus pendant l'année. Mon serveur est toujours un VPS de [Contabo](https://contabo.com/) mais je suis passé au modèle supérieur avec 400 Go de disque SSD. Après plusieurs années d'installations hybrides avec une partie des services conteneurisés et une partie installée par le gestionnaire de paquets du système, j'ai profité du changement de serveur pour réaliser une installation 100% docker avec [Traefik](https://doc.traefik.io/traefik/) dans le rôle de *reverse proxy* et gestionnaire des certificats SSL Let's Encrypt, le tout propulsé par une [Devuan](https://www.devuan.org/).
+Voici l'état de l'hébergement et un récapitulatif des changements survenus pendant l'année. Mon serveur est toujours un VPS de [Contabo](https://contabo.com/en/vps/) mais je suis passé au modèle supérieur avec 400 Go de disque SSD. Après plusieurs années d'installations hybrides avec une partie des services conteneurisés et une partie installée par le gestionnaire de paquets du système, j'ai profité du changement de serveur pour réaliser une installation 100% docker avec [Traefik](https://doc.traefik.io/traefik/) dans le rôle de *reverse proxy* et gestionnaire des certificats SSL Let's Encrypt, le tout propulsé par une [Devuan](https://www.devuan.org/).
 
 Mes services hébergés restent essentiellement les mêmes : 
 
