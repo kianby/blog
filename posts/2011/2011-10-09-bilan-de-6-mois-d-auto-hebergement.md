@@ -24,7 +24,7 @@ Aujourd'hui j'héberge [PluXml](http://pluxml.org/) (moteur de blog),
 [Tiny Tiny RSS](https://tt-rss.org/) (lecteur de flux RSS),
 [Prosody](http://prosody.im/) (Jabber), [Subsonic](http://www.subsonic.org)
 (streaming audio), [Shaarli](http://sebsauvage.net/wiki/doku.php?id=php:shaarli)
-(partage des favoris), [Minecraft](http://www.minecraft.net/) (limité à 5
+(partage des favoris), [Minecraft](https://www.minecraft.net/) (limité à 5
 utilisateurs simultanés) et ses
 [Mods](http://fr.wikipedia.org/wiki/Mod_%28jeu_vid%C3%A9o%29), [Mozilla
 Sync](http://docs.services.mozilla.com/howtos/run-sync.html) (synchronisation

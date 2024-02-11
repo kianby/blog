@@ -32,6 +32,6 @@ Enfin que serait une montre connectée sans la possibilité de changer de cadran
 
 ![watch face](/images/2018/amazfitwatchfaces.png)
 
-Bon voilà je suis revenu sur Android et je suis connecté. A ce propose je remercie le talentueux [Bunnyy](https://forum.xda-developers.com/member.php?u=8946392) pour le portage de [la ROM Resurection Remix](https://forum.xda-developers.com/samsung-a-series/development/rom-resurrection-remix-rr-v6-unofficial-t3765542) sur Samsung A5 2016 : je compte sur toi pour faire fonctionner les appels Bluetooth sous peu. 
+Bon voilà je suis revenu sur Android et je suis connecté. A ce propose je remercie le talentueux [Bunnyy](https://xdaforums.com/m/bunnyy.8946392/) pour le portage de [la ROM Resurection Remix](https://xdaforums.com/t/rom-resurrection-remix-rr-v6-2-1-unofficial-ov8-1-for-samsung-a5-2016-a510xx.3765542/) sur Samsung A5 2016 : je compte sur toi pour faire fonctionner les appels Bluetooth sous peu. 
 
 Est-ce que je suis entré dans le 21ème siècle ? un peu mais tout est loin de me plaire et j'essaie de ne choisir que les meilleurs côtés :-) 
