@@ -55,8 +55,13 @@ La gestion des stash :
 
     # voir le contenu d'un stash (0 est le plus récent)
     git stash show -p [stash@{<n>}]
+
     # appliquer un stash sans le supprimer
     git stash apply [stash@{<n>}]
+
+    # mettre en stash les fichiers indexés en les conservant
+    git stash push --keep-index -m "message"
+ 
 
 Récupérer un fichier d'une autre branche :
 
