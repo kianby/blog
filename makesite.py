@@ -60,6 +60,7 @@ class HighlightRenderer(mistune.HTMLRenderer):
             return highlight(code, lexer, formatter)
         return '<pre><code>' + mistune.escape(code) + '</code></pre>'
 
+
 markdown = mistune.create_markdown(renderer=HighlightRenderer())
 
 
@@ -79,9 +80,9 @@ def fwrite(filename, text):
         f.write(text)
 
 
-def log(msg, *args):
+def log(msg, *log_args):
     """Log message with specified arguments."""
-    sys.stderr.write(msg.format(*args) + "\n")
+    sys.stderr.write(msg.format(*log_args) + "\n")
 
 
 def truncate(text, words=25):
@@ -99,10 +100,12 @@ def read_headers(text):
 
 def rfc_2822_format(date_str):
     """Convert yyyy-mm-dd date string to RFC 2822 format date string."""
+    # Use datetime.datetime.strptime() with the correct format string
     d = datetime.datetime.strptime(date_str, "%Y-%m-%d")
-    dtuple = d.timetuple()
-    dtimestamp = time.mktime(dtuple)
-    return utils.formatdate(dtimestamp)
+    # Convert the timetuple to a timestamp
+    timestamp = time.mktime(d.timetuple())
+    # Return the formatted timestamp
+    return utils.formatdate(timestamp)
 
 
 def slugify(value):
@@ -111,11 +114,10 @@ def slugify(value):
     underscores) and converts spaces to hyphens. Also strips leading and
     trailing whitespace.
     """
-    value = (
-        unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
-    )
-    value = re.sub("[^\w\s-]", "", value).strip().lower()
-    return re.sub("[-\s]+", "-", value)
+    value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    value = re.sub(r"[^\w\s-]", "", value)  # Remove non-word characters and spaces
+    value = re.sub(r"\s+", "-", value)     # Replace multiple spaces with a single hyphen
+    return value.lower()                # Convert to lowercase
 
 
 def read_content(filename):
