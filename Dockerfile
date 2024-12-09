@@ -1,17 +1,9 @@
-FROM nginx:1.19.0-alpine
+FROM nginx:1.27.3-alpine
 
 RUN apk update 
 RUN apk add --no-cache build-base bash git python3 make tzdata curl py3-pip libressl-dev musl-dev libffi-dev python3-dev cargo
 
-RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.4.0
-RUN poetry config virtualenvs.create false
-
-# install poetry
-#ENV POETRY_HOME=/opt/poetry
-#RUN python3 -m venv $POETRY_HOME
-#RUN $POETRY_HOME/bin/pip install --upgrade pip
-#RUN $POETRY_HOME/bin/pip install setuptools_rust poetry==1.4.0
-#RUN $POETRY_HOME/bin/poetry --version
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 

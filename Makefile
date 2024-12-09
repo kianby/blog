@@ -1,6 +1,8 @@
 # Makefile
 # 
 
+.PHONY: build
+
 # if a file .local exists run site locally 
 ifeq ($(wildcard .local),) 
 	TARGET = site_remote
@@ -17,7 +19,7 @@ site_remote:
 	systemctl reload nginx	
 
 site_local:	
-	rye run python makesite.py --params params-local.json
+	uv run python makesite.py --params params-local.json
 	cd _site && python -m SimpleHTTPServer 2> /dev/null || python3 -m http.server
 
 dock: site_local
@@ -25,7 +27,10 @@ dock: site_local
 
 undock:
 	docker stop bloglocal
-	
+
+build:	
+	docker build -t kianby/blog .	
+
 certs:
 	mkdir -p ssl
 	cd ssl ; wget -N https://traefik.me/cert.pem
