@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#export POETRY_HOME=/opt/poetry
+python -V
 
 # clone and build  blog
 cd / 
 rm -rf /blog
 git clone https://github.com/kianby/blog.git
 cd /blog
+uv python pin 3.12.8
 uv sync
 uv run make
 

@@ -4,6 +4,8 @@ RUN apk update
 RUN apk add --no-cache build-base bash git python3 make tzdata curl py3-pip libressl-dev musl-dev libffi-dev python3-dev cargo
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+RUN mv /root/.local/bin/uv /usr/local/bin
+RUN mv /root/.local/bin/uvx /usr/local/bin
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 

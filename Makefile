@@ -29,7 +29,7 @@ undock:
 	docker stop bloglocal
 
 build:	
-	docker build -t kianby/blogduyax .	
+	docker build -t kianby/blog .	
 
 certs:
 	mkdir -p ssl
