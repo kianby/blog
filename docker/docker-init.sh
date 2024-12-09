@@ -9,7 +9,7 @@ git clone https://github.com/kianby/blog.git
 cd /blog
 uv python pin 3.12.8
 uv sync
-uv run make
+uv run python ./makesite.py
 
 # nginx serve
 #nginx -g 'daemon off;'
