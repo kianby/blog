@@ -3,6 +3,6 @@
     "subtitle": "GNU, Linux, BSD et autres libertés",
     "author": "Yax",
     "site_url": "https://blogduyax.madyanne.fr",
-    "stacosys_url": "http://stacosys:8100/api",
+    "stacosys_url": "http://localhost:8100/api",
     "external_check": "./check_git.sh"
 }
