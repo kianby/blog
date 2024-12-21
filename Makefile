@@ -10,7 +10,7 @@ else
 	TARGET = site_local
 endif
 
-site: $(TARGET) 	
+site: site_local 	
 	echo $(TARGET)
 
 site_remote:

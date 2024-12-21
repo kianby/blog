@@ -1,0 +1,47 @@
+vars: {
+   d2-config: {
+     layout-engine: elk
+     # Terminal theme code
+     theme-id: 300
+   }
+}
+
+dmz: {
+   nginx proxy: {
+     icon: https://icons.terrastruct.com/dev%2Fnginx.svg
+     shape: rectangle
+   }
+}
+
+private network: {
+   label.near: bottom-center
+   virtual machines: {
+     icon: https://icons.terrastruct.com/gcp%2FProducts%20and%20services%2FNetworking%2FVirtual%20Private%20Cloud.svg
+     style.multiple: true
+     containers: {
+       icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+       style.multiple: true
+     }
+   }
+}
+
+lan: {
+   bastion: {
+     icon: https://icons.terrastruct.com/dev%2Fssh.svg
+   }
+   devices: {
+     icon: https://icons.terrastruct.com/tech%2Flaptop.svg
+     style.multiple: true
+   }
+}
+
+internet box: {
+   icon: https://icons.terrastruct.com/tech%2Frouter.svg
+   width: 130
+}
+
+internet box -> dmz.nginx proxy: http/https
+
+lan.bastion -> private network.virtual machines: ssh
+
+dmz.nginx proxy -> private network.virtual machines: http

@@ -1,0 +1,76 @@
+vars: {
+   d2-config: {
+     layout-engine: elk
+     # Terminal theme code
+     theme-id: 4     
+   }
+}
+
+Proxmox: {
+  icon: https://www.svgrepo.com/download/331552/proxmox.svg
+  label: "Hyperviseur Proxmox"  
+
+  Containers: {
+    label: "Containers LXC"
+    
+    Nginx_Proxy: {
+      icon: https://upload.wikimedia.org/wikipedia/commons/d/dd/Linux_Containers_logo.svg
+      label: "Nginx Proxy"
+    }
+    
+    Bastion: {
+      icon: https://upload.wikimedia.org/wikipedia/commons/d/dd/Linux_Containers_logo.svg
+      label: "Bastion"    
+    }
+ 
+  }
+
+  vm1: {
+    icon : https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Kvmbanner-logo2_1.png/320px-Kvmbanner-logo2_1.png
+    label: "vm1"    
+
+    Heimdall: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Heimdall"
+    }
+
+    Blog: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Blog"      
+    }
+
+    Selfoss: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Selfoss"
+    }
+
+    Wallabag: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Wallabag"
+    }
+
+    Shaarli: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Shaarli"
+    }    
+  }
+
+  vm2: {
+    icon : https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Kvmbanner-logo2_1.png/320px-Kvmbanner-logo2_1.png
+    label: "vm2"
+    style: {  
+      stroke-dash: 3  
+    }
+    
+ 
+    Nextcloud: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Nextcloud"      
+    }
+
+    Immich: {
+      icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+      label: "Immich"      
+    }
+  }
+}
